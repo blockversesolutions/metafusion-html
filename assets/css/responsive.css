@@ -1,0 +1,93 @@
+@media all and (min-width: 1320px) {
+  .extra-container {
+    max-width: 1760px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+@media all and (max-width: 1320px) {
+  .construction-area {
+    padding-top: 115px;
+  }
+  .construction-wrapper {
+    background-position: left;
+  }
+}
+@media all and (max-width: 1199px) {
+  .construction-area {
+    padding-top: 62px;
+  }
+  h1 {
+    font-size: 55px;
+  }
+}
+
+@media all and (max-width: 991px) {
+  h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .construction-text p {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .flip-card-current {
+    font-size: 32px;
+    line-height: 30px;
+  }
+  .timer-label {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .construction-social {
+    padding-top: 40px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .construction-area {
+    padding-top: 20px;
+  }
+  h1 {
+    font-size: 37px;
+    line-height: 40px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .construction-text p {
+    padding-top: 14px;
+    padding-bottom: 20px;
+  }
+  .timer-number {
+    padding-bottom: 2px;
+  }
+  .timer-block::after {
+    bottom: -21px;
+  }
+  .timer-block {
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .construction-wrapper {
+    padding-bottom: 50px;
+  }
+  .timer-flip-header h3 {
+    font-size: 32px;
+    padding-bottom: 20px;
+  }
+}
+
+@media all and (max-width: 575px) {
+  .construction-wrapper {
+    padding-bottom: 30px;
+  }
+  .timer-flip-header h3 {
+    font-size: 24px;
+    padding-bottom: 10px;
+  }
+}
+
+@media all and (max-width: 450px) {
+}
