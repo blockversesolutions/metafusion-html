@@ -5,7 +5,7 @@ $(document).ready(function () {
     const words = text.split(" ");
     const html = words
       .map((word, i) => {
-        const delay = 0.3 * i;
+        const delay = 0.7 * i;
         return `<span class="word-wrapper"><span class="word" style="animation-delay:${delay}s">${word}</span></span>`;
       })
       .join(" ");
@@ -266,3 +266,143 @@ function copyEmail(box) {
 }
 
 // Function to copy email address End
+// GSAP Animation for Hero Icons - After reload to Before reload positions
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Set initial state (after reload positions) with opacity 0
+  gsap.set('.hero-animation-1 img', {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: 'auto',
+    top: 0
+  });
+  
+  gsap.set('.hero-animation-2 img', {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: 'auto',
+    top: 0
+  });
+  
+  gsap.set('.hero-animation-3 img', {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: 'auto',
+    top: 0
+  });
+  
+  gsap.set('.hero-animation-4 img', {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: 'auto',
+    top: 0
+  });
+  
+  gsap.set('.hero-animation-5 img', {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: 'auto',
+    top: 0
+  });
+  
+  gsap.set('.hero-animation-6 img', {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: 'auto',
+    top: 0
+  });
+  
+  gsap.set('.hero-animation-7 img', {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: 'auto',
+    top: 0
+  });
+  
+  // Animate to final positions (before reload positions)
+  gsap.to('.hero-animation-1 img', {
+    opacity: 1,
+    left: 142,
+    right: 'auto',
+    margin: 0,
+    top: 'auto',
+    duration: 8,
+    ease: "power1.out",
+    delay: 0.1
+  });
+  
+  gsap.to('.hero-animation-2 img', {
+    opacity: 1,
+    left: 257,
+    right: 'auto',
+    margin: 0,
+    top: 'auto',
+    bottom: 100,
+    duration: 8,
+    ease: "power1.out",
+    delay: 0.2
+  });
+  
+  gsap.to('.hero-animation-3 img', {
+    opacity: 1,
+    left: -361,
+    right: 0,
+    margin: 'auto',
+    top: 'auto',
+    bottom: 110,
+    duration: 6,
+    ease: "power1.out",
+    delay: 0.3
+  });
+  
+  gsap.to('.hero-animation-4 img', {
+    opacity: 1,
+    left: 0,
+    right: -444,
+    margin: 'auto',
+    top: 'auto',
+    bottom: 100,
+    duration: 8,
+    ease: "power1.out",
+    delay: 0.4
+  });
+  
+  gsap.to('.hero-animation-5 img', {
+    opacity: 1,
+    left: 717,
+    right: 0,
+    margin: 'auto',
+    top: 'auto',
+    bottom: 200,
+    duration: 6,
+    ease: "power2.out",
+    delay: 0.5
+  });
+  
+  gsap.to('.hero-animation-6 img', {
+    opacity: 1,
+    left: 'auto',
+    right: 230,
+    margin: 0,
+    top: 'auto',
+    bottom: 84,
+    duration: 5,
+    ease: "power2.out",
+    delay: 0.6
+  });
+  
+  gsap.to('.hero-animation-7 img', {
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
+    delay: 0.7
+  });
+  
+});
