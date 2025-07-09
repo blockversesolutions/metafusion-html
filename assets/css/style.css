@@ -1124,19 +1124,9 @@ p {
 .footer-area {
   position: relative;
   z-index: 1;
-  background-color: #010613;
   background: url("../images/bg/footer-bg.png") no-repeat center center / cover;
-  animation: fadeOpacity 6s ease-in-out infinite;
 }
 
-@keyframes fadeOpacity {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
 .footer-content {
   display: flex;
   gap: 40px;
