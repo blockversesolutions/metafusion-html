@@ -43,11 +43,16 @@
   .construction-social {
     padding-top: 40px;
   }
+  .small-shadow {
+    border-left: 146px solid transparent;
+    border-right: 123px solid transparent;
+    border-top: 750px solid #2a87ff3b;
+  }
 }
 
 @media all and (max-width: 767px) {
   .construction-area {
-    padding-top: 20px;
+    padding-top: 50px;
   }
   h1 {
     font-size: 37px;
@@ -77,6 +82,14 @@
     font-size: 32px;
     padding-bottom: 20px;
   }
+  .small-shadow {
+    transform: rotate(-17deg);
+    border-left: 32px solid transparent;
+    border-right: 62px solid transparent;
+    border-top: 297px solid #2a87ff3b;
+    top: 0;
+    left: 20%;
+  }
 }
 
 @media all and (max-width: 575px) {
@@ -86,6 +99,9 @@
   .timer-flip-header h3 {
     font-size: 24px;
     padding-bottom: 10px;
+  }
+  .toplight{
+    display: none;
   }
 }
 

@@ -73,7 +73,6 @@ p {
   line-height: 30px;
   color: #e0e0e0;
 }
-
 /*==========  Header Section Start  ==========*/
 
 .header-area {
@@ -87,11 +86,6 @@ p {
   width: 100%;
   z-index: 9;
 }
-.header {
-  border-radius: 30px;
-  backdrop-filter: blur(1px);
-}
-
 .logo img {
   width: 200px;
 }
@@ -255,20 +249,10 @@ p {
 
 /*==========  Hero Section Start  ==========*/
 .hero-area {
-  height: 100vh;
+  min-height: calc(100vh - 120px);
   padding: 160px 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-bg img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 500px;
-  z-index: -1;
-  margin-bottom: -159px;
+  position: sticky;
+  top: 0;
 }
 
 .hero-text {
@@ -660,9 +644,18 @@ p {
 /*==========  Hero Section End  ==========*/
 /*==========  Empower Section Start  ==========*/
 .empower-area {
-  padding: 90px 0 200px 0;
+  padding: 200px 0 200px 0;
   position: relative;
-  overflow: hidden;
+  background-color: #010613;
+  z-index: 1;
+}
+.hero-bg img {
+  position: absolute;
+  top: -247px;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  z-index: -1;
 }
 .empower-area .container {
   position: relative;
@@ -745,10 +738,26 @@ p {
   color: #fdfdfd99;
 }
 
+.empower-image-flip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+.empower-image-flip img {
+    width: 100%;
+    position: absolute;
+    left: 34px;
+    top: 0;
+}
+
 /*==========  Empower Section End  ==========*/
 /*==========  ECM coin Section Start  ==========*/
 .ecm-area {
   padding-bottom: 133px;
+  background-color: #010613;
+  position: relative;
+  z-index: 1;
 }
 .extra-container2 {
   max-width: 1100px;
@@ -799,11 +808,21 @@ p {
 .holding-area {
   background: url("../images/bg/bg.svg") no-repeat scroll 0 0 / cover;
   padding: 30px 0;
+  position: relative;
+  z-index: 2;
 }
 .holding-content {
   background: url("../images/bg/holder.png") no-repeat scroll 0 0 / cover;
   padding: 40px 0;
   text-align: center;
+}
+.holding-content {
+  background: url("../images/bg/holder.png") no-repeat scroll 0 0 / cover;
+  padding: 40px 0;
+  text-align: center;
+  transform: translateY(98px);
+  border: 1px solid #98c2f8;
+  border-radius: 12px;
 }
 .holding-head-text p {
   padding: 20px 0 60px 0;
@@ -820,8 +839,11 @@ p {
 /*==========  Holding Section End  ==========*/
 /*==========  Ecosystem Section Start  ==========*/
 .ecosystem-area {
-  padding-top: 120px;
+  padding-top: 170px;
   padding-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  background-color: #010613;
 }
 .ecosystem-head-text {
   max-width: 850px;
@@ -911,7 +933,7 @@ p {
   align-items: center;
 }
 .ecosystem-btn-wrapper .hero-btn {
-  padding: 15px 48px;
+  padding: 12px 48px;
   border-radius: 8px;
 }
 .ecosystem-btn-wrapper .hero-btn span {
@@ -926,6 +948,7 @@ p {
   padding: 330px 0 187px 0;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 .blockchain-video video {
   width: 100%;
@@ -984,6 +1007,9 @@ p {
 /*==========  Blockchain Section End  ==========*/
 .launch-area {
   padding-bottom: 110px;
+  position: relative;
+  z-index: 1;
+  background-color: #010613;
 }
 .launch-left {
   position: relative;
@@ -1093,6 +1119,24 @@ p {
 
 /*==========  Blockchain Section End  ==========*/
 /*==========  Footer Section Start  ==========*/
+
+
+.footer-area {
+  position: relative;
+  z-index: 1;
+  background-color: #010613;
+  background: url("../images/bg/footer-bg.png") no-repeat center center / cover;
+  animation: fadeOpacity 6s ease-in-out infinite;
+}
+
+@keyframes fadeOpacity {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
 .footer-content {
   display: flex;
   gap: 40px;
@@ -1120,11 +1164,12 @@ p {
   line-height: 44px;
   color: #fff;
   padding-bottom: 20px;
+  margin-top: 10px;
 }
 .footer-left-email {
-    padding-top: 60px;
+  padding-top: 60px;
 }
-.hero-btn span {
+.footer-area .hero-btn span {
   position: relative;
   z-index: 2;
   color: #fdfdfd;
@@ -1136,11 +1181,11 @@ p {
   line-height: 20px;
   text-align: center;
 }
-.hero-btn {
+.footer-area .hero-btn {
   padding: 10px 30px;
   border-radius: 8px;
 }
-.hero-btn::before {
+.footer-area .hero-btn::before {
   border-radius: 8px;
 }
 .footer-links {
@@ -1181,13 +1226,95 @@ p {
   box-shadow: 0 5px 15px rgba(255, 199, 0, 0.4);
   color: #010613;
 }
+.footer-right-bottom {
+  padding-top: 50px;
+}
+.footer-right-bottom p {
+  color: #fdfdfd99;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+}
+.email-box {
+  padding: 2px; /* Border thickness */
+  border-radius: 16px;
+  background: linear-gradient(145deg, #2a87ff00 0%, #2a86ff7a 100%);
+  cursor: pointer;
+  transition: 0.3s;
+  width: fit-content;
+  position: relative;
+  margin-top: 10px;
+}
+
+.email-inner {
+  display: flex;
+  align-items: center;
+  background: rgba(20, 20, 30, 0.6); /* Inner background */
+  border-radius: 14px;
+  padding: 12px 16px;
+  box-shadow: 0 0 12px rgba(0, 128, 255, 0.2);
+  color: white;
+  font-size: 16px;
+  backdrop-filter: blur(12px);
+  min-width: 280px;
+  transition: 0.3s;
+}
+
+.email-box:hover .email-inner {
+  box-shadow: 0 0 18px rgba(0, 128, 255, 0.4);
+}
+
+.email-text {
+  flex: 1;
+  user-select: text;
+}
+
+.copy-icon,
+.check-icon {
+  margin-left: 10px;
+  width: 18px;
+  height: 18px;
+  fill: #ccc;
+  transition: 0.3s;
+}
+
+.email-box:hover .copy-icon {
+  fill: white;
+}
+
+.check-icon {
+  display: none;
+  fill: #00ffae;
+}
+
+.email-box.copied .copy-icon {
+  display: none;
+}
+
+.email-box.copied .check-icon {
+  display: inline;
+}
+.copyright {
+  border-top: 2px solid #fdfdfd33;
+}
+.copyright-content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff99;
+  text-align: center;
+  padding: 24px 0 48px 0;
+}
+.copyright-content span {
+  color: #ffc700;
+}
 
 /*==========  Footer Section End  ==========*/
 /*==========  Footer Section End  ==========*/
 .construction-wrapper {
   background: url("../images/bg/construction-bg.png") no-repeat center center / cover;
   min-height: 100vh;
-  padding-top: 50px; 
+  padding-top: 50px;
   z-index: -1;
   overflow: hidden;
 }
@@ -1245,12 +1372,12 @@ p {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   /* transition: box-shadow 0.5s ease, opacity 0.5s ease;  */
-  transition: .5s;
+  transition: 0.5s;
   opacity: 0.8;
   cursor: pointer;
   box-shadow: inset 0px 1px 40px 0px #0d88cf00, inset 0px 4px 18px 0px #083b5800, inset 0px 50px 100px -48px #00a0fd00,
     inset 0px -40px 68px -64px #0e4d7200, inset 0px 7px 11px -4px #ffffff00, inset 0px 10px 56px -36px #ffffff00;
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .timer-block:hover {

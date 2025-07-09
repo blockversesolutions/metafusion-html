@@ -54,35 +54,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const rect = heroArea.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const mouseX = e.clientX;
-
-    // Remove existing classes
     heroArea.classList.remove("mouse-left", "mouse-right");
-
-    // Add class based on mouse position
     if (mouseX < centerX) {
       heroArea.classList.add("mouse-left");
     } else {
       heroArea.classList.add("mouse-right");
     }
-
-    // Calculate flip intensity based on distance from center
     const distance = Math.abs(mouseX - centerX);
     const maxDistance = rect.width / 2;
     const intensity = Math.min(distance / maxDistance, 1);
-
-    // Apply dynamic transforms
     if (mouseX < centerX) {
-      // Mouse on left side
       heroCard1.style.transform = `rotate(${-60 * intensity}deg)  translateX(${-5 * intensity}px)`;
       heroCard2.style.transform = `rotateY(${-45 * intensity}deg) translateX(${-2 * intensity}px)`;
     } else {
-      // Mouse on right side
       heroCard1.style.transform = `rotateY(${45 * intensity}deg) translateX(${2 * intensity}px)`;
       heroCard2.style.transform = `rotate(${60 * intensity}deg) translateX(${5 * intensity}px)`;
     }
   });
-
-  // Reset on mouse leave
   heroArea.addEventListener("mouseleave", function () {
     heroArea.classList.remove("mouse-left", "mouse-right");
     heroCard1.style.transform = "";
@@ -108,7 +96,7 @@ document.addEventListener("mousemove", function (e) {
     "radial-gradient(circle at " + x + "px " + y + "px ,rgba(190, 255, 255, 0.2), transparent 40%)";
 });
 
-// Countdown Timer with Flip Animation
+// Countdown Timer with Flip Animation start
 const targetDate = new Date();
 targetDate.setDate(targetDate.getDate() + 20);
 
@@ -121,8 +109,6 @@ let previousValues = {
 
 const elements = {
   timerBlocks: document.getElementById("timerBlocks"),
-
-  // Flip card elements
   daysFlip: document.getElementById("daysFlip"),
   daysCurrent: document.getElementById("daysCurrent"),
   daysNext: document.getElementById("daysNext"),
@@ -175,26 +161,16 @@ function calculateTimeRemaining() {
 
 function updateTimerElement(unit, value) {
   const formattedValue = formatNumber(value);
-
-  // Only update if value has changed
   if (previousValues[unit] !== value) {
     const flipCard = elements[unit + "Flip"];
     const currentElement = elements[unit + "Current"];
     const nextElement = elements[unit + "Next"];
-
-    // Set the next value
     nextElement.textContent = formattedValue;
-
-    // Add flip animation class
     flipCard.classList.add("flipping");
-
-    // After animation completes, update current value and remove class
     setTimeout(() => {
       currentElement.textContent = formattedValue;
       flipCard.classList.remove("flipping");
     }, 600);
-
-    // Store the new value
     previousValues[unit] = value;
   }
 }
@@ -226,8 +202,6 @@ function initializeCountdown() {
     elements.minutesNext.textContent = formatNumber(timeRemaining.minutes);
     elements.secondsCurrent.textContent = formatNumber(timeRemaining.seconds);
     elements.secondsNext.textContent = formatNumber(timeRemaining.seconds);
-
-    // Set previous values to current values to prevent immediate animation
     previousValues = {
       days: timeRemaining.days,
       hours: timeRemaining.hours,
@@ -235,15 +209,9 @@ function initializeCountdown() {
       seconds: timeRemaining.seconds,
     };
   }
-
-  // Update every second
   setInterval(updateCountdown, 1000);
 }
-
-// Start the countdown when page loads
 document.addEventListener("DOMContentLoaded", initializeCountdown);
-
-// Optional: Add keyboard shortcut to reset timer (for testing)
 document.addEventListener("keydown", function (event) {
   if (event.key === "r" || event.key === "R") {
     const newTargetDate = new Date();
@@ -251,8 +219,6 @@ document.addEventListener("keydown", function (event) {
     targetDate.setTime(newTargetDate.getTime());
 
     elements.timerBlocks.style.display = "flex";
-
-    // Reset previous values to force update
     previousValues = {
       days: null,
       hours: null,
@@ -264,33 +230,39 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-// Function to create white dots
+// Countdown Timer with Flip Animation End
 
+// Function to create white dots start
 function createDots() {
   const dotsContainer = document.getElementById("dotsBackground");
-  const numberOfDots = 70; // Adjust number of dots as needed
+  const numberOfDots = 70;
 
   for (let i = 0; i < numberOfDots; i++) {
     const dot = document.createElement("div");
     dot.className = "dot";
-
-    // Random size between 1px and 4px
     const size = Math.random() * 3 + 1;
     dot.style.width = size + "px";
     dot.style.height = size + "px";
-
-    // Random position
     dot.style.left = Math.random() * 100 + "%";
     dot.style.top = Math.random() * 100 + "%";
-
-    // Random animation delay
     dot.style.animationDelay = Math.random() * 3 + "s";
 
     dotsContainer.appendChild(dot);
   }
 }
 
-// THIS IS THE MISSING PART - Call the function when page loads
 document.addEventListener("DOMContentLoaded", function () {
   createDots();
 });
+// Function to create white dots End
+function copyEmail(box) {
+  const email = box.querySelector('.email-text').textContent;
+  navigator.clipboard.writeText(email).then(() => {
+    box.classList.add('copied');
+    setTimeout(() => {
+      box.classList.remove('copied');
+    }, 2000);
+  });
+}
+
+// Function to copy email address End

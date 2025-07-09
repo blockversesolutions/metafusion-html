@@ -7,10 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap CSS  -->
-    <link
-      href="./assets/css/bootstrap.min.css"
-      rel="stylesheet" 
-    />
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -136,13 +133,12 @@
         </div>
         <!-- Hero Logo animation End  -->
       </div>
-
-      <div class="hero-bg">
-        <img src="assets/images/bg/hero-bg.png" alt="image" />
-      </div>
     </section>
     <main>
       <section class="empower-area">
+        <div class="hero-bg">
+          <img src="assets/images/bg/hero-bg.png" alt="image" />
+        </div>
         <!-- lottifile loading animation start -->
         <div id="lottie-empower"></div>
         <!-- lottifile loading animation End -->
@@ -163,6 +159,11 @@
                     infrastructure, MetaFusion Labs partners strategically with BlockVerse Solutions LLC—an industry
                     leader in token issuance and blockchain development—to deliver scalable, innovative Web3 solutions.
                   </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="empower-image-flip">
+                  <img src="assets/images/icon/1.png" alt="image" />
                 </div>
               </div>
               <!-- 1.single item End  -->
@@ -222,6 +223,7 @@
           </div>
         </div>
       </section>
+
       <section class="ecm-area">
         <div class="container extra-container2">
           <div class="ecm-content">
@@ -631,7 +633,21 @@
             </div>
             <div class="footer-left-email">
               <span>EMAIL US</span>
-              <h3>For Inquiries, Please Reach Out</h3>
+              <div class="email-box" onclick="copyEmail(this)">
+                <div class="email-inner">
+                  <span class="email-text">hello@metafusionlabs.com</span>
+                  <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zM20 5H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 18H8V7h12v16z"
+                    />
+                  </svg>
+                  <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M20.285 6.709a1 1 0 0 0-1.414-1.418L9 15.162l-3.871-3.87a1 1 0 1 0-1.415 1.414l4.578 4.578a1 1 0 0 0 1.414 0L20.285 6.709z"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
           <div class="footer-right">
@@ -699,8 +715,11 @@
       </div>
       <div class="copyright">
         <div class="container">
-          <div class="copyright-content">
-            <p>Copyright © 2025 by MetaFusionLabs</p>
+          <div>
+            <p class="copyright-content">
+              Copyright © 2025 by
+              <span>MetaFusionLabs</span>
+            </p>
           </div>
         </div>
       </div>
