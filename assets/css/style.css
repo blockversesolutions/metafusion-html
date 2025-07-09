@@ -472,7 +472,6 @@ p {
  
 } */
 
-
 .hero-animation-1 img {
   width: 260px;
   height: auto;
@@ -690,7 +689,6 @@ p {
     opacity: 0.5;
   }
 }
-
 
 .hero-animation-7 img {
   width: 260px;
@@ -913,10 +911,10 @@ p {
   perspective: 1000px;
 }
 .empower-image-flip img {
-    width: 100%;
-    position: absolute;
-    left: 34px;
-    top: 0;
+  width: 100%;
+  position: absolute;
+  left: 34px;
+  top: 0;
 }
 
 /*==========  Empower Section End  ==========*/
@@ -926,6 +924,16 @@ p {
   background-color: #010613;
   position: relative;
   z-index: 1;
+}
+.focus {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 .extra-container2 {
   max-width: 1100px;
@@ -1284,14 +1292,13 @@ p {
   width: 72px;
   height: auto;
 }
-.launch-animation p{
+.launch-animation p {
   font-size: 22px;
   line-height: 24px;
 }
 
 /*==========  Blockchain Section End  ==========*/
 /*==========  Footer Section Start  ==========*/
-
 
 .footer-area {
   position: relative;

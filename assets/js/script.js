@@ -406,3 +406,15 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
 });
+
+// focus hover color 
+
+let focusbg = document.querySelector(".focus-bg");
+
+document.addEventListener("mousemove", function (e) {
+  let x = e.pageX;
+  let y = e.pageY;
+
+  focusbg.style.background =
+    "radial-gradient(circle at " + x + "px " + y + "px ,rgba(190, 255, 255, 0.2), transparent 40%)";
+});
