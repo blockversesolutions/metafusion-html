@@ -41,6 +41,9 @@
     border-right: 123px solid transparent;
     border-top: 750px solid #2a87ff3b;
   }
+   .timer-flip-header h3 {
+    font-size: 38px;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -105,6 +108,7 @@
     font-size: 16px;
     line-height: 24px;
   }
+ 
 }
 
 @media all and (max-width: 575px) {
@@ -147,6 +151,14 @@
   }
   .timer-blocks {
     padding-top: 20px;
+  }
+  .container {
+    max-width: 94%;
+    width: 100%;
+    margin: auto;
+  }
+  .timer-flip-header h3 {
+    font-size: 36px;
   }
 }
 
