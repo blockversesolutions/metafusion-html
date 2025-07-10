@@ -102,7 +102,7 @@ document.addEventListener("mousemove", function (e) {
 // Function to create white dots start
 function createDots() {
   const dotsContainers = document.querySelectorAll(".dotsBackground");
-  const numberOfDots = 120;
+  const numberOfDots = 70;
 
   dotsContainers.forEach((dotsContainer) => {
     for (let i = 0; i < numberOfDots; i++) {
