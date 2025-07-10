@@ -73,7 +73,7 @@
   }
   .timer-block {
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px;
   }
   .construction-wrapper {
     padding-bottom: 50px;
@@ -90,6 +90,10 @@
     top: 0;
     left: 20%;
   }
+  .construction-wrapper {
+    height: 100vh;
+    padding-top: 38px;
+  }
 }
 
 @media all and (max-width: 575px) {
@@ -100,8 +104,17 @@
     font-size: 24px;
     padding-bottom: 10px;
   }
-  .toplight{
+  .toplight {
     display: none;
+  }
+  p {
+    font-size: 14px;
+  }
+  .timer-flip-header h3 {
+    line-height: 30px;
+  }
+  p{
+    line-height: 20px;
   }
 }
 

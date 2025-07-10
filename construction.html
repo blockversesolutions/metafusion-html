@@ -7,10 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap CSS  -->
-    <link
-      href="./assets/css/bootstrap.min.css"
-      rel="stylesheet" 
-    />
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -27,10 +24,9 @@
   </head>
   <body>
     <div class="toplight">
-        <span class="small-shadow"></span>
+      <span class="small-shadow"></span>
     </div>
     <main class="construction-wrapper">
-    
       <div class="dots-background" id="dotsBackground"></div>
       <header class="header-area">
         <div class="container extra-container">
@@ -44,7 +40,7 @@
           <div class="construction-content">
             <div class="construction-text">
               <h1>
-                Website 
+                Website
                 <span>Under Construction</span>
               </h1>
               <p>
@@ -108,7 +104,9 @@
                   <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/company/meta-fusion-labs-official"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://www.linkedin.com/company/meta-fusion-labs-official">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
                 </li>
                 <li>
                   <a href="https://x.com/MetaFusionLabs"><i class="fa-brands fa-x-twitter"></i></a>
@@ -123,13 +121,87 @@
     <script src="./assets/js/jquery.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
-    <script
-      src="./assets/js/popper.min.js"
-    ></script>
-    <script
-      src="./assets/js/bootstrap.min.js"
-    ></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
 
     <script src="./assets/js/script.js"></script>
+    <script>
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 20);
+
+      const elements = {
+        timerBlocks: document.getElementById("timerBlocks"),
+        days: document.getElementById("daysCurrent"),
+        hours: document.getElementById("hoursCurrent"),
+        minutes: document.getElementById("minutesCurrent"),
+        seconds: document.getElementById("secondsCurrent"),
+      };
+
+      function formatNumber(num) {
+        return num.toString().padStart(2, "0");
+      }
+
+      function calculateTimeRemaining() {
+        const now = new Date().getTime();
+        const target = targetDate.getTime();
+        const difference = target - now;
+
+        if (difference <= 0) {
+          return {
+            days: 0,
+            hours: 0,
+            minutes: 0,
+            seconds: 0,
+            expired: true,
+          };
+        }
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        return {
+          days,
+          hours,
+          minutes,
+          seconds,
+          expired: false,
+        };
+      }
+
+      function updateCountdown() {
+        const time = calculateTimeRemaining();
+
+        if (time.expired) {
+          elements.timerBlocks.style.display = "none";
+          return;
+        }
+
+        elements.days.textContent = formatNumber(time.days);
+        elements.hours.textContent = formatNumber(time.hours);
+        elements.minutes.textContent = formatNumber(time.minutes);
+        elements.seconds.textContent = formatNumber(time.seconds);
+      }
+
+      function initializeCountdown() {
+        updateCountdown(); // Initial update
+        setInterval(updateCountdown, 1000);
+      }
+
+      document.addEventListener("DOMContentLoaded", initializeCountdown);
+
+      // Optional reset on key 'r' or 'R'
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "r" || event.key === "R") {
+          const newTargetDate = new Date();
+          newTargetDate.setDate(newTargetDate.getDate() + 20);
+          targetDate.setTime(newTargetDate.getTime());
+
+          elements.timerBlocks.style.display = "flex";
+          initializeCountdown();
+        }
+      });
+    </script>
   </body>
 </html>
