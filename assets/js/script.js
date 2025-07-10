@@ -86,7 +86,7 @@ lottie.loadAnimation({
   renderer: "svg",
   loop: true,
   autoplay: true,
-  path: "./assets/js/tt.json",
+  path: "./assets/js/empower.json",
 });
 
 let focus = document.querySelector(".focus");

@@ -90,7 +90,7 @@ p {
   position: inherit;
 }
 .logo img {
-  width: 200px;
+  width: 220px;
 }
 
 .menu-bg {
@@ -433,11 +433,11 @@ p {
   color: #fdfdfdcc;
 }
 .hero-card p {
-    font-weight: 700;
-    font-size: 39.64px;
-    line-height: 32.31px;
-    color: #fdfdfd;
-    text-align: left;
+  font-weight: 700;
+  font-size: 39.64px;
+  line-height: 32.31px;
+  color: #fdfdfd;
+  text-align: left;
 }
 .hero-card1 {
   position: absolute;
@@ -777,10 +777,10 @@ p {
 }
 
 .hero-card1 {
-    transform: perspective(18px) rotate3d(1, -14, 0, -2deg);
+  transform: perspective(18px) rotate3d(1, -14, 0, -2deg);
 }
 .hero-card2 {
-    transform: perspective(17px) rotate3d(1, -14, 0, 2deg);
+  transform: perspective(17px) rotate3d(1, -14, 0, 2deg);
 }
 .hero-area:hover .hero-card1 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -792,7 +792,7 @@ p {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
-.hero-card2:hover {   
+.hero-card2:hover {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
@@ -849,7 +849,7 @@ p {
   height: 888px;
   margin: 0px auto;
   position: absolute;
-  bottom: -32px;
+  bottom: 161px;
   left: 0px;
 }
 .empower-bg img {
@@ -1545,14 +1545,22 @@ p {
 .construction-text h1 span {
   color: #ffc700;
 }
-
-.construction-text p {
-  text-align: center;
-  max-width: 690px;
-  margin: auto;
-  color: #e0e0e0;
-  padding-top: 30px;
-  padding-bottom: 60px;
+.construction-description {
+    padding-top: 25px;
+    padding-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+}
+.construction-description p {
+    text-align: center;
+    max-width: 630px;
+    margin: auto;
+    color: #e0e0e0;
+}
+.construction-description p:first-child{
+  letter-spacing: 0.5px;
 }
 
 .timer-flip-header h3 {

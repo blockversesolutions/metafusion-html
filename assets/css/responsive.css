@@ -7,9 +7,6 @@
   }
 }
 @media all and (max-width: 1320px) {
-  .construction-area {
-    padding-top: 115px;
-  }
   .construction-wrapper {
     background-position: left;
   }
@@ -27,10 +24,6 @@
   h1 {
     font-size: 48px;
     line-height: 48px;
-  }
-  .construction-text p {
-    padding-top: 20px;
-    padding-bottom: 40px;
   }
   .flip-card-current {
     font-size: 32px;
@@ -61,10 +54,7 @@
   p {
     font-size: 16px;
   }
-  .construction-text p {
-    padding-top: 14px;
-    padding-bottom: 20px;
-  }
+
   .timer-number {
     padding-bottom: 2px;
   }
@@ -136,6 +126,27 @@
   }
   .construction-wrapper {
     height: auto;
+  }
+  .timer-block {
+    max-width: 120px;
+    flex-shrink: 1;
+  }
+  .construction-description {
+    gap: 2px;
+  }
+  .construction-area {
+    padding-top: 10px;
+  }
+  .construction-text p {
+    padding-top: 10px;
+    padding-bottom: 7px;
+  }
+  h1 {
+    font-size: 31px;
+    line-height: 40px;
+  }
+  .timer-blocks {
+    padding-top: 20px;
   }
 }
 

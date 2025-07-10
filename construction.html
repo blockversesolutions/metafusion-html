@@ -41,12 +41,16 @@
             <div class="construction-text">
               <h1>
                 Website
-                <span>Under Construction</span>
+                <span> Upgrading...</span>
               </h1>
-              <p>
-                Scheduled maintenance is in progress to enhance your experience. We'll be back shortly. We appreciate
-                your patience.
+              <div class="construction-description">
+                <p>
+                Meta Fusion Labs is temporarily offline for building a new experience for the next wave of Web3 innovations.
               </p>
+                <p>
+                We will be back soon with something smarter, faster and fusion-powered.
+              </p>
+              </div>
             </div>
 
             <div class="construction-timer">
@@ -97,12 +101,7 @@
             </div>
             <div class="construction-social d-flex justify-content-center align-items-center">
               <ul class="social-links d-flex align-items-center">
-                <li>
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </li>
+               
                 <li>
                   <a href="https://www.linkedin.com/company/meta-fusion-labs-official">
                     <i class="fa-brands fa-linkedin-in"></i>
@@ -125,83 +124,72 @@
     <script src="./assets/js/bootstrap.min.js"></script>
 
     <script src="./assets/js/script.js"></script>
-    <script>
-      const targetDate = new Date();
-      targetDate.setDate(targetDate.getDate() + 20);
+ <script>
+  // 🎯 Fixed end date: July 21, 2025 23:59:59
+  const targetDate = new Date("2025-07-21T23:59:59");
 
-      const elements = {
-        timerBlocks: document.getElementById("timerBlocks"),
-        days: document.getElementById("daysCurrent"),
-        hours: document.getElementById("hoursCurrent"),
-        minutes: document.getElementById("minutesCurrent"),
-        seconds: document.getElementById("secondsCurrent"),
+  const elements = {
+    timerBlocks: document.getElementById("timerBlocks"),
+    days: document.getElementById("daysCurrent"),
+    hours: document.getElementById("hoursCurrent"),
+    minutes: document.getElementById("minutesCurrent"),
+    seconds: document.getElementById("secondsCurrent"),
+  };
+
+  function formatNumber(num) {
+    return num.toString().padStart(2, "0");
+  }
+
+  function calculateTimeRemaining() {
+    const now = new Date().getTime();
+    const target = targetDate.getTime();
+    const difference = target - now;
+
+    if (difference <= 0) {
+      return {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+        expired: true,
       };
+    }
 
-      function formatNumber(num) {
-        return num.toString().padStart(2, "0");
-      }
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-      function calculateTimeRemaining() {
-        const now = new Date().getTime();
-        const target = targetDate.getTime();
-        const difference = target - now;
+    return {
+      days,
+      hours,
+      minutes,
+      seconds,
+      expired: false,
+    };
+  }
 
-        if (difference <= 0) {
-          return {
-            days: 0,
-            hours: 0,
-            minutes: 0,
-            seconds: 0,
-            expired: true,
-          };
-        }
+  function updateCountdown() {
+    const time = calculateTimeRemaining();
 
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    if (time.expired) {
+      elements.timerBlocks.style.display = "none";
+      return;
+    }
 
-        return {
-          days,
-          hours,
-          minutes,
-          seconds,
-          expired: false,
-        };
-      }
+    elements.days.textContent = formatNumber(time.days);
+    elements.hours.textContent = formatNumber(time.hours);
+    elements.minutes.textContent = formatNumber(time.minutes);
+    elements.seconds.textContent = formatNumber(time.seconds);
+  }
 
-      function updateCountdown() {
-        const time = calculateTimeRemaining();
+  function initializeCountdown() {
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  }
 
-        if (time.expired) {
-          elements.timerBlocks.style.display = "none";
-          return;
-        }
+  document.addEventListener("DOMContentLoaded", initializeCountdown);
+</script>
 
-        elements.days.textContent = formatNumber(time.days);
-        elements.hours.textContent = formatNumber(time.hours);
-        elements.minutes.textContent = formatNumber(time.minutes);
-        elements.seconds.textContent = formatNumber(time.seconds);
-      }
-
-      function initializeCountdown() {
-        updateCountdown(); // Initial update
-        setInterval(updateCountdown, 1000);
-      }
-
-      document.addEventListener("DOMContentLoaded", initializeCountdown);
-
-      // Optional reset on key 'r' or 'R'
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "r" || event.key === "R") {
-          const newTargetDate = new Date();
-          newTargetDate.setDate(newTargetDate.getDate() + 20);
-          targetDate.setTime(newTargetDate.getTime());
-
-          elements.timerBlocks.style.display = "flex";
-          initializeCountdown();
-        }
-      });
-    </script>
   </body>
 </html>
