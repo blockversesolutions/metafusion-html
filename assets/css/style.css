@@ -86,6 +86,9 @@ p {
   width: 100%;
   z-index: 9;
 }
+.construction-wrapper .header-area {
+  position: inherit;
+}
 .logo img {
   width: 200px;
 }
@@ -253,8 +256,8 @@ p {
   padding: 160px 0;
   position: sticky;
   top: 0;
+  background: #010613;
 }
-
 .hero-text {
   max-width: 740px;
   width: 100%;
@@ -430,11 +433,11 @@ p {
   color: #fdfdfdcc;
 }
 .hero-card p {
-  font-weight: 700;
-  font-size: 49.64px;
-  line-height: 49.31px;
-  color: #fdfdfd;
-  text-align: left;
+    font-weight: 700;
+    font-size: 39.64px;
+    line-height: 32.31px;
+    color: #fdfdfd;
+    text-align: left;
 }
 .hero-card1 {
   position: absolute;
@@ -454,23 +457,6 @@ p {
 }
 
 /* start animation code  */
-/* .hero-animation-1 img,
-.hero-animation-2 img,
-.hero-animation-3 img,
-.hero-animation-4 img,
-.hero-animation-5 img,
-.hero-animation-6 img,
-.hero-animation-7 img{
-  margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: -1;
-  opacity: 0;
-  transition: all 0.8s ease-in-out;
- 
-} */
 
 .hero-animation-1 img {
   width: 260px;
@@ -694,6 +680,43 @@ p {
   width: 260px;
   height: auto;
 }
+.hero-animation-8 img {
+  width: 177px;
+  height: auto;
+  position: absolute;
+  right: 387px;
+  bottom: 204px;
+  z-index: -1;
+  animation: iconAnim8 11s ease-in-out 6.9s infinite;
+  opacity: 0.5;
+}
+@keyframes iconAnim8 {
+  0% {
+    transform: translateY(28px) translateX(5px) rotate(0deg);
+    opacity: 0.5;
+  }
+  20% {
+    transform: translateY(-18px) translateX(-25px) rotate(8deg);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translateY(15px) translateX(12px) rotate(-4deg);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(-5px) translateX(-15px) rotate(6deg);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateY(22px) translateX(8px) rotate(-2deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(28px) translateX(5px) rotate(0deg);
+    opacity: 0.5;
+  }
+}
+
 /* Style 2: Word Flow */
 .style-3 .word-wrapper,
 .style-2 .word-wrapper {
@@ -752,35 +775,30 @@ p {
   cursor: pointer;
   overflow: hidden;
 }
-.hero-card1,
-.hero-card2 {
-  perspective: 1000px;
+
+.hero-card1 {
+    transform: perspective(18px) rotate3d(1, -14, 0, -2deg);
 }
-.hero-card1,
 .hero-card2 {
-  transform: rotateY(0deg);
+    transform: perspective(17px) rotate3d(1, -14, 0, 2deg);
 }
 .hero-area:hover .hero-card1 {
-  transform: rotateY(-60deg) translateX(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 .hero-area:hover .hero-card2 {
-  transform: rotateY(60deg) translateX(5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 .hero-card1:hover {
-  transform: rotateY(-90deg) translateX(-10px) scale(1.05);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
-.hero-card2:hover {
-  transform: rotateY(90deg) translateX(10px) scale(1.2);
+.hero-card2:hover {   
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
 .hero-card1:not(:hover),
 .hero-card2:not(:hover) {
-  transition: all 0.4s ease-out;
+  transition: all 2s ease-out;
 }
 .hero-card1:hover::before,
 .hero-card2:hover::before {
@@ -795,16 +813,16 @@ p {
   border-radius: inherit;
 }
 .hero-area.mouse-left .hero-card1 {
-  transform: rotateY(-20deg) translateX(-8px);
+  transform: perspective(-20deg) rotate3d(1, -14, 0, -2deg);
 }
 .hero-area.mouse-left .hero-card2 {
-  transform: rotateY(-5deg) translateX(-3px);
+  transform: perspective(-5deg) rotate3d(1, -14, 0, 2deg);
 }
 .hero-area.mouse-right .hero-card1 {
-  transform: rotateY(5deg) translateX(3px);
+  transform: perspective(5deg) rotate3d(1, -14, 0, 2deg);
 }
 .hero-area.mouse-right .hero-card2 {
-  transform: rotateY(20deg) translateX(8px);
+  transform: perspective(20deg) rotate3d(1, -14, 0, -2deg);
 }
 
 /*==========  Hero Section End  ==========*/
@@ -920,27 +938,31 @@ p {
 /*==========  Empower Section End  ==========*/
 /*==========  ECM coin Section Start  ==========*/
 .ecm-area {
-  padding-bottom: 133px;
-  background-color: #010613;
+  padding: 80px 0 133px 0;
+  background-color: rgba(1, 6, 19, 1);
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
-.focus {
-  position: absolute;
 
+.focus-bg {
+  position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  top: 0;
+  pointer-events: none;
+  z-index: 1;
 }
+
 .extra-container2 {
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
   width: 100%;
+  z-index: 2;
 }
+
 .ecm-head-text {
   max-width: 730px;
   text-align: center;
@@ -948,36 +970,59 @@ p {
   width: 100%;
   padding-bottom: 60px;
 }
+
+.ecm-head-text h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  color: #fdfdfd;
+  margin-bottom: 20px;
+}
+
+.ecm-head-text p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fdfdfd99;
+}
+
 .ecm-single-card:nth-child(4n + 3),
 .ecm-single-card:nth-child(4n + 4) {
   transform: translateX(84px);
 }
+
 .ecm-card {
-  border: 1px solid #ffbe3800;
   padding: 40px 40px 70px 40px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 3px;
+  border-radius: 5px;
   height: 100%;
-  /* box-shadow: #ffc700 0px 1px 15px; */
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Removed initial box-shadow */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  border: 2px solid rgba(0, 0, 0, red);
 }
-.ecm-card:hover {
-  box-shadow: #ffc700 0px 1px 15px;
-  transition: 0.3s ease-in-out;
-  border: 1px solid #ffbe38;
-}
+
 .ecm-card h3 {
   font-weight: 500;
   font-size: 36px;
   line-height: 44px;
   color: #fdfdfd;
   padding-bottom: 20px;
+  margin-bottom: 0;
 }
+
 .ecm-card p {
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
   color: #fdfdfd99;
+  margin-bottom: 0;
 }
 /*==========  ECM coin Section End  ==========*/
 /*==========  Holding Section Start  ==========*/
@@ -1482,10 +1527,10 @@ p {
 /*==========  Footer Section End  ==========*/
 .construction-wrapper {
   background: url("../images/bg/construction-bg.png") no-repeat center center / cover;
-  min-height: 100vh;
-  padding-top: 50px;
+  height: auto;
   z-index: -1;
   overflow: hidden;
+  height: 100vh;
 }
 .construction-logo {
   text-align: center;

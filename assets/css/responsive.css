@@ -52,7 +52,7 @@
 
 @media all and (max-width: 767px) {
   .construction-area {
-    padding-top: 50px;
+    padding-top: 20px;
   }
   h1 {
     font-size: 37px;
@@ -75,9 +75,6 @@
     border-radius: 8px;
     padding: 10px;
   }
-  .construction-wrapper {
-    padding-bottom: 50px;
-  }
   .timer-flip-header h3 {
     font-size: 32px;
     padding-bottom: 20px;
@@ -90,16 +87,37 @@
     top: 0;
     left: 20%;
   }
-  .construction-wrapper {
-    height: 100vh;
-    padding-top: 38px;
+  .ecm-single-card:nth-child(4n + 3),
+  .ecm-single-card:nth-child(4n + 4) {
+    transform: translateX(0);
+  }
+
+  .ecm-card {
+    padding: 30px 30px 50px 30px;
+  }
+
+  .ecm-card h3 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .ecm-card p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .ecm-head-text h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .ecm-head-text p {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
 @media all and (max-width: 575px) {
-  .construction-wrapper {
-    padding-bottom: 30px;
-  }
   .timer-flip-header h3 {
     font-size: 24px;
     padding-bottom: 10px;
@@ -113,8 +131,11 @@
   .timer-flip-header h3 {
     line-height: 30px;
   }
-  p{
+  p {
     line-height: 20px;
+  }
+  .construction-wrapper {
+    height: auto;
   }
 }
 
