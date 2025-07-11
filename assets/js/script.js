@@ -64,15 +64,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const maxDistance = rect.width / 2;
     const intensity = Math.min(distance / maxDistance, 1);
     if (mouseX < centerX) {
-      heroCard1.style.transform = `perspective(${-36 * intensity})  rotate3d(${1 * intensity}, ${-14 * intensity}, 0, -2deg)`;
-      heroCard2.style.transform = `perspective(${-36 * intensity}) rotate3d(${-2 * intensity}, ${-14 * intensity}, 0, 2deg)`;
+      heroCard1.style.transform = `perspective(${-36 * intensity})  rotate3d(${1 * intensity}, ${
+        -14 * intensity
+      }, 0, -2deg)`;
+      heroCard2.style.transform = `perspective(${-36 * intensity}) rotate3d(${-2 * intensity}, ${
+        -14 * intensity
+      }, 0, 2deg)`;
     } else {
-      heroCard1.style.transform = `perspective(${35 * intensity}) rotate3d(${2 * intensity},  ${-14 * intensity}, 0, 2deg)`;
-      heroCard2.style.transform = `perspective(${37 * intensity}) rotate3d(${5 * intensity}, ${-14 * intensity}, 0, -2deg)`;
+      heroCard1.style.transform = `perspective(${35 * intensity}) rotate3d(${2 * intensity},  ${
+        -14 * intensity
+      }, 0, 2deg)`;
+      heroCard2.style.transform = `perspective(${37 * intensity}) rotate3d(${5 * intensity}, ${
+        -14 * intensity
+      }, 0, -2deg)`;
     }
-    
-    // transform: perspective(17px) rotate3d(1, -14, 0, -2deg);
 
+    // transform: perspective(17px) rotate3d(1, -14, 0, -2deg);
   });
   heroArea.addEventListener("mouseleave", function () {
     heroArea.classList.remove("mouse-left", "mouse-right");
@@ -202,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
     right: "auto",
     margin: 0,
     top: "auto",
-    duration: 8,
+    duration: 5,
     ease: "power1.out",
     delay: 0.1,
   });
@@ -214,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
     margin: 0,
     top: "auto",
     bottom: 100,
-    duration: 8,
+    duration: 5,
     ease: "power1.out",
     delay: 0.2,
   });
@@ -238,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
     margin: "auto",
     top: "auto",
     bottom: 100,
-    duration: 8,
+    duration: 5,
     ease: "power1.out",
     delay: 0.4,
   });
@@ -250,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
     margin: "auto",
     top: "auto",
     bottom: 200,
-    duration: 6,
+    duration: 5,
     ease: "power2.out",
     delay: 0.5,
   });
@@ -278,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // focus hover color
 // Get the focus background element
 const focusBg = document.querySelector(".focus-bg");
-const ecmArea = document.querySelector(".ecm-area");
+const ecmArea = document.querySelector(".ecm-card-main");
 
 // Add mouse move event listener to the ECM area
 ecmArea.addEventListener("mousemove", function (e) {
@@ -288,10 +295,22 @@ ecmArea.addEventListener("mousemove", function (e) {
   const y = e.clientY - rect.top;
 
   // Apply the radial gradient spotlight effect
-  focusBg.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 190, 56, 0.7), transparent 40%)`;
+  focusBg.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 190, 56, 0.7), transparent 300px)`;
 });
 
 // Optional: Reset the background when mouse leaves the area
 ecmArea.addEventListener("mouseleave", function () {
   focusBg.style.background = "transparent";
+});
+
+window.addEventListener("beforeunload", () => {
+  localStorage.setItem("scrollY", window.scrollY);
+});
+
+window.addEventListener("load", () => {
+  const scrollY = localStorage.getItem("scrollY");
+  if (scrollY) {
+    window.scrollTo(0, scrollY);
+    localStorage.removeItem("scrollY");
+  }
 });

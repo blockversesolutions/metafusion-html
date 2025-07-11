@@ -47,6 +47,19 @@
   .construction-logo a img {
     width: 185px;
   }
+  .nav {
+    width: 100%;
+    top: 93px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    background: gray;
+    padding: 22px 0;
+  }
+  .nav ul {
+    gap: 30px;
+  }
 }
 
 @media all and (max-width: 767px) {
