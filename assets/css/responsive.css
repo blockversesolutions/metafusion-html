@@ -118,6 +118,12 @@
   .construction-logo a img {
     width: 150px;
   }
+  .header-area {
+    padding: 10px 0;
+  }
+  .construction-social {
+    padding-top: 25px;
+  }
 }
 
 @media all and (max-width: 575px) {
