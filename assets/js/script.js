@@ -42,7 +42,7 @@ function initAnimations() {
   window.timelines = [tl2, tl3];
 }
 
-// Hero Card Mouse Position Animation
+// Hero Card Mouse Position Animation (Hover-based)
 document.addEventListener("DOMContentLoaded", function () {
   const heroArea = document.querySelector(".hero-area");
   const heroCard1 = document.querySelector(".hero-card1");
@@ -54,36 +54,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const rect = heroArea.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const mouseX = e.clientX;
-    heroArea.classList.remove("mouse-left", "mouse-right");
-    if (mouseX < centerX) {
-      heroArea.classList.add("mouse-left");
-    } else {
-      heroArea.classList.add("mouse-right");
-    }
+
     const distance = Math.abs(mouseX - centerX);
     const maxDistance = rect.width / 2;
     const intensity = Math.min(distance / maxDistance, 1);
-    if (mouseX < centerX) {
-      heroCard1.style.transform = `perspective(${-36 * intensity})  rotate3d(${1 * intensity}, ${
-        -14 * intensity
-      }, 0, -2deg)`;
-      heroCard2.style.transform = `perspective(${-36 * intensity}) rotate3d(${-2 * intensity}, ${
-        -14 * intensity
-      }, 0, 2deg)`;
-    } else {
-      heroCard1.style.transform = `perspective(${35 * intensity}) rotate3d(${2 * intensity},  ${
-        -14 * intensity
-      }, 0, 2deg)`;
-      heroCard2.style.transform = `perspective(${37 * intensity}) rotate3d(${5 * intensity}, ${
-        -14 * intensity
-      }, 0, -2deg)`;
-    }
 
-    // transform: perspective(17px) rotate3d(1, -14, 0, -2deg);
+    if (mouseX < centerX) {
+      heroCard1.style.transform = `perspective(20px) rotate3d(${1 * intensity}, -14, 0, -2deg)`;
+      heroCard2.style.transform = `perspective(10px) rotate3d(${1 * intensity}, -14, 0, 2deg)`;
+    } else {
+      heroCard1.style.transform = `perspective(10px) rotate3d(${1 * intensity}, -14, 0, 2deg)`;
+      heroCard2.style.transform = `perspective(20px) rotate3d(${1 * intensity}, -14, 0, -2deg)`;
+    }
   });
+
   heroArea.addEventListener("mouseleave", function () {
-    heroArea.classList.remove("mouse-left", "mouse-right");
-    heroCard1.style.transform = "";
+    heroCard1.style.transform = ""; // reset to CSS
     heroCard2.style.transform = "";
   });
 });
@@ -108,23 +94,67 @@ document.addEventListener("mousemove", function (e) {
 
 // Function to create white dots start
 function createDots() {
-  const dotsContainers = document.querySelectorAll(".dotsBackground");
-  const numberOfDots = 70;
+  const dotsContainer = document.querySelector(".dots-background");
+  const numberOfDots = 80;
 
-  dotsContainers.forEach((dotsContainer) => {
-    for (let i = 0; i < numberOfDots; i++) {
-      const dot = document.createElement("div");
-      dot.className = "dot";
-      const size = Math.random() * 3 + 1;
-      dot.style.width = size + "px";
-      dot.style.height = size + "px";
-      dot.style.left = Math.random() * 100 + "%";
-      dot.style.top = Math.random() * 100 + "%";
-      dot.style.animationDelay = Math.random() * 3 + "s";
+  for (let i = 0; i < numberOfDots; i++) {
+    const dot = document.createElement("div");
+    dot.className = "dot";
 
-      dotsContainer.appendChild(dot);
+    // Random size between 1px and 4px
+    const size = Math.random() * 3 + 1;
+    dot.style.width = size + "px";
+    dot.style.height = size + "px";
+
+    // Random position
+    dot.style.left = Math.random() * 100 + "%";
+    dot.style.top = Math.random() * 100 + "%";
+
+    // Random animation delay
+    dot.style.animationDelay = Math.random() * 4 + "s";
+
+    // Add variety to star colors and animations
+    const variation = Math.random();
+    if (variation < 0.1) {
+      dot.classList.add("bright");
+    } else if (variation < 0.2) {
+      dot.classList.add("blue");
     }
-  });
+
+    // Add different twinkling patterns and movement
+    const twinkleType = Math.random();
+    const movementType = Math.random();
+
+    if (twinkleType < 0.2) {
+      dot.classList.add("fast-twinkle");
+      // Add movement to fast twinkling stars
+      if (movementType < 0.5) {
+        dot.classList.add("floating");
+      }
+    } else if (twinkleType < 0.4) {
+      dot.classList.add("slow-twinkle");
+      // Add movement to slow twinkling stars
+      if (movementType < 0.5) {
+        dot.classList.add("drifting");
+      }
+    } else {
+      // Regular twinkling stars with movement
+      if (movementType < 0.3) {
+        dot.classList.add("floating");
+      } else if (movementType < 0.6) {
+        dot.classList.add("drifting");
+      } else if (movementType < 0.8) {
+        dot.classList.add("swaying");
+      }
+    }
+
+    // Add random delays for movement animations
+    if (dot.classList.contains("floating") || dot.classList.contains("drifting") || dot.classList.contains("swaying")) {
+      dot.style.animationDelay = Math.random() * 8 + "s, " + Math.random() * 6 + "s";
+    }
+
+    dotsContainer.appendChild(dot);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -286,19 +316,12 @@ document.addEventListener("DOMContentLoaded", function () {
 // Get the focus background element
 const focusBg = document.querySelector(".focus-bg");
 const ecmArea = document.querySelector(".ecm-card-main");
-
-// Add mouse move event listener to the ECM area
 ecmArea.addEventListener("mousemove", function (e) {
-  // Get the position relative to the ECM area
   const rect = ecmArea.getBoundingClientRect();
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
-
-  // Apply the radial gradient spotlight effect
   focusBg.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 190, 56, 0.7), transparent 300px)`;
 });
-
-// Optional: Reset the background when mouse leaves the area
 ecmArea.addEventListener("mouseleave", function () {
   focusBg.style.background = "transparent";
 });
