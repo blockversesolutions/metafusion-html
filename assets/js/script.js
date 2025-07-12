@@ -15,6 +15,30 @@ $(document).ready(function () {
   initAnimations();
 });
 
+$(document).ready(function () {
+  // Menu toggle
+  $(".mobile-bars").click(function () {
+    const nav = $(".nav");
+
+    if (nav.hasClass("show")) {
+      nav.fadeOut(200).removeClass("show");
+    } else {
+      nav.fadeIn(200).addClass("show");
+    }
+  });
+
+  // Click outside of .nav ul → hide menu
+  $(document).on("click", function (e) {
+    const nav = $(".nav");
+    const target = $(e.target);
+
+    // If menu is open, and click is outside nav ul
+    if (nav.hasClass("show") && !target.closest(".nav ul").length && !target.closest(".mobile-bars").length) {
+      nav.fadeOut(300).removeClass("show");
+    }
+  });
+});
+
 function initAnimations() {
   // Style 2: Word Flow
   const tl2 = gsap.timeline();
@@ -74,12 +98,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-lottie.loadAnimation({
-  container: document.getElementById("lottie-empower"), // the dom element
+const animation = lottie.loadAnimation({
+  container: document.getElementById("lottie-empower"),
   renderer: "svg",
   loop: true,
-  autoplay: true,
+  autoplay: false, // Autoplay off
   path: "./assets/js/empower.json",
+});
+
+// .empower-bg er upor hover korle animation start hobe
+window.addEventListener("scroll", function () {
+  const scrollY = window.scrollY || window.pageYOffset;
+
+  if (scrollY >= 700) {
+    animation.play(); // Empower animation starts
+  }
 });
 
 let focus = document.querySelector(".focus");
@@ -91,70 +124,78 @@ document.addEventListener("mousemove", function (e) {
   focus.style.background =
     "radial-gradient(circle at " + x + "px " + y + "px ,rgba(190, 255, 255, 0.2), transparent 40%)";
 });
-
-// Function to create white dots start
 function createDots() {
-  const dotsContainer = document.querySelector(".dots-background");
+  // Select all containers with either class name
+  const dotsContainers = document.querySelectorAll(".dots-background, .dotsBackground");
   const numberOfDots = 80;
 
-  for (let i = 0; i < numberOfDots; i++) {
-    const dot = document.createElement("div");
-    dot.className = "dot";
+  dotsContainers.forEach((dotsContainer) => {
+    // Clear existing dots to prevent duplicates
+    dotsContainer.innerHTML = "";
 
-    // Random size between 1px and 4px
-    const size = Math.random() * 3 + 1;
-    dot.style.width = size + "px";
-    dot.style.height = size + "px";
+    for (let i = 0; i < numberOfDots; i++) {
+      const dot = document.createElement("div");
+      dot.className = "dot";
 
-    // Random position
-    dot.style.left = Math.random() * 100 + "%";
-    dot.style.top = Math.random() * 100 + "%";
+      // Random size between 1px and 4px
+      const size = Math.random() * 3 + 1;
+      dot.style.width = size + "px";
+      dot.style.height = size + "px";
 
-    // Random animation delay
-    dot.style.animationDelay = Math.random() * 4 + "s";
+      // Random position
+      dot.style.left = Math.random() * 100 + "%";
+      dot.style.top = Math.random() * 100 + "%";
 
-    // Add variety to star colors and animations
-    const variation = Math.random();
-    if (variation < 0.1) {
-      dot.classList.add("bright");
-    } else if (variation < 0.2) {
-      dot.classList.add("blue");
-    }
+      // Random animation delay
+      dot.style.animationDelay = Math.random() * 4 + "s";
 
-    // Add different twinkling patterns and movement
-    const twinkleType = Math.random();
-    const movementType = Math.random();
-
-    if (twinkleType < 0.2) {
-      dot.classList.add("fast-twinkle");
-      // Add movement to fast twinkling stars
-      if (movementType < 0.5) {
-        dot.classList.add("floating");
+      // Add variety to star colors and animations
+      const variation = Math.random();
+      if (variation < 0.1) {
+        dot.classList.add("bright");
+      } else if (variation < 0.2) {
+        dot.classList.add("blue");
       }
-    } else if (twinkleType < 0.4) {
-      dot.classList.add("slow-twinkle");
-      // Add movement to slow twinkling stars
-      if (movementType < 0.5) {
-        dot.classList.add("drifting");
-      }
-    } else {
-      // Regular twinkling stars with movement
-      if (movementType < 0.3) {
-        dot.classList.add("floating");
-      } else if (movementType < 0.6) {
-        dot.classList.add("drifting");
-      } else if (movementType < 0.8) {
-        dot.classList.add("swaying");
-      }
-    }
 
-    // Add random delays for movement animations
-    if (dot.classList.contains("floating") || dot.classList.contains("drifting") || dot.classList.contains("swaying")) {
-      dot.style.animationDelay = Math.random() * 8 + "s, " + Math.random() * 6 + "s";
-    }
+      // Add different twinkling patterns and movement
+      const twinkleType = Math.random();
+      const movementType = Math.random();
 
-    dotsContainer.appendChild(dot);
-  }
+      if (twinkleType < 0.2) {
+        dot.classList.add("fast-twinkle");
+        // Add movement to fast twinkling stars
+        if (movementType < 0.5) {
+          dot.classList.add("floating");
+        }
+      } else if (twinkleType < 0.4) {
+        dot.classList.add("slow-twinkle");
+        // Add movement to slow twinkling stars
+        if (movementType < 0.5) {
+          dot.classList.add("drifting");
+        }
+      } else {
+        // Regular twinkling stars with movement
+        if (movementType < 0.3) {
+          dot.classList.add("floating");
+        } else if (movementType < 0.6) {
+          dot.classList.add("drifting");
+        } else if (movementType < 0.8) {
+          dot.classList.add("swaying");
+        }
+      }
+
+      // Add random delays for movement animations
+      if (
+        dot.classList.contains("floating") ||
+        dot.classList.contains("drifting") ||
+        dot.classList.contains("swaying")
+      ) {
+        dot.style.animationDelay = Math.random() * 8 + "s, " + Math.random() * 6 + "s";
+      }
+
+      dotsContainer.appendChild(dot);
+    }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -337,3 +378,23 @@ window.addEventListener("load", () => {
     localStorage.removeItem("scrollY");
   }
 });
+
+const holdingContent = document.querySelector(".holding-content");
+const ball = document.querySelector(".rotating-ball");
+
+function setAnimationDuration() {
+  const width = holdingContent.clientWidth;
+  const height = holdingContent.clientHeight;
+
+  const perimeter = 2 * (width + height); // Total distance ball will travel
+  const speed = 100; // pixels per second (adjust as you like)
+
+  const duration = perimeter / speed; // seconds
+  ball.style.animationDuration = `${duration}s`;
+}
+
+// Call on load
+setAnimationDuration();
+
+// Call on window resize to adjust dynamically
+window.addEventListener("resize", setAnimationDuration);

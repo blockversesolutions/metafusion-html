@@ -6,6 +6,14 @@
     padding: 0 20px;
   }
 }
+@media all and (min-width: 992px) {
+  .nav {
+    display: block !important;
+  }
+  .nav ul {
+    display: flex !important;
+  }
+}
 @media all and (max-width: 1320px) {
   .construction-wrapper {
     background-position: left;
@@ -17,6 +25,19 @@
   }
   h1 {
     font-size: 55px;
+  }
+  .nav ul {
+    gap: 0 34px;
+  }
+  .hero-card {
+    padding: 18px;
+    border-radius: 3px;
+  }
+  h1 {
+    line-height: 55px;
+  }
+  .footer-content {
+    gap: 0px;
   }
 }
 
@@ -47,18 +68,71 @@
   .construction-logo a img {
     width: 185px;
   }
-  .nav {
-    width: 100%;
-    top: 93px;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    justify-content: center;
-    background: gray;
-    padding: 22px 0;
-  }
   .nav ul {
     gap: 30px;
+  }
+  .logo {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(41, 41, 41, 0.4);
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .nav.show {
+    display: block;
+    opacity: 1;
+  }
+  .extra-container {
+    position: relative;
+  }
+  .hero-card1 {
+    left: 52px;
+  }
+  .hero-card2 {
+    right: 52px;
+  }
+  .hero-btn {
+    padding: 15px 50px;
+    border-radius: 7px;
+  }
+  .hero-btn::before {
+    border-radius: 7px;
+  }
+  .logo img {
+    width: 200px;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer-left-email {
+    padding-top: 15px;
+  }
+  .footer-right-bottom {
+    padding-top: 20px;
+  }
+  .launch-right {
+    padding-left: 0px;
+  }
+  .hero-card1 {
+    top: 60%;
+  }
+  .hero-card2 {
+    top: 60%;
   }
 }
 
@@ -132,10 +206,37 @@
     width: 150px;
   }
   .header-area {
-    padding: 10px 0;
+    padding: 15px 0;
   }
   .construction-social {
     padding-top: 25px;
+  }
+  .hero-area {
+    padding: 120px 0;
+  }
+  .hero-card1 {
+    top: 65%;
+  }
+  .hero-card2 {
+    top: 65%;
+  }
+  .hero-animation {
+    display: none;
+  }
+  .hero-card p {
+    font-size: 31px;
+  }
+  .hero-card {
+    padding: 9px 12px;
+  }
+  .hero-text {
+    line-height: 12px !important;
+  }
+  .hero-text {
+    padding: 12px 0 40px 0;
+  }
+  .empower-area {
+    padding: 79px 0 150px 0;
   }
 }
 
