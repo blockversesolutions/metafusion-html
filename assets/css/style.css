@@ -3,6 +3,7 @@ html {
   /*line-height: 1.5;*/
   /*#6fda44*/
   /*#008329*/
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -90,15 +91,16 @@ p {
 /*==========  Header Section Start  ==========*/
 
 .header-area {
-  width: 100%;
-  background-color: #10131c33;
-  backdrop-filter: blur(20px);
-  padding: 23px 0px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 9;
+	width: 100%;
+	background-color: #10131c33;
+	backdrop-filter: blur(20px);
+	padding: 23px 0px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 9;
+	box-shadow: #ffbe38 0px 2px 10px -2px, #ffbe38 0px 0px 1px -2px;
 }
 .construction-wrapper .header-area {
   position: inherit;
@@ -121,12 +123,20 @@ p {
 .nav a:hover {
   color: #ffc700;
 }
-.nav-a.active {
+.nav ul li a.active {
   color: #ffc700;
 }
 
 .nav ul {
   gap: 0 48px;
+}
+.dropdown-menu.show{
+  background-color: #10131c;
+  border-radius: 8px;
+  box-shadow: #ffbe38 0px 2px 10px -2px, #ffbe38 0px 0px 1px -2px !important;
+}
+.dropdown-item {
+	color: #ffffff;
 }
 
 .btn-1 {
@@ -229,7 +239,7 @@ p {
 .mobile-bars {
   background: none;
   border: none;
-  color: #857d71;
+  color: #ffffff;
   font-size: 20px;
   margin-left: 10px;
 }
@@ -267,7 +277,8 @@ p {
 /*==========  Hero Section Start  ==========*/
 .hero-area {
   padding: 160px 0;
-  position: sticky;
+  position: relative;
+  z-index: 1;
   top: 0;
   background: #010613;
   overflow: hidden;
@@ -901,6 +912,9 @@ p {
   position: relative;
   z-index: 1;
 }
+.empower-head-text h2 {
+	padding-bottom: 25px;
+}
 .empower-top {
   padding-bottom: 360px;
 }
@@ -916,11 +930,12 @@ p {
   transition: all 0.3s ease;
 }
 
+
 .col-xl-3:nth-child(even) .single-empower-card {
-  transform: translateY(-84px);
+  transform: translateY(-85px);
 }
 .col-xl-3:nth-child(odd) .single-empower-card {
-  transform: translateY(84px);
+  transform: translateY(85px);
 }
 .single-empower-card:hover {
   box-shadow: #ffc700 0px 1px 15px;
@@ -1035,7 +1050,7 @@ p {
   transition: all 0.3s ease-in-out;
   position: relative;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   /* Removed initial box-shadow */
   display: flex;
   flex-direction: column;
@@ -1057,6 +1072,26 @@ p {
   line-height: 32px;
   color: #fdfdfd99;
   margin-bottom: 0;
+}
+/*==========  ECM coin Section End  ==========*/
+/*==========  ECM coin Section End  ==========*/
+.unlock-area{
+  padding: 90px 0;
+  background-color: #010613;
+  position: relative;
+  /* background: url('../images/bg/video.png') no-repeat scroll center center / cover; */
+  z-index: 1;
+}
+.unlock-area::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('../images/bg/video.png') no-repeat scroll center center / cover;
+  z-index: -1;
+  opacity: .2;
 }
 /*==========  ECM coin Section End  ==========*/
 /*==========  Holding Section Start  ==========*/
@@ -1126,7 +1161,7 @@ p {
 }
 
 .holding-head-text p {
-  padding: 20px 0 60px 0;
+  padding: 20px 0 30px 0;
   max-width: 687px;
   margin: auto;
 }
@@ -1173,6 +1208,7 @@ p {
 .ecosystem-card-wrapper {
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 .ecosystem-card-bg img {
   width: 260px;
@@ -1347,33 +1383,33 @@ p {
   background: radial-gradient(116.8% 131.22% at 0% -25.63%, rgba(43, 184, 255, 0.48) 0%, rgba(68, 43, 255, 0) 100%)
     /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   position: absolute;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 /* Individual positioning */
 .launch-animation1 {
   top: 0;
-  left: 0;
+  left: 35px;
   animation-name: anim1;
 }
 
 .launch-animation2 {
-  bottom: 0;
-  left: 0;
-  animation-name: anim2;
+    bottom: 122px;
+    left: 45px;
+    animation-name: anim2;
 }
 
 .launch-animation3 {
   top: 0;
-  right: 0;
+  right: 35px;
   animation-name: anim3;
 }
 
 .launch-animation4 {
-  bottom: 0;
-  right: 0;
-  animation-name: anim4;
+    bottom: 87px;
+    right: 35px;
+    animation-name: anim4;
 }
 
 @keyframes anim1 {
@@ -1421,7 +1457,7 @@ p {
   height: auto;
 }
 .launch-animation p {
-  font-size: 22px;
+  font-size: 18px;
   line-height: 24px;
 }
 
@@ -1521,10 +1557,10 @@ p {
 
 .social-links li a:hover {
   background: #ffc700;
-  transform: translateY(-3px);
   border: 1px solid #ffc700;
   box-shadow: 0 5px 15px rgba(255, 199, 0, 0.4);
   color: #010613;
+  overflow: hidden;
 }
 .footer-right-bottom {
   padding-top: 50px;
@@ -1532,7 +1568,7 @@ p {
 .footer-right-bottom p {
   color: #fdfdfd99;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 20px;
 }
 .email-box {
@@ -1605,8 +1641,11 @@ p {
   text-align: center;
   padding: 24px 0 48px 0;
 }
-.copyright-content span {
+.copyright-content a {
   color: #ffc700;
+}
+.copyright-content a:hover{
+  color: #ffc700e5;
 }
 
 /*==========  Footer Section End  ==========*/

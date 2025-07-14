@@ -32,12 +32,12 @@
           </div>
           <div class="nav">
             <ul class="d-flex flex-lg-row flex-column align-items-center gx-4">
-              <li class="fade-in-left nav-item-1"><a class="nav-a active" href="#">Home</a></li>
-              <li class="fade-in-left nav-item-2"><a class="nav-a" href="#">About</a></li>
-              <li class="fade-in-left nav-item-3"><a class="nav-a" href="#">ECM Coin</a></li>
-              <li class="fade-in-left nav-item-4"><a class="nav-a" href="#">Ecosystem</a></li>
+              <li class="fade-in-left nav-item-1"><a class="nav-link active" href="#home">Home</a></li>
+              <li class="fade-in-left nav-item-2"><a class="nav-link" href="#about">About</a></li>
+              <li class="fade-in-left nav-item-3"><a class="nav-link" href="#ecmcoin">ECM Coin</a></li>
+              <li class="fade-in-left nav-item-4"><a class="nav-link" href="#ecosystem">Ecosystem</a></li>
               <li class="fade-in-left nav-item-5 d-block d-lg-none">
-                <a href="#" class="btn-1">Contact Us</a>
+                <a href="#footer" class="btn-1 nav-link">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -64,7 +64,7 @@
         </div>
       </div>
     </header>
-    <section class="hero-area">
+    <section class="hero-area section-link" id="home">
       <div class="toplight">
         <span class="small-shadow"></span>
       </div>
@@ -84,7 +84,7 @@
         <p>20,153</p>
       </div>
       <div class="container">
-        <div class="hero-content">
+        <div class="hero-content " >
           <!-- Hero Title animation start  -->
           <div class="style-2">
             <div class="hero-title reveal-wrapper">
@@ -148,7 +148,7 @@
       </div>
     </section>
     <main>
-      <section class="empower-area">
+      <section class="empower-area section-link" id="about">
         <div class="dots-background dotsBackground"></div>
         <div class="hero-bg">
           <img src="assets/images/bg/hero-bg.png" alt="image" />
@@ -164,7 +164,7 @@
           <div class="empower-content">
             <div class="row empower-top">
               <!-- 1.single item start  -->
-              <div class="col-md-8 col-xl-7">
+              <div class="col-md-5 col-xl-7">
                 <div class="empower-head-text">
                   <h2>Empowering the Future of Blockchain</h2>
                   <p>
@@ -236,7 +236,7 @@
         </div>
       </section>
 
-      <section class="ecm-area">
+      <section class="ecm-area section-link" id="ecmcoin">
         <!-- extra-container2 -->
         <div class="container-fluid">
           <div class="ecm-content">
@@ -296,6 +296,20 @@
           </div>
         </div>
       </section>
+      <section class="unlock-area" >
+        <div class="container">
+          <div class="unlock-content">
+            <div class="ecosystem-head-text">
+              <h2>Unlock the Full Potential of ECM</h2>
+              <p>
+                ECM isn’t just a token — it’s your gateway to a powerful blockchain-driven universe. Whether you're a
+                long-term investor or a daily user, holding ECM grants you access to exclusive benefits that grow in
+                value over time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="holding-area">
         <div class="container">
           <div class="holding-content">
@@ -311,7 +325,7 @@
           </div>
         </div>
       </section>
-      <section class="ecosystem-area">
+      <section class="ecosystem-area section-link" id="ecosystem">
         <div class="dots-background dotsBackground"></div>
         <div class="container">
           <div class="ecosystem-content">
@@ -511,7 +525,7 @@
         <div class="container">
           <div class="blockchain-content">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-4 col-xl-6">
                 <div class="blockchain-head-text">
                   <h2>Why ECM Blockchain?</h2>
                   <p>
@@ -523,7 +537,7 @@
             </div>
           </div>
           <div class="blockchain-cards">
-            <div class="row g-3">
+            <div class="row g-4">
               <!-- 1.signle blockchain card start -->
               <div class="col-sm-6 col-xl-3">
                 <div class="single-blockchain-card">
@@ -638,7 +652,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer-area">
+    <footer class="footer-area section-link" id="footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-left">
@@ -742,7 +756,7 @@
           <div>
             <p class="copyright-content">
               Copyright © 2025 by
-              <span>MetaFusionLabs</span>
+              <a href="#">MetaFusionLabs</a>
             </p>
           </div>
         </div>
@@ -764,5 +778,26 @@
     ></script>
 
     <script src="./assets/js/script.js"></script>
+    <script>
+      const sections = document.querySelectorAll(".section-link");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+    </script>
   </body>
 </html>

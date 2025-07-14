@@ -34,6 +34,14 @@
     font-size: 22px;
     line-height: 29px;
   }
+  #lottie-empower {
+    height: 1252px;
+    bottom: 25px;
+    left: -15px;
+  }
+  .col-xl-3:nth-child(even) .single-empower-card {
+    transform: translateY(-52px);
+  }
 }
 @media all and (max-width: 1400px) {
   .single-empower-card h3 {
@@ -47,16 +55,37 @@
     font-size: 20px;
     line-height: 28px;
   }
-  #lottie-empower {
-    height: 1258px;
-    bottom: 0px;
-    left: 34px;
-    width: 92%;
-  }
+
   .single-empower-card {
     padding: 20px 20px;
   }
+  .single-ecosystem-card {
+    padding: 40px 25px;
+  }
 }
+@media all and (max-width: 1370px) {
+  #lottie-empower {
+    height: 1252px;
+    bottom: 3px;
+    left: 109px;
+    width: 82%;
+  }
+  .col-xl-3:nth-child(2n) .single-empower-card {
+    transform: translateY(-84px);
+  }
+}
+@media all and (max-width: 1350px) {
+  #lottie-empower {
+    height: 1258px;
+    bottom: -3px;
+    left: 93px;
+    width: 84%;
+  }
+  .col-xl-3:nth-child(2n) .single-empower-card {
+    transform: translateY(-81px);
+  }
+}
+
 @media all and (max-width: 1320px) {
   .construction-wrapper {
     background-position: left;
@@ -66,6 +95,43 @@
   }
   .hero-card2 {
     top: 57%;
+  }
+  .social-links li a {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+  .social-links {
+    gap: 6px;
+  }
+  .col-xl-3:nth-child(2n) .single-empower-card {
+    transform: translateY(-86px);
+  }
+  #lottie-empower {
+    height: 1258px;
+    bottom: 1px;
+    left: 60px;
+    width: 88%;
+  }
+}
+@media all and (max-width: 1310px) {
+  #lottie-empower {
+    height: 1258px;
+    bottom: -3px;
+    left: 84px;
+    width: 85%;
+  }
+}
+@media all and (max-width: 1250px) {
+  #lottie-empower {
+    height: 1258px;
+    bottom: 6px;
+    left: 47px;
+    width: 90%;
+  }
+
+  .col-xl-3:nth-child(even) .single-empower-card {
+    transform: translateY(-75px);
   }
 }
 @media all and (max-width: 1199px) {
@@ -86,7 +152,10 @@
     line-height: 55px;
   }
   .footer-content {
-    gap: 0px;
+    gap: 25px;
+  }
+  .footer-left-contact h3 {
+    font-size: 30px;
   }
   .holding-content {
     transform: translateY(70px);
@@ -117,6 +186,12 @@
   }
   .launch-animation {
     padding: 15px;
+  }
+  .launch-animation {
+    width: 115px;
+  }
+  .launch-animation img {
+    width: 43px;
   }
 }
 
@@ -164,17 +239,21 @@
     position: absolute;
     top: 60px;
     left: 0;
-    background: rgba(41, 41, 41, 0.4);
     width: 100%;
+    background-color: #10131c;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: #ffbe38 0px 2px 9px;
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17px);
     display: none;
     opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    backdrop-filter: blur(20px);
     transition: opacity 0.5s ease;
+    opacity: 0;
   }
-
   .nav.show {
     display: block;
     opacity: 1;
@@ -424,6 +503,9 @@
   .footer-content {
     padding-bottom: 30px;
   }
+  .empower-head-text h2 {
+    padding-bottom: 20px;
+  }
 }
 
 @media all and (max-width: 575px) {
@@ -484,11 +566,11 @@
     border-radius: 7px;
   }
   .hero-card1 {
-    top: 61%;
+    top: 71%;
     left: 31px;
   }
   .hero-card2 {
-    top: 61%;
+    top: 71%;
     right: 31px;
   }
   .holding-content {
@@ -498,7 +580,7 @@
     padding: 30px 0 50px 0;
   }
   h2 {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 140%;
   }
   .holding-head-text p {
@@ -525,7 +607,7 @@
     line-height: 24px;
   }
   .blockchain-card-desc {
-    padding-top: 10px;
+    padding-top: 22px;
   }
   .blockchain-card-icon > h3 {
     font-size: 18px;
@@ -552,7 +634,8 @@
   }
   .footer-right-bottom p {
     text-align: justify;
-    font-size: 10px;
+    font-size: 8px;
+    line-height: 12px;
   }
   .footer-content {
     padding-bottom: 20px;
@@ -565,7 +648,7 @@
   .footer-links li a {
     font-size: 14px;
     line-height: 20px;
-    padding: 5px 0;
+    padding: 3px 0;
   }
   .footer-left-contact h3 {
     font-size: 22px;
@@ -584,6 +667,12 @@
   }
   .single-empower-card h3 {
     padding: 10px 0 10px 0;
+  }
+  .empower-head-text h2 {
+    padding-bottom: 15px;
+  }
+  .logo img {
+    width: 170px;
   }
 }
 
