@@ -14,9 +14,58 @@
     display: flex !important;
   }
 }
+@media all and (max-width: 1500px) {
+  .single-empower-card h3 {
+    padding: 20px 0 15px 0;
+  }
+  .empower-icon {
+    width: 74px;
+    height: auto;
+  }
+  .ecm-card {
+    padding: 30px 30px 30px 30px;
+  }
+  .ecm-card h3 {
+    font-size: 31px;
+    line-height: 32px;
+    padding-bottom: 15px;
+  }
+  .ecm-card p {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+@media all and (max-width: 1400px) {
+  .single-empower-card h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+    padding: 14px 0 11px 0;
+  }
+  .ecm-card p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  #lottie-empower {
+    height: 1258px;
+    bottom: 0px;
+    left: 34px;
+    width: 92%;
+  }
+  .single-empower-card {
+    padding: 20px 20px;
+  }
+}
 @media all and (max-width: 1320px) {
   .construction-wrapper {
     background-position: left;
+  }
+  .hero-card1 {
+    top: 57%;
+  }
+  .hero-card2 {
+    top: 57%;
   }
 }
 @media all and (max-width: 1199px) {
@@ -38,6 +87,36 @@
   }
   .footer-content {
     gap: 0px;
+  }
+  .holding-content {
+    transform: translateY(70px);
+  }
+  #lottie-empower {
+    height: 1258px;
+    bottom: 254px;
+    left: 34px;
+    width: 92%;
+  }
+  .empower-area {
+    padding: 300px 0 145px 0;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .launch-animation img {
+    width: 54px;
+  }
+  .launch-animation p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .launch-animation {
+    padding: 15px;
   }
 }
 
@@ -76,6 +155,10 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
+  }
+  .construction-logo {
+    display: flex;
+    justify-content: center !important;
   }
   .nav {
     position: absolute;
@@ -134,6 +217,61 @@
   .hero-card2 {
     top: 60%;
   }
+  .ecm-area {
+    padding: 80px 0 100px 0px 0;
+  }
+  .holding-content {
+    transform: translateY(60px);
+  }
+  .single-ecosystem-card {
+    padding: 30px 20px;
+    border-radius: 6px;
+  }
+  .single-ecosystem-card::before {
+    border-radius: 7px;
+  }
+  .single-ecosystem-card img {
+    width: 81px;
+    height: auto;
+  }
+  .ecosystem-card-desc {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 11px 0;
+  }
+  .ecosystem-btn-wrapper .hero-btn {
+    padding: 9px 44px;
+    border-radius: 2px;
+  }
+  .ecosystem-btn-wrapper .hero-btn::before {
+    border-radius: 4px;
+  }
+  .blockchain-video video {
+    height: 57%;
+  }
+  .blockchain-area {
+    padding: 143px 0 187px 0;
+  }
+  .holding-head-text p {
+    padding: 17px 0 20px 0;
+  }
+  p {
+    line-height: 26px;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .launch-left {
+    max-width: 496px;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .empower-area {
+    padding: 121px 0 145px 0;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -169,10 +307,6 @@
     border-top: 297px solid #2a87ff3b;
     top: 0;
     left: 20%;
-  }
-  .ecm-single-card:nth-child(4n + 3),
-  .ecm-single-card:nth-child(4n + 4) {
-    transform: translateX(0);
   }
 
   .ecm-card {
@@ -238,6 +372,58 @@
   .empower-area {
     padding: 79px 0 150px 0;
   }
+  .ecm-area {
+    padding: 80px 0 70px 0;
+  }
+  .holding-content {
+    transform: translateY(40px);
+  }
+  .col-xl-3:nth-child(2n + 1) .single-empower-card {
+    transform: translateY(0px);
+  }
+  .col-xl-3:nth-child(2n) .single-empower-card {
+    transform: translateY(0px);
+  }
+  .empower-top {
+    padding-bottom: 172px;
+  }
+  #lottie-empower {
+    display: none;
+  }
+  .empower-area {
+    padding: 79px 0 44px 0;
+  }
+  .ecm-area {
+    padding: 40px 0 70px 0;
+  }
+  .ecm-head-text {
+    padding-bottom: 27px;
+  }
+  .empower-icon {
+    width: 58px;
+  }
+  .launch-animation img {
+    width: 35px;
+  }
+  .launch-animation {
+    padding: 10px;
+    width: 84px;
+    gap: 10px;
+    border-radius: 6px;
+  }
+  .launch-animation p {
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .launch-right p {
+    padding-top: 10px;
+  }
+  .launch-right a {
+    margin-top: 40px;
+  }
+  .footer-content {
+    padding-bottom: 30px;
+  }
 }
 
 @media all and (max-width: 575px) {
@@ -257,6 +443,10 @@
   }
   .construction-description {
     gap: 2px;
+  }
+  .ecm-head-text h2 {
+    font-size: 22px;
+    line-height: 22px;
   }
   .construction-area {
     padding-top: 10px;
@@ -289,7 +479,117 @@
   .construction-logo a img {
     width: 135px;
   }
+  .hero-btn {
+    padding: 12px 34px;
+    border-radius: 7px;
+  }
+  .hero-card1 {
+    top: 61%;
+    left: 31px;
+  }
+  .hero-card2 {
+    top: 61%;
+    right: 31px;
+  }
+  .holding-content {
+    transform: translateY(24px);
+  }
+  .ecm-area {
+    padding: 30px 0 50px 0;
+  }
+  h2 {
+    font-size: 22px;
+    line-height: 140%;
+  }
+  .holding-head-text p {
+    padding: 12px 0 20px 0;
+  }
+  .ecm-card h3 {
+    font-size: 20px;
+    line-height: 27px;
+    padding-bottom: 8px;
+  }
+  .ecm-card p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .empower-top {
+    padding-bottom: 50px;
+  }
+  .ecm-card {
+    padding: 20px;
+    text-align: center;
+  }
+  .blockchain-card-desc p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .blockchain-card-desc {
+    padding-top: 10px;
+  }
+  .blockchain-card-icon > h3 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .blockchain-video video {
+    height: 25%;
+    width: 150%;
+    top: 163px;
+    left: -156px;
+    z-index: -1;
+  }
+  .blockchain-area {
+    padding: 53px 0 90px 0;
+  }
+  .btn-1 {
+    padding: 10px 26px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .launch-right a {
+    margin-top: 26px;
+  }
+  .footer-right-bottom p {
+    text-align: justify;
+    font-size: 10px;
+  }
+  .footer-content {
+    padding-bottom: 20px;
+  }
+  .copyright-content {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 15px 0 15px 0;
+  }
+  .footer-links li a {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 0;
+  }
+  .footer-left-contact h3 {
+    font-size: 22px;
+    line-height: 31px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+  }
+  .launch-area {
+    padding-bottom: 61px;
+  }
+  .ecosystem-area {
+    padding-top: 73px;
+  }
+  .empower-icon {
+    width: 50px;
+  }
+  .single-empower-card h3 {
+    padding: 10px 0 10px 0;
+  }
 }
 
 @media all and (max-width: 450px) {
+  h1 {
+    font-size: 29px;
+    line-height: 31px;
+  }
 }
