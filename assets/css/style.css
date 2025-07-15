@@ -198,6 +198,20 @@ p {
 .dropdown-item-animate {
   animation-delay: 0.7s;
 }
+.dropdown-item:focus, .dropdown-item:hover {
+		background-color: transparent;
+	border-radius: 4px;
+	color: #ffffff;
+}
+.dropdown-item.active, .dropdown-item:active {
+	background-color: #ffbe38;
+	border-radius: 4px;
+	color: #1c1c1e;
+}
+.dropdown-menu.show {
+	padding: 7px 7px;
+}
+
 
 @keyframes fadeInLeft {
   0% {
@@ -502,16 +516,19 @@ p {
 }
 
 /* start animation code  */
-
 .hero-animation-1 img {
   width: 260px;
   height: auto;
   position: absolute;
   left: 142px;
   z-index: -1;
-  animation: iconAnim1 12s ease-in-out 6s infinite;
+  animation: iconAnim1 12s ease-in-out 0.5s infinite;
+  /* Remove animation-fill-mode: both */
   opacity: 0.5;
+  /* Set initial transform state to match 0% keyframe */
+  transform: translateY(40px) translateX(0px) rotate(0deg);
 }
+
 @keyframes iconAnim1 {
   0% {
     transform: translateY(40px) translateX(0px) rotate(0deg);
@@ -542,9 +559,12 @@ p {
   left: 257px;
   bottom: 100px;
   z-index: -1;
-  animation: iconAnim2 14s ease-in-out 6.3s infinite;
+  animation: iconAnim2 14s ease-in-out 0.3s infinite;
   opacity: 0.5;
+  /* Set initial transform state to match 0% keyframe */
+  transform: translateY(30px) translateX(-5px) rotate(0deg);
 }
+
 @keyframes iconAnim2 {
   0% {
     transform: translateY(30px) translateX(-5px) rotate(0deg);
@@ -581,9 +601,12 @@ p {
   margin: auto;
   bottom: 110px;
   z-index: -1;
-  animation: iconAnim3 15s ease-in-out 6.7s infinite;
+  animation: iconAnim3 15s ease-in-out 0.7s infinite;
   opacity: 0.5;
+  /* Set initial transform state to match 0% keyframe */
+  transform: translateY(50px) translateX(0px) rotate(0deg);
 }
+
 @keyframes iconAnim3 {
   0% {
     transform: translateY(50px) translateX(0px) rotate(0deg);
@@ -620,9 +643,12 @@ p {
   right: -444px;
   bottom: 100px;
   z-index: -1;
-  animation: iconAnim4 13s ease-in-out 6.1s infinite;
+  animation: iconAnim4 13s ease-in-out 0.5s infinite;
   opacity: 0.5;
+  /* Set initial transform state to match 0% keyframe */
+  transform: translateY(35px) translateX(10px) rotate(0deg);
 }
+
 @keyframes iconAnim4 {
   0% {
     transform: translateY(35px) translateX(10px) rotate(0deg);
@@ -654,9 +680,12 @@ p {
   left: 717px;
   margin: auto;
   bottom: 200px;
-  animation: iconAnim5 16s ease-in-out 6.5s infinite;
+  animation: iconAnim5 16s ease-in-out 0.5s infinite;
   opacity: 0.5;
+  /* Set initial transform state to match 0% keyframe */
+  transform: translateY(45px) translateX(-8px) rotate(0deg);
 }
+
 @keyframes iconAnim5 {
   0% {
     transform: translateY(45px) translateX(-8px) rotate(0deg);
@@ -691,9 +720,12 @@ p {
   right: 230px;
   bottom: 84px;
   z-index: -1;
-  animation: iconAnim6 11s ease-in-out 6.9s infinite;
+  animation: iconAnim6 11s ease-in-out 0.9s infinite;
   opacity: 0.5;
+  /* Set initial transform state to match 0% keyframe */
+  transform: translateY(28px) translateX(5px) rotate(0deg);
 }
+
 @keyframes iconAnim6 {
   0% {
     transform: translateY(28px) translateX(5px) rotate(0deg);
@@ -727,6 +759,7 @@ p {
   z-index: -1 !important;
   position: absolute;
 }
+
 .hero-animation-8 img {
   width: 177px;
   height: auto;
@@ -734,9 +767,12 @@ p {
   right: 387px;
   bottom: 204px;
   z-index: -1;
-  animation: iconAnim8 11s ease-in-out 6.9s infinite;
+  animation: iconAnim8 11s ease-in-out 0.9s infinite;
   opacity: 0.5;
+  /* Set initial transform state to match 0% keyframe */
+  transform: translateY(28px) translateX(5px) rotate(0deg);
 }
+
 @keyframes iconAnim8 {
   0% {
     transform: translateY(28px) translateX(5px) rotate(0deg);
@@ -763,7 +799,6 @@ p {
     opacity: 0.5;
   }
 }
-
 /* Style 2: Word Flow */
 .style-3 .word-wrapper,
 .style-2 .word-wrapper {
@@ -1006,6 +1041,8 @@ p {
   top: 0;
   pointer-events: none;
   z-index: 1;
+  transition: opacity 0.4s ease; 
+  pointer-events: none;
 }
 
 .extra-container2 {
@@ -1067,8 +1104,8 @@ p {
 
 .ecm-card p {
   font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 26px;
   color: #fdfdfd99;
   margin-bottom: 0;
 }

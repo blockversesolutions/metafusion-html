@@ -651,7 +651,7 @@
     padding: 3px 0;
   }
   .footer-left-contact h3 {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 31px;
     padding-bottom: 20px;
     margin-top: 10px;
@@ -674,11 +674,20 @@
   .logo img {
     width: 170px;
   }
+  .hero-bg img {
+    top: -315px;
+  }
+  .empower-area {
+    padding: 4px 0 44px 0;
+  }
 }
 
 @media all and (max-width: 450px) {
   h1 {
     font-size: 29px;
     line-height: 31px;
+  }
+  .footer-left-contact h3 {
+    font-size: 18px;
   }
 }

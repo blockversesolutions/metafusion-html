@@ -214,26 +214,210 @@ function copyEmail(box) {
 }
 
 // Function to copy email address End
+// GSAP Animation for Hero Icons - Top to CSS position, then keyframes
+document.addEventListener("DOMContentLoaded", function () {
+  // Set initial state - elements start from top center
+  gsap.set(".hero-animation-1 img", {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: "auto",
+    top: -100, // Start from above viewport
+  });
+
+  gsap.set(".hero-animation-2 img", {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: "auto",
+    top: -100,
+  });
+
+  gsap.set(".hero-animation-3 img", {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: "auto",
+    top: -100,
+  });
+
+  gsap.set(".hero-animation-4 img", {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: "auto",
+    top: -100,
+  });
+
+  gsap.set(".hero-animation-5 img", {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: "auto",
+    top: -100,
+  });
+
+  gsap.set(".hero-animation-6 img", {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: "auto",
+    top: -100,
+  });
+
+  gsap.set(".hero-animation-7 img", {
+    opacity: 0,
+    left: 0,
+    right: 0,
+    margin: "auto",
+    top: -100,
+  });
+
+  // Animate to exact CSS positions with keyframe starting transforms
+  gsap.to(".hero-animation-1 img", {
+    opacity: 0.5, // Match CSS keyframe 0% opacity
+    left: 142,
+    right: "auto",
+    margin: 0,
+    top: "auto",
+    // Apply the starting transform from CSS keyframe 0%
+    y: 40,  // translateY(40px) from iconAnim1 0%
+    x: 0,   // translateX(0px) from iconAnim1 0%
+    rotation: 0, // rotate(0deg) from iconAnim1 0%
+    duration: 5,
+    ease: "power1.out",
+    delay: 0.1,
+  });
+
+  gsap.to(".hero-animation-2 img", {
+    opacity: 0.5, // Match CSS keyframe 0% opacity
+    left: 257,
+    right: "auto",
+    margin: 0,
+    top: "auto",
+    bottom: 100,
+    // Apply the starting transform from CSS keyframe 0%
+    y: 30,  // translateY(30px) from iconAnim2 0%
+    x: -5,  // translateX(-5px) from iconAnim2 0%
+    rotation: 0, // rotate(0deg) from iconAnim2 0%
+    duration: 5,
+    ease: "power1.out",
+    delay: 0.2,
+  });
+
+  gsap.to(".hero-animation-3 img", {
+    opacity: 0.5, // Match CSS keyframe 0% opacity
+    left: -361,
+    right: 0,
+    margin: "auto",
+    top: "auto",
+    bottom: 110,
+    // Apply the starting transform from CSS keyframe 0%
+    y: 50,  // translateY(50px) from iconAnim3 0%
+    x: 0,   // translateX(0px) from iconAnim3 0%
+    rotation: 0, // rotate(0deg) from iconAnim3 0%
+    duration: 6,
+    ease: "power1.out",
+    delay: 0.3,
+  });
+
+  gsap.to(".hero-animation-4 img", {
+    opacity: 0.5, // Match CSS keyframe 0% opacity
+    left: 0,
+    right: -444,
+    margin: "auto",
+    top: "auto",
+    bottom: 100,
+    // Apply the starting transform from CSS keyframe 0%
+    y: 35,  // translateY(35px) from iconAnim4 0%
+    x: 10,  // translateX(10px) from iconAnim4 0%
+    rotation: 0, // rotate(0deg) from iconAnim4 0%
+    duration: 5,
+    ease: "power1.out",
+    delay: 0.4,
+  });
+
+  gsap.to(".hero-animation-5 img", {
+    opacity: 0.5, // Match CSS keyframe 0% opacity
+    left: 717,
+    right: 0,
+    margin: "auto",
+    top: "auto",
+    bottom: 200,
+    // Apply the starting transform from CSS keyframe 0%
+    y: 45,  // translateY(45px) from iconAnim5 0%
+    x: -8,  // translateX(-8px) from iconAnim5 0%
+    rotation: 0, // rotate(0deg) from iconAnim5 0%
+    duration: 5,
+    ease: "power2.out",
+    delay: 0.5,
+  });
+
+  gsap.to(".hero-animation-6 img", {
+    opacity: 0.5, // Match CSS keyframe 0% opacity
+    left: "auto",
+    right: 230,
+    margin: 0,
+    top: "auto",
+    bottom: 84,
+    // Apply the starting transform from CSS keyframe 0%
+    y: 28,  // translateY(28px) from iconAnim6 0%
+    x: 5,   // translateX(5px) from iconAnim6 0%
+    rotation: 0, // rotate(0deg) from iconAnim6 0%
+    duration: 5,
+    ease: "power2.out",
+    delay: 0.6,
+  });
+
+  gsap.to(".hero-animation-7 img", {
+    opacity: 1,
+    left: 0,
+    right: 0,
+    margin: "auto",
+    top: "auto",
+    // Add your hero-animation-7 CSS position and keyframe starting transform here
+    duration: 1,
+    ease: "power2.out",
+    delay: 0.7,
+  });
+});
+
+// Optional: If you want to ensure CSS animations start after GSAP completes
+// You can temporarily disable CSS animations and re-enable them:
+/*
+// Add this CSS to temporarily disable keyframe animations
+const style = document.createElement('style');
+style.textContent = `
+  .hero-animation-1 img,
+  .hero-animation-2 img,
+  .hero-animation-3 img,
+  .hero-animation-4 img,
+  .hero-animation-5 img,
+  .hero-animation-6 img {
+    animation-play-state: paused !important;
+  }
+`;
+document.head.appendChild(style);
+
+// Re-enable animations after GSAP completes (adjust timing as needed)
+setTimeout(() => {
+  style.remove();
+}, 7000); // Adjust based on your longest GSAP animation duration + delay
+*/
 
 // focus hover color
-
-
-  const focusBg = document.querySelector(".focus-bg");
-  const ecmArea = document.querySelector(".ecm-card-main");
-
-  ecmArea.addEventListener("mousemove", function (e) {
-    const rect = ecmArea.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    focusBg.style.opacity = "1";
-    focusBg.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 190, 56, 0.7), transparent 300px)`;
-  });
-
-  ecmArea.addEventListener("mouseleave", function () {
-    focusBg.style.opacity = "0";
-  });
-
+// Get the focus background element
+const focusBg = document.querySelector(".focus-bg");
+const ecmArea = document.querySelector(".ecm-card-main");
+ecmArea.addEventListener("mousemove", function (e) {
+  const rect = ecmArea.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  focusBg.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 190, 56, 0.7), transparent 300px)`;
+});
+ecmArea.addEventListener("mouseleave", function () {
+  focusBg.style.background = "transparent";
+});
 
 window.addEventListener("beforeunload", () => {
   localStorage.setItem("scrollY", window.scrollY);
@@ -266,15 +450,3 @@ setAnimationDuration();
 
 // Call on window resize to adjust dynamically
 window.addEventListener("resize", setAnimationDuration);
-
-
-// Dropdown menu active section code Start
-document.querySelectorAll(".dropdown-item").forEach((item) => {
-  item.addEventListener("click", function () {
-    document.querySelectorAll(".dropdown-item").forEach((el) =>
-      el.classList.remove("active")
-    );
-    this.classList.add("active");
-  });
-}); 
-// Dropdown menu active section code End 
