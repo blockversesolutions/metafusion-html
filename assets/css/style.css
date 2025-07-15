@@ -1193,10 +1193,11 @@ p {
   list-style-position: inside;
 }
 .unlock-card.unlock-card3 {
-  background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  padding: 0;
+    background: transparent;
+    padding: 0;
+    background: linear-gradient(197.48deg, rgba(36, 36, 49, 0.2) -6.67%, rgba(67, 67, 105, 0.2) 54.9%, rgba(36, 36, 49, 0) 116.47%);
+    padding: 20px;
+    border: 2px solid #8080805c;
 }
 .unlock-card.unlock-card3::before {
   background: transparent;
@@ -1208,7 +1209,7 @@ p {
   padding-top: 20px;
 }
 .unlock-card-sub .hero-btn {
-  width: 100%;
+  width: 80%;
 }
 .unlock-card-sub .hero-btn {
   background: linear-gradient(145deg, #24243100 0%, #434369d6 87%, #242431 100%);
@@ -1219,7 +1220,7 @@ p {
   border-radius: 10px;
 }
 .unlock-card.unlock-card2 {
-  transform: translateY(258px);
+    transform: translateY(308px);
 }
 .unlock-btn1:hover {
   background: linear-gradient(145deg, #221a05 0%, #684c04 100%) !important;
@@ -1238,15 +1239,76 @@ p {
 }
 
 /* lottifile */
-#lottie-unlock {
-    width: 91%;
-    height: 95%;
-    position: absolute;
-    top: 4px;
-    left: 75px;
-    z-index: 0;
+.hold-animation {
+    position: relative;
+    overflow: hidden;
+}
+.glow-path {
+  stroke: #ffcc00;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 6px #ffcc00);
 }
 
+.moving-dot {
+  fill: #ffcc00;
+  filter: drop-shadow(0 0 10px #ffcc00) drop-shadow(0 0 20px #ffcc00);
+}
+.vector-animation1 svg path {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.vector-animation1 svg {
+  position: absolute;
+  bottom: 0;
+  left: 36px;
+  height: 500px;
+  width: 434px;
+}
+
+.glow-path2 {
+  stroke: #ffcc00;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 6px #ffcc00);
+}
+
+.moving-dot2 {
+  fill: #ffcc00;
+  filter: drop-shadow(0 0 10px #ffcc00) drop-shadow(0 0 20px #ffcc00);
+}
+.vector-animation2 svg {
+    left: 0;
+    right: 166px;
+    margin: auto;
+    top: -149px;
+    position: absolute;
+    width: 446px;
+    height: 416px;
+}
+
+.glow-path3 {
+      stroke: #ffcc00;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      filter: drop-shadow(0 0 6px #ffcc00);
+    }
+
+    .moving-dot3 {
+      fill: #ffcc00;
+      filter: drop-shadow(0 0 10px #ffcc00) drop-shadow(0 0 20px #ffcc00);
+    }
+    .vector-animation3 svg {
+    position: absolute;
+    left: 0;
+    right: -325px;
+    margin: auto;
+    top: 145px;
+}
 /*==========  ECM coin Section End  ==========*/
 /*==========  Holding Section Start  ==========*/
 .holding-area {
