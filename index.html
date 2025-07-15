@@ -7,7 +7,12 @@
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap CSS  -->
-    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -84,7 +89,7 @@
         <p>20,153</p>
       </div>
       <div class="container">
-        <div class="hero-content " >
+        <div class="hero-content">
           <!-- Hero Title animation start  -->
           <div class="style-2">
             <div class="hero-title reveal-wrapper">
@@ -296,7 +301,7 @@
           </div>
         </div>
       </section>
-      <section class="unlock-area" >
+      <section class="unlock-area">
         <div class="container">
           <div class="unlock-content">
             <div class="ecosystem-head-text">
@@ -306,6 +311,61 @@
                 long-term investor or a daily user, holding ECM grants you access to exclusive benefits that grow in
                 value over time.
               </p>
+              <div class="unlock-btn-wrapper">
+                <a href="#" class="hero-btn">
+                  <div class="light-particle"></div>
+                  <div class="light-particle"></div>
+                  <div class="light-particle"></div>
+                  <span>Hold ECM, Unlock Utility</span>
+                </a>
+              </div>
+            </div>
+            <div class="unlock-card-main">
+              <!-- 1. single card start  -->
+              <div class="unlock-card">
+                <div class="unlock-card-title">
+                  <h3>Grow with ECM</h3>
+                </div>
+                <div class="unlock-card-text">
+                  <ul>
+                    <li>Benefit from long-term value growth</li>
+                    <li>Backed by real-world use and adoption</li>
+                    <li>Strong demand across integrated platforms</li>
+                    <li>Designed for ecosystem-wide scalability</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 1. single card End  -->
+              <!-- 2. single card start  -->
+              <div class="unlock-card">
+                <div class="unlock-card-title">
+                  <h3>Access Perks</h3>
+                </div>
+                <div class="unlock-card-text">
+                  <ul>
+                    <li>Earn rewards through staking</li>
+                    <li>Get airdrops and early pre-sale entry</li>
+                    <li>Unlock premium features across platforms</li>
+                    <li>Access exclusive content and events</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 2. single card End  -->
+              <!-- 3. single card start  -->
+              <div class="unlock-card">
+                <div class="unlock-card-title">
+                  <h3>Access Perks</h3>
+                </div>
+                <div class="unlock-card-text">
+                  <ul>
+                    <li>Earn rewards through staking</li>
+                    <li>Get airdrops and early pre-sale entry</li>
+                    <li>Unlock premium features across platforms</li>
+                    <li>Access exclusive content and events</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 3. single card End  -->
             </div>
           </div>
         </div>
@@ -337,7 +397,7 @@
               </p>
             </div>
             <div class="ecosystem-cards">
-              <div class="row g-4 justify-content-center">
+              <div class="row gx-5 gy-5 justify-content-center">
                 <!-- 1. single ecosystem card start  -->
                 <div class="col-sm-6 col-md-4 col-xl-3">
                   <div class="ecosystem-card-wrapper">
@@ -767,12 +827,12 @@
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
     <script
-      src="./assets/js/popper.min.js"
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
     ></script>
     <script
-      src="./assets/js/bootstrap.min.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
       integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
       crossorigin="anonymous"
     ></script>
@@ -780,24 +840,24 @@
     <script src="./assets/js/script.js"></script>
     <script>
       const sections = document.querySelectorAll(".section-link");
-    const navLinks = document.querySelectorAll(".nav-link");
+      const navLinks = document.querySelectorAll(".nav-link");
 
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-      });
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
 
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-          link.classList.add("active");
-        }
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+        });
       });
-    });
     </script>
   </body>
 </html>

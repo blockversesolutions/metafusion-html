@@ -91,16 +91,16 @@ p {
 /*==========  Header Section Start  ==========*/
 
 .header-area {
-	width: 100%;
-	background-color: #10131c33;
-	backdrop-filter: blur(20px);
-	padding: 23px 0px;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	z-index: 9;
-	box-shadow: #ffbe38 0px 2px 10px -2px, #ffbe38 0px 0px 1px -2px;
+  width: 100%;
+  background-color: #10131c33;
+  backdrop-filter: blur(20px);
+  padding: 23px 0px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  box-shadow: #ffbe38 0px 2px 10px -2px, #ffbe38 0px 0px 1px -2px;
 }
 .construction-wrapper .header-area {
   position: inherit;
@@ -130,13 +130,13 @@ p {
 .nav ul {
   gap: 0 48px;
 }
-.dropdown-menu.show{
+.dropdown-menu.show {
   background-color: #10131c;
   border-radius: 8px;
   box-shadow: #ffbe38 0px 2px 10px -2px, #ffbe38 0px 0px 1px -2px !important;
 }
 .dropdown-item {
-	color: #ffffff;
+  color: #ffffff;
 }
 
 .btn-1 {
@@ -875,10 +875,10 @@ p {
 /*==========  Hero Section End  ==========*/
 /*==========  Empower Section Start  ==========*/
 .empower-area {
-    padding: 300px 0 200px 0;
-    position: relative;
-    background-color: #010613;
-    z-index: 1;
+  padding: 300px 0 200px 0;
+  position: relative;
+  background-color: #010613;
+  z-index: 1;
 }
 
 .hero-bg img {
@@ -893,12 +893,12 @@ p {
   position: relative;
 }
 #lottie-empower {
-	height: 1252px;
-	margin: 0px auto;
-	position: absolute;
-	bottom: 50px;
-	left: -15px;
-	width: 100%;
+  height: 1252px;
+  margin: 0px auto;
+  position: absolute;
+  bottom: 50px;
+  left: -15px;
+  width: 100%;
 }
 .empower-bg img {
   width: 700px;
@@ -913,7 +913,7 @@ p {
   z-index: 1;
 }
 .empower-head-text h2 {
-	padding-bottom: 25px;
+  padding-bottom: 25px;
 }
 .empower-top {
   padding-bottom: 360px;
@@ -929,7 +929,6 @@ p {
   overflow: hidden;
   transition: all 0.3s ease;
 }
-
 
 .col-xl-3:nth-child(even) .single-empower-card {
   transform: translateY(-85px);
@@ -1075,24 +1074,90 @@ p {
 }
 /*==========  ECM coin Section End  ==========*/
 /*==========  ECM coin Section End  ==========*/
-.unlock-area{
+.unlock-area {
   padding: 90px 0;
   background-color: #010613;
   position: relative;
   /* background: url('../images/bg/video.png') no-repeat scroll center center / cover; */
   z-index: 1;
 }
-.unlock-area::after{
+.unlock-area::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background: url('../images/bg/video.png') no-repeat scroll center center / cover;
+  background: url("../images/bg/video.png") no-repeat scroll center center / cover;
   z-index: -1;
-  opacity: .2;
+  opacity: 0.2;
 }
+.hero-btn {
+    background: linear-gradient(145deg, #FFBE3800 0%, #FFBE38 100%);
+}
+.unlock-btn-wrapper{
+  padding-top: 60px;
+}
+.unlock-btn-wrapper .hero-btn::before {
+    background: linear-gradient(to right, #FFBE3800, #FFBE38);
+    border-radius: 5px;
+}
+.unlock-btn-wrapper .hero-btn {
+    padding: 10px 50px;
+    border-radius: 5px;
+}
+.unlock-card {
+    position: relative;
+    padding: 30px;
+    border-radius: 10px;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    background: linear-gradient(197.48deg, rgba(36, 36, 49, 0.75) -6.67%, rgba(67, 67, 105, 0.75) 54.9%, rgba(36, 36, 49, 0) 116.47%);
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.unlock-card-main {
+    display: flex;
+}
+.unlock-card{
+  flex: 0 0 calc(33.33% - 20px);
+  margin-right: 30px;
+}
+.unlock-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 2px;
+    background: linear-gradient(to bottom, #464E84 0%, #464E8400 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: -1;
+}
+.unlock-card-title h3 {
+    font-weight: 590;
+    font-size: 24px;
+    line-height: 32px;
+    color:#FDFDFD;
+}
+.unlock-card-text ul{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.unlock-card-text ul li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+     list-style-type: disc;
+     list-style-position: inside;
+}
+
 /*==========  ECM coin Section End  ==========*/
 /*==========  Holding Section Start  ==========*/
 .holding-area {
@@ -1121,7 +1186,7 @@ p {
   box-shadow: #0084ff 0px 1px 15px;
   text-align: center;
   transform: translateY(106px);
-  padding:40px 30px;
+  padding: 40px 30px;
 }
 .rotating-ball {
   position: absolute;
@@ -1197,7 +1262,7 @@ p {
   position: relative;
   padding: 40px 50px;
   border-radius: 10px;
-  background: linear-gradient(to bottom, #242431 0%, #ffffff00 100%);
+  background: linear-gradient(to bottom, #242431 0%, #ffffff1f 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   overflow: hidden;
@@ -1395,9 +1460,9 @@ p {
 }
 
 .launch-animation2 {
-    bottom: 122px;
-    left: 45px;
-    animation-name: anim2;
+  bottom: 122px;
+  left: 45px;
+  animation-name: anim2;
 }
 
 .launch-animation3 {
@@ -1407,9 +1472,9 @@ p {
 }
 
 .launch-animation4 {
-    bottom: 87px;
-    right: 35px;
-    animation-name: anim4;
+  bottom: 87px;
+  right: 35px;
+  animation-name: anim4;
 }
 
 @keyframes anim1 {
@@ -1532,7 +1597,7 @@ p {
   display: inline-block;
   padding: 5px 0;
 }
-.footer-links li a:hover{
+.footer-links li a:hover {
   color: #ffc700;
 }
 .social-links {
@@ -1644,7 +1709,7 @@ p {
 .copyright-content a {
   color: #ffc700;
 }
-.copyright-content a:hover{
+.copyright-content a:hover {
   color: #ffc700e5;
 }
 
@@ -1655,7 +1720,6 @@ p {
   height: auto;
   z-index: -1;
   overflow: hidden;
-  
 }
 .construction-content {
   position: relative;
