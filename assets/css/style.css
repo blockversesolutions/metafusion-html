@@ -1408,6 +1408,7 @@ p {
   border-radius: 8px;
   transition: all 0.3s ease;
   cursor: pointer;
+  height: 100%;
 }
 .single-blockchain-card:hover {
   box-shadow: inset 0px 17px 40px 0px #0d89cf33, inset 0px 6px 32px 16px #083b584d, inset 17px 62px 79px -9px #00a1fd4d,
