@@ -26,13 +26,9 @@ $(document).ready(function () {
       nav.fadeIn(200).addClass("show");
     }
   });
-
-  // Click outside of .nav ul → hide menu
   $(document).on("click", function (e) {
     const nav = $(".nav");
     const target = $(e.target);
-
-    // If menu is open, and click is outside nav ul
     if (nav.hasClass("show") && !target.closest(".nav ul").length && !target.closest(".mobile-bars").length) {
       nav.fadeOut(300).removeClass("show");
     }
@@ -40,7 +36,6 @@ $(document).ready(function () {
 });
 
 function initAnimations() {
-  // Style 2: Word Flow
   const tl2 = gsap.timeline();
   tl2.to(".style-2 .word", {
     y: 0,
@@ -51,7 +46,6 @@ function initAnimations() {
       ease: "power2.inOut",
     },
   });
-  // Style 2: Word Flow
   const tl3 = gsap.timeline();
   tl3.to(".style-3 .word", {
     y: 0,
@@ -93,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   heroArea.addEventListener("mouseleave", function () {
-    heroCard1.style.transform = ""; // reset to CSS
+    heroCard1.style.transform = "";
     heroCard2.style.transform = "";
   });
 });
@@ -105,76 +99,51 @@ const animation = lottie.loadAnimation({
   autoplay: false, // Autoplay off
   path: "./assets/js/empower.json",
 });
-
-// .empower-bg er upor hover korle animation start hobe
 window.addEventListener("scroll", function () {
   const scrollY = window.scrollY || window.pageYOffset;
 
   if (scrollY >= 700) {
-    animation.play(); // Empower animation starts
+    animation.play(); 
   }
 });
 
-let focus = document.querySelector(".focus");
-
-document.addEventListener("mousemove", function (e) {
-  let x = e.pageX;
-  let y = e.pageY;
-
-  focus.style.background =
-    "radial-gradient(circle at " + x + "px " + y + "px ,rgba(190, 255, 255, 0.2), transparent 40%)";
-});
 function createDots() {
   // Select all containers with either class name
   const dotsContainers = document.querySelectorAll(".dots-background, .dotsBackground");
   const numberOfDots = 80;
 
   dotsContainers.forEach((dotsContainer) => {
-    // Clear existing dots to prevent duplicates
     dotsContainer.innerHTML = "";
 
     for (let i = 0; i < numberOfDots; i++) {
       const dot = document.createElement("div");
       dot.className = "dot";
-
-      // Random size between 1px and 4px
       const size = Math.random() * 3 + 1;
       dot.style.width = size + "px";
       dot.style.height = size + "px";
-
-      // Random position
       dot.style.left = Math.random() * 100 + "%";
       dot.style.top = Math.random() * 100 + "%";
-
-      // Random animation delay
       dot.style.animationDelay = Math.random() * 4 + "s";
-
-      // Add variety to star colors and animations
       const variation = Math.random();
       if (variation < 0.1) {
         dot.classList.add("bright");
       } else if (variation < 0.2) {
         dot.classList.add("blue");
       }
-
-      // Add different twinkling patterns and movement
       const twinkleType = Math.random();
       const movementType = Math.random();
 
       if (twinkleType < 0.2) {
         dot.classList.add("fast-twinkle");
-        // Add movement to fast twinkling stars
         if (movementType < 0.5) {
           dot.classList.add("floating");
         }
       } else if (twinkleType < 0.4) {
         dot.classList.add("slow-twinkle");
-        // Add movement to slow twinkling stars
         if (movementType < 0.5) {
           dot.classList.add("drifting");
         }
       } else {
-        // Regular twinkling stars with movement
         if (movementType < 0.3) {
           dot.classList.add("floating");
         } else if (movementType < 0.6) {
@@ -183,8 +152,6 @@ function createDots() {
           dot.classList.add("swaying");
         }
       }
-
-      // Add random delays for movement animations
       if (
         dot.classList.contains("floating") ||
         dot.classList.contains("drifting") ||
