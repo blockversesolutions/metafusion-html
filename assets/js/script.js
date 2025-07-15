@@ -92,20 +92,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const animation = lottie.loadAnimation({
-  container: document.getElementById("lottie-empower"),
-  renderer: "svg",
-  loop: true,
-  autoplay: false, // Autoplay off
-  path: "./assets/js/empower.json",
-});
-window.addEventListener("scroll", function () {
-  const scrollY = window.scrollY || window.pageYOffset;
 
-  if (scrollY >= 700) {
-    animation.play(); 
-  }
-});
+
 
 function createDots() {
   // Select all containers with either class name
