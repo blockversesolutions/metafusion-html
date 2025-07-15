@@ -523,9 +523,7 @@ p {
   left: 142px;
   z-index: -1;
   animation: iconAnim1 12s ease-in-out 0.5s infinite;
-  /* Remove animation-fill-mode: both */
   opacity: 0.5;
-  /* Set initial transform state to match 0% keyframe */
   transform: translateY(40px) translateX(0px) rotate(0deg);
 }
 
@@ -633,7 +631,6 @@ p {
     opacity: 0.5;
   }
 }
-
 .hero-animation-4 img {
   width: 142px;
   height: auto;
@@ -752,7 +749,7 @@ p {
     opacity: 0.5;
   }
 }
-
+/* 
 .hero-animation-7 img {
   width: 260px;
   height: auto;
@@ -769,9 +766,8 @@ p {
   z-index: -1;
   animation: iconAnim8 11s ease-in-out 0.9s infinite;
   opacity: 0.5;
-  /* Set initial transform state to match 0% keyframe */
   transform: translateY(28px) translateX(5px) rotate(0deg);
-}
+} */
 
 @keyframes iconAnim8 {
   0% {

@@ -428,13 +428,10 @@
     padding: 120px 0;
   }
   .hero-card1 {
-    top: 65%;
+    top: 71%;
   }
   .hero-card2 {
-    top: 65%;
-  }
-  .hero-animation {
-    display: none;
+    top: 71%;
   }
   .hero-card p {
     font-size: 31px;
@@ -506,6 +503,30 @@
   .empower-head-text h2 {
     padding-bottom: 20px;
   }
+  .hero-animation-1 img {
+    width: 134px;
+    top: 75%;
+  }
+  .hero-animation-2 img {
+    width: 134px;
+    top: 60%;
+  }
+  .hero-animation-3 img {
+    width: 134px;
+    top: 51%;
+  }
+  .hero-animation-4 img {
+    width: 134px;
+    top: 51%;
+  }
+  .hero-animation-5 img {
+    width: 134px;
+    top: 51%;
+  }
+  .hero-animation-6 img {
+    width: 134px;
+    top: 55%;
+  }
 }
 
 @media all and (max-width: 575px) {
@@ -566,11 +587,11 @@
     border-radius: 7px;
   }
   .hero-card1 {
-    top: 71%;
+    top: 53%;
     left: 31px;
   }
   .hero-card2 {
-    top: 71%;
+    top: 53%;
     right: 31px;
   }
   .holding-content {
