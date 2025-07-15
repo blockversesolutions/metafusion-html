@@ -424,9 +424,11 @@
   .construction-social {
     padding-top: 25px;
   }
-  .hero-area {
+ .hero-area {
     padding: 120px 0;
-  }
+    padding-bottom: 406px;
+    height: auto;
+}
   .hero-card1 {
     top: 71%;
   }
