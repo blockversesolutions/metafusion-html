@@ -1431,7 +1431,7 @@ p {
 }
 .single-ecosystem-card {
   position: relative;
-  padding: 40px 50px;
+  padding: 40px 30px;
   border-radius: 10px;
   background: linear-gradient(to bottom, #242431 0%, #ffffff1f 100%);
   backdrop-filter: blur(20px);
