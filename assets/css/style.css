@@ -962,6 +962,13 @@ p {
   transition: all 0.3s ease;
   height: 100%;
 }
+.single-empower-card img{
+  transition: all 0.3s ease;
+}
+.single-empower-card:hover img{
+  transform: scale(1.1);
+    transition: all 0.3s ease;
+}
 
 .col-xl-3:nth-child(even) .single-empower-card {
   transform: translateY(-85px);
@@ -1113,7 +1120,6 @@ p {
   padding-bottom: 90px;
   background-color: #010613;
   position: relative;
-  /* background: url('../images/bg/video.png') no-repeat scroll center center / cover; */
   z-index: 1;
 }
 .unlock-card-wrapper {
@@ -1800,7 +1806,16 @@ p {
   box-shadow: 0 5px 15px rgba(255, 199, 0, 0.4);
   color: #010613;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
+.social-links li a i{
+  transition: all 0.3s ease;
+}
+.social-links li a:hover i{
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
 .footer-right-bottom {
   padding-top: 50px;
 }
