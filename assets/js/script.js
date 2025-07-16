@@ -158,6 +158,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Function to create white dots End
+
+// Email coppy text Start
 function copyEmail(box) {
   const email = box.querySelector(".email-text").textContent;
   navigator.clipboard.writeText(email).then(() => {
@@ -168,7 +170,8 @@ function copyEmail(box) {
   });
 }
 
-// Function to copy email address End
+
+// Email coppy text End
 
 // focus hover color
 

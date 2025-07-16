@@ -36,8 +36,8 @@
   }
   #lottie-empower {
     height: 1252px;
-    bottom: -75px;
-    left: -15px;
+    bottom: 6px;
+    left: 68px;
   }
   .col-xl-3:nth-child(even) .single-empower-card {
     transform: translateY(-52px);
@@ -57,9 +57,9 @@
   }
   #lottie-empower {
     height: 1252px;
-    bottom: -101px;
-    left: 136px;
-    width: 79%;
+    bottom: -35px;
+    left: 130px;
+    width: 90%;
   }
   .col-xl-3:nth-child(2n) .single-empower-card {
     transform: translateY(-85px);
@@ -89,9 +89,9 @@
 @media all and (max-width: 1370px) {
   #lottie-empower {
     height: 1252px;
-    bottom: -99px;
-    left: 109px;
-    width: 82%;
+    bottom: -31px;
+    left: 110px;
+    width: 93%;
   }
   .col-xl-3:nth-child(2n) .single-empower-card {
     transform: translateY(-84px);
@@ -100,9 +100,9 @@
 @media all and (max-width: 1350px) {
   #lottie-empower {
     height: 1258px;
-    bottom: -102px;
+    bottom: -40px;
     left: 100px;
-    width: 83%;
+    width: 94%;
   }
   .col-xl-3:nth-child(2n) .single-empower-card {
     transform: translateY(-81px);
@@ -132,29 +132,37 @@
   }
   #lottie-empower {
     height: 1258px;
-    bottom: -100px;
-    left: 86px;
-    width: 85%;
+    bottom: -38px;
+    left: 84px;
+    width: 96%;
   }
 }
 @media all and (max-width: 1310px) {
   #lottie-empower {
     height: 1258px;
-    bottom: -103px;
+    bottom: -38px;
     left: 84px;
-    width: 85%;
+    width: 96%;
   }
 }
 @media all and (max-width: 1250px) {
   #lottie-empower {
-    height: 1258px;
-    bottom: -103px;
-    left: 48px;
-    width: 90%;
+    height: 1373px;
+    bottom: -100px;
+    left: 53px;
+    width: 101%;
   }
 
   .col-xl-3:nth-child(even) .single-empower-card {
     transform: translateY(-75px);
+  }
+}
+@media all and (max-width: 1220px) {
+  #lottie-empower {
+    height: 1373px;
+    bottom: -97px;
+    left: 36px;
+    width: 104%;
   }
 }
 @media all and (max-width: 1199px) {

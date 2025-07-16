@@ -928,8 +928,8 @@ p {
   height: 1252px;
   margin: 0px auto;
   position: absolute;
-  bottom: -45px;
-  left: -16px;
+  bottom: 35px;
+  left: 70px;
   width: 100%;
 }
 .empower-bg img {
@@ -962,12 +962,12 @@ p {
   transition: all 0.3s ease;
   height: 100%;
 }
-.single-empower-card img{
+.single-empower-card img {
   transition: all 0.3s ease;
 }
-.single-empower-card:hover img{
+.single-empower-card:hover img {
   transform: scale(1.1);
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .col-xl-3:nth-child(even) .single-empower-card {
@@ -1160,7 +1160,7 @@ p {
   width: 100%;
 }
 .unlock-card:hover {
-    box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d, inset 0px 50px 100px -48px #00a1fd4d,
+  box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d, inset 0px 50px 100px -48px #00a1fd4d,
     inset 0px -40px 68px -64px #0e4e724d, inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
 }
 
@@ -1184,7 +1184,6 @@ p {
   z-index: -1;
 }
 
-
 .unlock-card-title h3 {
   font-weight: 590;
   font-size: 24px;
@@ -1206,17 +1205,22 @@ p {
   list-style-position: inside;
 }
 .unlock-card.unlock-card3 {
-    background: transparent;
-    padding: 0;
-    background: linear-gradient(197.48deg, rgba(36, 36, 49, 0.2) -6.67%, rgba(67, 67, 105, 0.2) 54.9%, rgba(36, 36, 49, 0) 116.47%);
-    padding: 20px;
-    border: 2px solid #8080805c;
+  background: transparent;
+  padding: 0;
+  background: linear-gradient(
+    197.48deg,
+    rgba(36, 36, 49, 0.2) -6.67%,
+    rgba(67, 67, 105, 0.2) 54.9%,
+    rgba(36, 36, 49, 0) 116.47%
+  );
+  padding: 20px;
+  border: 2px solid #8080805c;
 }
 /* .unlock-card.unlock-card3:hover{
   border: 2px solid ;
 } */
 .unlock-card.unlock-card3:hover {
-    box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d, inset 0px 50px 100px -48px #00a1fd4d,
+  box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d, inset 0px 50px 100px -48px #00a1fd4d,
     inset 0px -40px 68px -64px #0e4e724d, inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
 }
 .unlock-card.unlock-card3::before {
@@ -1240,7 +1244,7 @@ p {
   border-radius: 10px;
 }
 .unlock-card.unlock-card2 {
-    transform: translateY(308px);
+  transform: translateY(308px);
 }
 .unlock-btn1:hover {
   background: linear-gradient(145deg, #221a05 0%, #684c04 100%) !important;
@@ -1260,8 +1264,8 @@ p {
 
 /* lottifile */
 .hold-animation {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 .glow-path {
   stroke: #ffcc00;
@@ -1301,33 +1305,33 @@ p {
   filter: drop-shadow(0 0 10px #ffcc00) drop-shadow(0 0 20px #ffcc00);
 }
 .vector-animation2 svg {
-    left: 0;
-    right: 166px;
-    margin: auto;
-    top: -149px;
-    position: absolute;
-    width: 446px;
-    height: 416px;
+  left: 0;
+  right: 166px;
+  margin: auto;
+  top: -149px;
+  position: absolute;
+  width: 446px;
+  height: 416px;
 }
 
 .glow-path3 {
-      stroke: #ffcc00;
-      stroke-width: 2;
-      fill: none;
-      stroke-linecap: round;
-      filter: drop-shadow(0 0 6px #ffcc00);
-    }
+  stroke: #ffcc00;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 6px #ffcc00);
+}
 
-    .moving-dot3 {
-      fill: #ffcc00;
-      filter: drop-shadow(0 0 10px #ffcc00) drop-shadow(0 0 20px #ffcc00);
-    }
-    .vector-animation3 svg {
-    position: absolute;
-    left: 0;
-    right: -325px;
-    margin: auto;
-    top: 145px;
+.moving-dot3 {
+  fill: #ffcc00;
+  filter: drop-shadow(0 0 10px #ffcc00) drop-shadow(0 0 20px #ffcc00);
+}
+.vector-animation3 svg {
+  position: absolute;
+  left: 0;
+  right: -325px;
+  margin: auto;
+  top: 145px;
 }
 /*==========  ECM coin Section End  ==========*/
 /*==========  Holding Section Start  ==========*/
@@ -1808,10 +1812,10 @@ p {
   overflow: hidden;
   transition: all 0.3s ease;
 }
-.social-links li a i{
+.social-links li a i {
   transition: all 0.3s ease;
 }
-.social-links li a:hover i{
+.social-links li a:hover i {
   transform: scale(1.1);
   transition: all 0.3s ease;
 }

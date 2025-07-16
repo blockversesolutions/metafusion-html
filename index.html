@@ -101,7 +101,8 @@
           <div class="style-3">
             <div class="hero-title reveal-wrapper">
               <h1 class="hero-text">
-                Powering ECM Coin and its ecosystem—delivering scalable, low-cost, blockchain infrastructure for e-commerce, trading and beyond.
+                Powering ECM Coin and its ecosystem—delivering scalable, low-cost, blockchain infrastructure for
+                e-commerce, trading and beyond.
               </h1>
             </div>
           </div>
@@ -947,14 +948,6 @@
         });
       });
 
-      // window.addEventListener("scroll", function () {
-      //   const scrollY = window.scrollY || window.pageYOffset;
-
-      //   if (scrollY >= 700) {
-      //     animation.play();
-      //   }
-      // });
-
       // lottifile
       const animation = lottie.loadAnimation({
         container: document.getElementById("lottie-empower"),
@@ -963,16 +956,13 @@
         autoplay: false,
         path: "./assets/js/empower.json",
       });
+      window.addEventListener("scroll", function () {
+        const scrollY = window.scrollY || window.pageYOffset;
 
-      const animation2 = lottie.loadAnimation({
-        container: document.getElementById("lottie-unlock"),
-        renderer: "svg",
-        loop: true,
-        autoplay: false,
-        path: "./assets/js/unlock.json",
+        if (scrollY >= 700) {
+          animation.play();
+        }
       });
-      animation.play();
-      animation2.play();
     </script>
   </body>
 </html>
