@@ -1118,6 +1118,7 @@ p {
 }
 .unlock-card-wrapper {
   background: url("../images/bg/video.png") no-repeat scroll center center / cover;
+  padding: 0 20px;
 }
 .unlock-btn-wrapper {
   text-align: center;
@@ -1131,7 +1132,7 @@ p {
   border-radius: 5px;
 }
 .unlock-btn-wrapper .hero-btn {
-  padding: 10px 50px;
+  padding: 15px 50px;
   border-radius: 5px;
 }
 .unlock-card {
@@ -1152,6 +1153,11 @@ p {
   height: 100%;
   width: 100%;
 }
+.unlock-card:hover {
+    box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d, inset 0px 50px 100px -48px #00a1fd4d,
+    inset 0px -40px 68px -64px #0e4e724d, inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
+}
+
 .unlock-card-main {
   display: flex;
 }
@@ -1171,6 +1177,7 @@ p {
   mask-composite: exclude;
   z-index: -1;
 }
+
 
 .unlock-card-title h3 {
   font-weight: 590;
@@ -1198,6 +1205,13 @@ p {
     background: linear-gradient(197.48deg, rgba(36, 36, 49, 0.2) -6.67%, rgba(67, 67, 105, 0.2) 54.9%, rgba(36, 36, 49, 0) 116.47%);
     padding: 20px;
     border: 2px solid #8080805c;
+}
+/* .unlock-card.unlock-card3:hover{
+  border: 2px solid ;
+} */
+.unlock-card.unlock-card3:hover {
+    box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d, inset 0px 50px 100px -48px #00a1fd4d,
+    inset 0px -40px 68px -64px #0e4e724d, inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
 }
 .unlock-card.unlock-card3::before {
   background: transparent;
@@ -1460,6 +1474,14 @@ p {
 .single-ecosystem-card img {
   width: 120px;
   height: auto;
+  transition: all 0.3s ease;
+}
+.single-ecosystem-card:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+.ecosystem-card-text {
+  padding: 20px 0;
 }
 .ecosystem-card-text h3 {
   font-weight: 590;

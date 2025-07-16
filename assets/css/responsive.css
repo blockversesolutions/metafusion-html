@@ -73,6 +73,18 @@
   .single-ecosystem-card {
     padding: 40px 25px;
   }
+  .unlock-card {
+    padding: 20px;
+  }
+  .unlock-card.unlock-card3 {
+    padding: 15px;
+  }
+  .unlock-card-title h3 {
+    font-size: 20px;
+  }
+  .unlock-card-sub .hero-btn {
+    padding: 20px 25px;
+  }
 }
 @media all and (max-width: 1370px) {
   #lottie-empower {
@@ -215,6 +227,34 @@
     position: inherit;
     left: 34px;
     top: 0;
+  }
+  .col-xl-3:nth-child(odd) .single-empower-card {
+    transform: translateY(-32px);
+  }
+  .unlock-card-main {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .unlock-card {
+    margin-right: 00px;
+    flex: 0 0 100%;
+  }
+  .unlock-card.unlock-card2 {
+    transform: translateY(0px);
+  }
+  .unlock-card {
+    padding: 30px;
+  }
+  .unlock-card-title h3 {
+    font-size: 24px;
+  }
+  .vector-animation1 svg,
+  .vector-animation2 svg,
+  .vector-animation3 svg {
+    display: none;
+  }
+  .unlock-btn-wrapper {
+    padding-bottom: 31px;
   }
 }
 
@@ -373,6 +413,14 @@
   }
   .empower-area {
     padding: 121px 0 45px 0;
+  }
+  .vector-animation1 svg,
+  .vector-animation2 svg,
+  .vector-animation3 svg {
+    display: none;
+  }
+  .unlock-card-main {
+    gap: 25px;
   }
 }
 
@@ -550,6 +598,23 @@
     width: 134px;
     top: 55%;
   }
+  .unlock-card-title h3 {
+    font-size: 20px;
+  }
+  .unlock-card-text ul li {
+    font-size: 14px;
+  }
+  .hero-btn span {
+    font-size: 16px;
+  }
+  .unlock-card-sub {
+    gap: 15px;
+    padding-top: 15px;
+  }
+  .unlock-card-text ul {
+    padding-top: 10px;
+    gap: 3px;
+  }
 }
 
 @media all and (max-width: 575px) {
@@ -723,6 +788,9 @@
   }
   .empower-area {
     padding: 4px 0 44px 0;
+  }
+  .hero-btn span {
+    font-size: 14px;
   }
 }
 
