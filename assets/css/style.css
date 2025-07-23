@@ -1,8 +1,6 @@
 html {
   font-size: 62.5%;
-  /*line-height: 1.5;*/
-  /*#6fda44*/
-  /*#008329*/
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 body {
@@ -11,7 +9,6 @@ body {
   font-weight: 400;
   font-size: 1.4rem;
   position: relative;
-  /* background-color: #10131c; */
   background-color: #010613;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -1123,9 +1120,29 @@ p {
   z-index: 1;
 }
 .unlock-card-wrapper {
-  background: url("../images/bg/video.png") no-repeat scroll center center / cover;
-  padding: 0 20px;
+  position: relative;
 }
+
+.unlock-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.unlock-card-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(1 6 19 / 81%), rgb(1 6 19 / 0%));
+    z-index: -1;
+}
+
 .unlock-btn-wrapper {
   text-align: center;
   padding-bottom: 70px;

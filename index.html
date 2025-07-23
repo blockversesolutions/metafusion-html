@@ -373,6 +373,9 @@
                 </div>
               </div>
               <div class="unlock-card-wrapper">
+                <video  id="bg-video"  autoplay muted loop playsinline class="unlock-bg-video">
+                  <source src="./assets/images/video/holdecm.mp4" type="video/mp4" />
+                </video>
                 <div class="unlock-btn-wrapper">
                   <a href="#" class="hero-btn">
                     <div class="light-particle"></div>
@@ -963,6 +966,8 @@
           animation.play();
         }
       });
+      const video = document.getElementById("bg-video");
+      video.playbackRate = 0.7;
     </script>
   </body>
 </html>
