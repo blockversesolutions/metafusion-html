@@ -1,0 +1,64 @@
+ 
+ 
+
+.logo-container img {
+  width: 80px;
+  height: 80px;
+}
+
+ 
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-section {
+  display: flex;
+  padding: 50px;
+}
+
+.about-text, .logo-thumbnails {
+  width: 50%;
+}
+
+.logo-thumbnails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-thumbnails-set {
+  height: 500px;
+  width: 500px;
+  border: 2px solid white;
+  position: relative;
+}
+.logo-container {
+  position: absolute;
+  transition: transform 1s ease-in-out;
+  z-index: 1000;
+}
+
+.logo-container img {
+  width: 60px;
+  height: 60px;
+  transition: transform 1s ease-in-out;
+}
+
+/* Optional: when flying */
+.logo-flying img {
+  transform: scale(2.8); /* Grows while flying */
+}
+@keyframes bounce-drop {
+  0%   { transform: translateY(-100px) scale(2.8); }
+  40%  { transform: translateY(0) scale(2.8); }
+  60%  { transform: translateY(-30px) scale(2.8); }
+  80%  { transform: translateY(0) scale(2.8); }
+  100% { transform: translateY(0) scale(2.8); }
+}
+
+.logo-bounce {
+  animation: bounce-drop 0.6s ease-out;
+}

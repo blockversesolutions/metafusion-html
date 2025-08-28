@@ -64,9 +64,9 @@
   .col-xl-3:nth-child(2n) .single-empower-card {
     transform: translateY(-85px);
   }
-  .hero-bg img {
+  /* .hero-bg img {
     top: -174px;
-  }
+  } */
   .single-empower-card {
     padding: 20px 20px;
   }
@@ -264,6 +264,9 @@
   .unlock-btn-wrapper {
     padding-bottom: 31px;
   }
+  .ecm-area {
+    padding-top: 100px;
+  }
 }
 
 @media all and (max-width: 991px) {
@@ -314,7 +317,7 @@
     background-color: #10131c;
     padding: 20px;
     -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    box-shadow: #ffbe38 0px 2px 9px;
+    box-shadow: #ffbe38 0px 2px 5px;
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17px);
     display: none;
@@ -324,6 +327,7 @@
     backdrop-filter: blur(20px);
     transition: opacity 0.5s ease;
     opacity: 0;
+    border-radius: 10px;
   }
   .nav.show {
     display: block;
@@ -389,6 +393,7 @@
     font-size: 15px;
     line-height: 22px;
     padding: 11px 0;
+    padding-top: 0;
   }
   .ecosystem-btn-wrapper .hero-btn {
     padding: 9px 44px;
@@ -429,6 +434,9 @@
   }
   .unlock-card-main {
     gap: 25px;
+  }
+  .empower-image-flip img {
+    left: 0;
   }
 }
 
@@ -505,6 +513,7 @@
   }
   .hero-area {
     padding: 120px 0;
+    padding-top: 60px;
   }
   .hero-card1 {
     top: 71%;
@@ -524,9 +533,7 @@
   .hero-text {
     padding: 12px 0 40px 0;
   }
-  .empower-area {
-    padding: 79px 0 50px 0;
-  }
+
   .ecm-area {
     padding: 80px 0 70px 0;
   }
@@ -547,6 +554,7 @@
   }
   .empower-area {
     padding: 79px 0 44px 0;
+    padding-top: 170px;
   }
   .ecm-area {
     padding: 40px 0 70px 0;
@@ -796,13 +804,20 @@
   }
   .empower-area {
     padding: 4px 0 44px 0;
+    padding-top: 140px;
   }
   .hero-btn span {
     font-size: 14px;
   }
+  .hero-animation {
+    bottom: 35%;
+  }
+  .hero-card {
+    display: none;
+  }
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 480px) {
   h1 {
     font-size: 29px;
     line-height: 31px;
