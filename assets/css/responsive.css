@@ -815,6 +815,9 @@
   .hero-card {
     display: none;
   }
+  .empower-area:before {
+    background-size: cover;
+  }
 }
 
 @media all and (max-width: 480px) {

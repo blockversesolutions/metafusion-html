@@ -838,6 +838,12 @@ p {
   transform: translateY(100%);
 }
 
+.style-3{
+  position: relative;
+  z-index: 999999;
+ 
+ 
+}
 /* Hero Text: Word Flow (same animation as style-2) */
 .hero-text .word-wrapper {
   display: inline-block;
@@ -2309,3 +2315,14 @@ p {
     float-drift 15s ease-in-out infinite;
 }
 /*==========  Footer Section End  ==========*/
+.empower-area:before{
+  content: "";
+  position: absolute;
+  top: -18%;
+  left: 0;
+  height: 35%;
+  width: 100%;
+  background-image: url('../images/bg/hero-bg.png');
+  background-size: 100% 100%;
+  z-index: -2;
+}
