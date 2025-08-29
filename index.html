@@ -20,7 +20,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <title>Metafusion | Home</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -32,15 +35,28 @@
       <div class="container extra-container">
         <div class="d-flex align-items-center justify-content-between header">
           <div class="logo fade-in-left">
-            <a href="index.html"><img src="./assets/images/logo.png" alt="logo" /></a>
-            <button class="mobile-bars d-lg-none d-block"><i class="fa-solid fa-bars-staggered"></i></button>
+            <a href="index.html"
+              ><img src="./assets/images/logo.png" alt="logo"
+            /></a>
+            <button class="mobile-bars d-lg-none d-block">
+              <i class="fa-solid fa-bars-staggered"></i>
+            </button>
           </div>
+
           <div class="nav">
             <ul class="d-flex flex-lg-row flex-column align-items-center gx-4">
-              <li class="fade-in-left nav-item-1"><a class="nav-link active" href="#home">Home</a></li>
-              <li class="fade-in-left nav-item-2"><a class="nav-link" href="#about">About</a></li>
-              <li class="fade-in-left nav-item-3"><a class="nav-link" href="#ecmcoin">ECM Coin</a></li>
-              <li class="fade-in-left nav-item-4"><a class="nav-link" href="#ecosystem">Ecosystem</a></li>
+              <li class="fade-in-left nav-item-1">
+                <a class="nav-link active" href="#home-section">Home</a>
+              </li>
+              <li class="fade-in-left nav-item-2">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="fade-in-left nav-item-3">
+                <a class="nav-link" href="#ecmcoin">ECM Coin</a>
+              </li>
+              <li class="fade-in-left nav-item-4">
+                <a class="nav-link" href="#ecosystem">Ecosystem</a>
+              </li>
               <li class="fade-in-left nav-item-5 d-block d-lg-none">
                 <a href="#footer" class="btn-1 nav-link">Contact Us</a>
               </li>
@@ -50,26 +66,29 @@
             <div class="d-flex align-items-center">
               <a href="#" class="btn-1 fade-in-right btn-animate">Contact Us</a>
               <div class="dropdown fade-in-right dropdown-item-animate">
-                <button
-                  class="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <img src="assets/images/icon/world.svg" alt="photos" />
-                  EN
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item active" href="#">EN</a></li>
-                  <li><a class="dropdown-item" href="#">BN</a></li>
-                </ul>
+                <div class="position-relative">
+                  <span
+                    class="btn btn-secondary dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img src="assets/images/icon/world.svg" alt="photos" />
+                    EN
+                  </span>
+                  <ul class="dropdown-menu country-dropdown">
+                    <li><a class="dropdown-item active" href="#">EN</a></li>
+                    <li><a class="dropdown-item" href="#">BN</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <section class="hero-area section-link" id="home">
+    <section class="hero-area section-link" id="home-section">
+      <div class="ellipse ellipse-1"></div>
+      <div class="ellipse ellipse-2"></div>
       <div class="toplight">
         <span class="small-shadow"></span>
       </div>
@@ -93,71 +112,75 @@
           <!-- Hero Title animation start  -->
           <div class="style-2">
             <div class="hero-title reveal-wrapper">
-              <h1>Architecting the Future of Digital Commerce MetaFusion Labs</h1>
+              <h1>
+                Architecting the Future of Digital Commerce MetaFusion Labs
+              </h1>
             </div>
           </div>
           <!-- Hero Title animation start  -->
           <!-- Hero Title animation start  -->
           <div class="style-3">
-            <div class="hero-title reveal-wrapper">
-              <h1 class="hero-text">
-                Powering ECM Coin and its ecosystem—delivering scalable, low-cost, blockchain infrastructure for
-                e-commerce, trading and beyond.
-              </h1>
+            <div class="row">
+              <div class="col-lg-8 offset-lg-2">
+                <div class="hero-title reveal-wrapper">
+                  <p class="text-center mt-5">
+                    Powering ECM Coin and its ecosystem—delivering scalable,
+                    low-cost, blockchain infrastructure for e-commerce, trading
+                    and beyond.
+                  </p>
+                  <!-- <h1 class="hero-text">
+                
+              </h1> -->
+                </div>
+              </div>
+            </div>
+            <div class="hero-btn-wrapper position-relative mt-5">
+              <a href="#" class="hero-btn">
+                <div class="light-particle"></div>
+                <div class="light-particle"></div>
+                <div class="light-particle"></div>
+                <span>
+                  Start Exploring
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </a>
             </div>
           </div>
+          <!-- Hero Logo animation start  -->
+          <div class="hero-animation">
+            <div class="hero-animation-1">
+              <img src="assets/images/icon/1.png" alt="image" />
+            </div>
+            <div class="hero-animation-2">
+              <img src="assets/images/icon/2.png" alt="image" />
+            </div>
+            <div class="hero-animation-3">
+              <img src="assets/images/icon/3.png" alt="image" />
+            </div>
+            <div class="hero-animation-4">
+              <img src="assets/images/icon/4.png" alt="image" />
+            </div>
+            <div class="hero-animation-5">
+              <img src="assets/images/icon/5.png" alt="image" />
+            </div>
+            <div class="hero-animation-6">
+              <img src="assets/images/icon/6.png" alt="image" />
+            </div>
+          </div>
+          <!-- Hero Logo animation End  -->
           <!-- Hero Text animation End  -->
-          <!-- Hero Botton animation start  -->
-          <div class="hero-btn-wrapper">
-            <a href="#" class="hero-btn">
-              <div class="light-particle"></div>
-              <div class="light-particle"></div>
-              <div class="light-particle"></div>
-              <span>
-                Start Exploring
-                <i class="fa-solid fa-arrow-right"></i>
-              </span>
-            </a>
-          </div>
-          <!-- Hero botton animation End  -->
+          <!-- Hero Button animation start  -->
+          <!-- Hero Button animation End  -->
         </div>
-
-        <!-- Hero Logo animation start  -->
-        <div class="hero-animation">
-          <div class="hero-animation-1">
-            <img src="assets/images/icon/1.png" alt="image" />
-          </div>
-          <div class="hero-animation-2">
-            <img src="assets/images/icon/2.png" alt="image" />
-          </div>
-          <div class="hero-animation-3">
-            <img src="assets/images/icon/3.png" alt="image" />
-          </div>
-          <div class="hero-animation-4">
-            <img src="assets/images/icon/4.png" alt="image" />
-          </div>
-          <div class="hero-animation-5">
-            <img src="assets/images/icon/5.png" alt="image" />
-          </div>
-          <div class="hero-animation-6">
-            <img src="assets/images/icon/6.png" alt="image" />
-          </div>
-          <!-- <div class="hero-animation-7">
-            <img src="assets/images/icon/7.png" alt="image" />
-          </div>
-          <div class="hero-animation-8">
-            <img src="assets/images/icon/8.png" alt="image" />
-          </div> -->
-        </div>
-        <!-- Hero Logo animation End  -->
       </div>
     </section>
     <main>
       <section class="empower-area section-link" id="about">
+        <div class="ellipse ellipse-3"></div>
         <div class="dots-background dotsBackground"></div>
-        <div class="hero-bg">
+        <!-- <div class="hero-bg">
           <img src="assets/images/bg/hero-bg.png" alt="image" />
-        </div>
+        </div> -->
         <!-- lottifile loading animation start -->
         <div id="lottie-empower"></div>
         <!-- lottifile loading animation End -->
@@ -173,14 +196,20 @@
                 <div class="empower-head-text">
                   <h2>Empowering the Future of Blockchain</h2>
                   <p>
-                    MetaFusion Labs is a blockchain solutions company officially registered in Panama, serving as the
-                    parent organization behind the ECM Ecosystem. With a strong focus on developing decentralized
-                    infrastructure, MetaFusion Labs partners strategically with BlockVerse Solutions LLC—an industry
-                    leader in token issuance and blockchain development—to deliver scalable, innovative Web3 solutions.
+                    MetaFusion Labs is a blockchain solutions company officially
+                    registered in Panama, serving as the parent organization
+                    behind the ECM Ecosystem. With a strong focus on developing
+                    decentralized infrastructure, MetaFusion Labs partners
+                    strategically with BlockVerse Solutions LLC—an industry
+                    leader in token issuance and blockchain development—to
+                    deliver scalable, innovative Web3 solutions.
                   </p>
                 </div>
               </div>
               <div class="col-lg-6 col-xl-5">
+                <div class="logo-thumbnails">
+                  <div class="logo-thumbnails-set" id="target-box"></div>
+                </div>
                 <div class="empower-image-flip d-block d-xl-none">
                   <img src="assets/images/bg/empower.png" alt="image" />
                 </div>
@@ -192,11 +221,16 @@
                 <!-- 1.single empower card start   -->
                 <div class="col-md-6 col-xl-3">
                   <div class="single-empower-card">
-                    <img class="empower-icon" src="assets/images/icon/power-1.png" alt="image" />
+                    <img
+                      class="empower-icon"
+                      src="assets/images/icon/power-1.png"
+                      alt="image"
+                    />
                     <h3>Blockchain Infrastructure</h3>
                     <p>
-                      MetaFusion Labs is a blockchain solutions company officially registered in Panama, serving as the
-                      parent organization behind the ECM Ecosystem.
+                      MetaFusion Labs is a blockchain solutions company
+                      officially registered in Panama, serving as the parent
+                      organization behind the ECM Ecosystem.
                     </p>
                   </div>
                 </div>
@@ -204,11 +238,15 @@
                 <!-- 2.single empower card start   -->
                 <div class="col-md-6 col-xl-3">
                   <div class="single-empower-card">
-                    <img class="empower-icon" src="assets/images/icon/power-2.png" alt="image" />
+                    <img
+                      class="empower-icon"
+                      src="assets/images/icon/power-2.png"
+                      alt="image"
+                    />
                     <h3>Ensure Accessibility</h3>
                     <p>
-                      Make Web3 tools and platforms easy to use and available to everyone—businesses and individuals
-                      alike.
+                      Make Web3 tools and platforms easy to use and available to
+                      everyone—businesses and individuals alike.
                     </p>
                   </div>
                 </div>
@@ -216,19 +254,31 @@
                 <!-- 3.single empower card start   -->
                 <div class="col-md-6 col-xl-3">
                   <div class="single-empower-card">
-                    <img class="empower-icon" src="assets/images/icon/power-3.png" alt="image" />
+                    <img
+                      class="empower-icon"
+                      src="assets/images/icon/power-3.png"
+                      alt="image"
+                    />
                     <h3>Bridge Finance & Comm-erce</h3>
-                    <p>Develop robust systems capable of supporting large-scale dece-ntralized applications.</p>
+                    <p>
+                      Develop robust systems capable of supporting large-scale
+                      dece-ntralized applications.
+                    </p>
                   </div>
                 </div>
                 <!-- 3.single empower card End  -->
                 <!-- 4.single empower card start   -->
                 <div class="col-md-6 col-xl-3">
                   <div class="single-empower-card">
-                    <img class="empower-icon" src="assets/images/icon/power-4.png" alt="image" />
+                    <img
+                      class="empower-icon"
+                      src="assets/images/icon/power-4.png"
+                      alt="image"
+                    />
                     <h3>Champion Decentralization</h3>
                     <p>
-                      Promote transparent, decentralized technologies that empower users and remove centralized control.
+                      Promote transparent, decentralized technologies that
+                      empower users and remove centralized control.
                     </p>
                   </div>
                 </div>
@@ -246,53 +296,85 @@
             <div class="ecm-head-text">
               <h2>What is ECM Coin?</h2>
               <p>
-                ECM Coin is the native utility and governance token of the ECM Ecosystem, used for payments, staking,
-                rewards, DAO voting, and platform-wide utility.
+                ECM Coin is the native utility and governance token of the ECM
+                Ecosystem, used for payments, staking, rewards, DAO voting, and
+                platform-wide utility.
               </p>
             </div>
             <div class="row g-2 ecm-card-main">
               <div class="focus-bg"></div>
-              <div class="d-none d-md-block col-md-1 col-xl-3 ecm-single-card"><div class="ecm-card"></div></div>
+              <div class="d-none d-md-block col-md-1 col-xl-3 ecm-single-card">
+                <div class="ecm-card"></div>
+              </div>
 
               <div class="col-sm-6 col-md-5 col-xl-3 ecm-single-card">
                 <div class="ecm-card">
                   <h3>Payments</h3>
-                  <p>Use ECM for fast, secure transactions across supported platforms.</p>
+                  <p>
+                    Use ECM for fast, secure transactions across supported
+                    platforms.
+                  </p>
                 </div>
               </div>
               <div class="col-sm-6 col-md-5 col-xl-3 ecm-single-card">
                 <div class="ecm-card">
                   <h3>E-commerce</h3>
-                  <p>Seamlessly integrate ECM into online stores as a digital payment option.</p>
+                  <p>
+                    Seamlessly integrate ECM into online stores as a digital
+                    payment option.
+                  </p>
                 </div>
               </div>
 
-              <div class="d-none d-md-block col-md-1 col-xl-3 ecm-single-card"><div class="ecm-card"></div></div>
-              <div class="d-none d-xl-block col-xl-1 ecm-single-card"><div class="ecm-card"></div></div>
-              <div class="d-none d-md-block col-md-2 col-xl-3 ecm-single-card"><div class="ecm-card"></div></div>
+              <div class="d-none d-md-block col-md-1 col-xl-3 ecm-single-card">
+                <div class="ecm-card"></div>
+              </div>
+              <div class="d-none d-xl-block col-xl-1 ecm-single-card">
+                <div class="ecm-card"></div>
+              </div>
+              <div class="d-none d-md-block col-md-2 col-xl-3 ecm-single-card">
+                <div class="ecm-card"></div>
+              </div>
               <div class="col-sm-6 col-md-5 col-xl-3 ecm-single-card">
                 <div class="ecm-card">
                   <h3>Staking & Rewards</h3>
-                  <p>Stake ECM to earn rewards and participate in ecosystem incentives.</p>
+                  <p>
+                    Stake ECM to earn rewards and participate in ecosystem
+                    incentives.
+                  </p>
                 </div>
               </div>
 
-              <div class="d-none d-md-block col-md-3 col-xl-3 ecm-single-card"><div class="ecm-card"></div></div>
-              <div class="d-none d-md-block col-md-2 col-xl-2 ecm-single-card"><div class="ecm-card"></div></div>
-              <div class="d-none d-md-block col-md-1 col-xl-3 ecm-single-card"><div class="ecm-card"></div></div>
+              <div class="d-none d-md-block col-md-3 col-xl-3 ecm-single-card">
+                <div class="ecm-card"></div>
+              </div>
+              <div class="d-none d-md-block col-md-2 col-xl-2 ecm-single-card">
+                <div class="ecm-card"></div>
+              </div>
+              <div class="d-none d-md-block col-md-1 col-xl-3 ecm-single-card">
+                <div class="ecm-card"></div>
+              </div>
               <div class="col-sm-6 col-md-5 col-xl-3 ecm-single-card">
                 <div class="ecm-card">
                   <h3>Ecosystem Utility</h3>
-                  <p>Access and interact with features across all ECM-powered platforms.</p>
+                  <p>
+                    Access and interact with features across all ECM-powered
+                    platforms.
+                  </p>
                 </div>
               </div>
               <div class="col-sm-6 col-md-5 col-xl-3 ecm-single-card">
                 <div class="ecm-card">
                   <h3>Governance Voting</h3>
-                  <p>Vote on key proposals and shape the future of the ECM Ecosystem through DAO governance.</p>
+                  <p>
+                    Vote on key proposals and shape the future of the ECM
+                    Ecosystem through DAO governance.
+                  </p>
                 </div>
               </div>
-              <div class="d-none d-sm-block col-sm-6 col-md-1 col-xl-3 ecm-single-card">
+              <div
+                class="d-none d-sm-block col-sm-6 col-md-1 col-xl-3 ecm-single-card"
+              >
                 <div class="ecm-card"></div>
               </div>
             </div>
@@ -305,15 +387,52 @@
             <div class="ecosystem-head-text">
               <h2>Unlock the Full Potential of ECM</h2>
               <p>
-                ECM isn’t just a token — it’s your gateway to a powerful blockchain-driven universe. Whether you're a
-                long-term investor or a daily user, holding ECM grants you access to exclusive benefits that grow in
-                value over time.
+                ECM isn’t just a token — it’s your gateway to a powerful
+                blockchain-driven universe. Whether you're a long-term investor
+                or a daily user, holding ECM grants you access to exclusive
+                benefits that grow in value over time.
               </p>
             </div>
             <div class="hold-animation">
               <div class="vector-animation">
                 <div class="vector-animation1">
                   <svg>
+                    <defs>
+                      <!-- Gradient stroke for the path -->
+                      <linearGradient
+                        id="multiColorStroke"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="0%"
+                      >
+                        <stop offset="0%" stop-color="#7B7B7B" />
+                        <stop offset="50%" stop-color="#7B7B7B" />
+                        <stop offset="100%" stop-color="#7B7B7B" />
+                      </linearGradient>
+
+                      <!-- Gradient beam for the trailing light -->
+                      <linearGradient
+                        id="beamGradient"
+                        x1="0%"
+                        y1="100%"
+                        x2="0%"
+                        y2="0%"
+                      >
+                        <stop
+                          offset="0%"
+                          stop-color="#ffcc00"
+                          stop-opacity="0"
+                        />
+                        <stop
+                          offset="100%"
+                          stop-color="#ffcc00"
+                          stop-opacity="0.8"
+                        />
+                      </linearGradient>
+                    </defs>
+
+                    <!-- Motion path -->
                     <path
                       id="motionPath"
                       class="glow-path"
@@ -321,11 +440,16 @@
                         L 150 300             
                         Q 150 350, 250 350  
                         L 500 350"
+                      stroke="url(#multiColorStroke)"
                     />
 
-                    <!-- Glowing moving dot -->
+                    <!-- Actual moving dot -->
                     <circle r="6" class="moving-dot">
-                      <animateMotion dur="5s" repeatCount="indefinite" rotate="auto">
+                      <animateMotion
+                        dur="5s"
+                        repeatCount="indefinite"
+                        rotate="auto"
+                      >
                         <mpath href="#motionPath" />
                       </animateMotion>
                     </circle>
@@ -345,7 +469,11 @@
 
                     <!-- Glowing moving dot -->
                     <circle r="6" class="moving-dot2">
-                      <animateMotion dur="5s" repeatCount="indefinite" rotate="auto">
+                      <animateMotion
+                        dur="5s"
+                        repeatCount="indefinite"
+                        rotate="auto"
+                      >
                         <mpath href="#motionPath2" />
                       </animateMotion>
                     </circle>
@@ -365,7 +493,11 @@
 
                     <!-- Glowing moving circle -->
                     <circle r="6" class="moving-dot3">
-                      <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+                      <animateMotion
+                        dur="6s"
+                        repeatCount="indefinite"
+                        rotate="auto"
+                      >
                         <mpath href="#motionPath3" />
                       </animateMotion>
                     </circle>
@@ -373,8 +505,18 @@
                 </div>
               </div>
               <div class="unlock-card-wrapper">
-                <video  id="bg-video"  autoplay muted loop playsinline class="unlock-bg-video">
-                  <source src="./assets/images/video/holdecm.mp4" type="video/mp4" />
+                <video
+                  id="bg-video"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  class="unlock-bg-video"
+                >
+                  <source
+                    src="./assets/images/video/holdecm.mp4"
+                    type="video/mp4"
+                  />
                 </video>
                 <div class="unlock-btn-wrapper">
                   <a href="#" class="hero-btn">
@@ -468,7 +610,10 @@
             <span class="rotating-ball"></span>
             <div class="holding-head-text">
               <h2>Start Holding ECM on MyCoinPoll</h2>
-              <p>Purchase ECM directly on MyCoinPoll and unlock exclusive benefits across the ecosystem.</p>
+              <p>
+                Purchase ECM directly on MyCoinPoll and unlock exclusive
+                benefits across the ecosystem.
+              </p>
               <a href="#" class="btn-1 btn-animate">
                 Buy ECM Now
                 <i class="fa-solid fa-arrow-right"></i>
@@ -484,8 +629,9 @@
             <div class="ecosystem-head-text">
               <h2>ECM Ecosystem</h2>
               <p>
-                The ECM Ecosystem is a comprehensive suite of blockchain-based platforms and services designed to
-                revolutionize e-commerce, trading, and digital asset management.
+                The ECM Ecosystem is a comprehensive suite of blockchain-based
+                platforms and services designed to revolutionize e-commerce,
+                trading, and digital asset management.
               </p>
             </div>
             <div class="ecosystem-cards">
@@ -502,7 +648,9 @@
                         <h3>MyCoinPoll</h3>
                         <span>Launchpad</span>
                       </div>
-                      <p class="ecosystem-card-desc">Community-driven token sale platform</p>
+                      <p class="ecosystem-card-desc">
+                        Community-driven token sale platform
+                      </p>
                       <div class="ecosystem-btn-wrapper">
                         <a href="#" class="hero-btn">
                           <div class="light-particle"></div>
@@ -527,7 +675,9 @@
                         <h3>MyCoinPoll</h3>
                         <span>Launchpad</span>
                       </div>
-                      <p class="ecosystem-card-desc">Community-driven token sale platform</p>
+                      <p class="ecosystem-card-desc">
+                        Community-driven token sale platform
+                      </p>
                       <div class="ecosystem-btn-wrapper">
                         <a href="#" class="hero-btn">
                           <div class="light-particle"></div>
@@ -552,7 +702,9 @@
                         <h3>MyCoinPoll</h3>
                         <span>Launchpad</span>
                       </div>
-                      <p class="ecosystem-card-desc">Community-driven token sale platform</p>
+                      <p class="ecosystem-card-desc">
+                        Community-driven token sale platform
+                      </p>
                       <div class="ecosystem-btn-wrapper">
                         <a href="#" class="hero-btn">
                           <div class="light-particle"></div>
@@ -577,7 +729,9 @@
                         <h3>MyCoinPoll</h3>
                         <span>Launchpad</span>
                       </div>
-                      <p class="ecosystem-card-desc">Community-driven token sale platform</p>
+                      <p class="ecosystem-card-desc">
+                        Community-driven token sale platform
+                      </p>
                       <div class="ecosystem-btn-wrapper">
                         <a href="#" class="hero-btn">
                           <div class="light-particle"></div>
@@ -602,7 +756,9 @@
                         <h3>MyCoinPoll</h3>
                         <span>Launchpad</span>
                       </div>
-                      <p class="ecosystem-card-desc">Community-driven token sale platform</p>
+                      <p class="ecosystem-card-desc">
+                        Community-driven token sale platform
+                      </p>
                       <div class="ecosystem-btn-wrapper">
                         <a href="#" class="hero-btn">
                           <div class="light-particle"></div>
@@ -627,7 +783,9 @@
                         <h3>MyCoinPoll</h3>
                         <span>Launchpad</span>
                       </div>
-                      <p class="ecosystem-card-desc">Community-driven token sale platform</p>
+                      <p class="ecosystem-card-desc">
+                        Community-driven token sale platform
+                      </p>
                       <div class="ecosystem-btn-wrapper">
                         <a href="#" class="hero-btn">
                           <div class="light-particle"></div>
@@ -652,7 +810,9 @@
                         <h3>ECM Blockchain</h3>
                         <span>Layer 1 Blockchain</span>
                       </div>
-                      <p class="ecosystem-card-desc">Our native blockchain net-work launching in 2026.</p>
+                      <p class="ecosystem-card-desc">
+                        Our native blockchain net-work launching in 2026.
+                      </p>
                       <div class="ecosystem-btn-wrapper">
                         <a href="#" class="hero-btn">
                           <div class="light-particle"></div>
@@ -672,7 +832,13 @@
       </section>
       <section class="blockchain-area">
         <div class="blockchain-video">
-          <video src="assets/images/video/blockchain.mp4" autoplay muted loop playsinline></video>
+          <video
+            src="assets/images/video/blockchain.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
         </div>
         <div class="container">
           <div class="blockchain-content">
@@ -681,8 +847,9 @@
                 <div class="blockchain-head-text">
                   <h2>Why ECM Blockchain?</h2>
                   <p>
-                    Discover how ECM Blockchain delivers ultra-fast performance, low fees, and seamless
-                    integration—engineered for modern commerce and future-ready dApps.
+                    Discover how ECM Blockchain delivers ultra-fast performance,
+                    low fees, and seamless integration—engineered for modern
+                    commerce and future-ready dApps.
                   </p>
                 </div>
               </div>
@@ -700,7 +867,10 @@
                     <h3>Low Transaction Costs</h3>
                   </div>
                   <div class="blockchain-card-desc">
-                    <p>ECM reduces fees dramatically for frequent microtransactions</p>
+                    <p>
+                      ECM reduces fees dramatically for frequent
+                      microtransactions
+                    </p>
                   </div>
                 </div>
               </div>
@@ -715,7 +885,10 @@
                     <h3>Ultra-Fast Confirmations</h3>
                   </div>
                   <div class="blockchain-card-desc">
-                    <p>Blocks are confirmed within seconds, ensuring lightning-fast.</p>
+                    <p>
+                      Blocks are confirmed within seconds, ensuring
+                      lightning-fast.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -730,7 +903,9 @@
                     <h3>Dev-Friendly for dApps</h3>
                   </div>
                   <div class="blockchain-card-desc">
-                    <p>SDKs, docs, and modular tools for seamless development.</p>
+                    <p>
+                      SDKs, docs, and modular tools for seamless development.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -784,14 +959,19 @@
                 <div class="launch-right">
                   <h2>Launch Your Crypto Project with Confidence</h2>
                   <p>
-                    MyCoinPoll’s Launchpad is your all-in-one gateway to successfully launching a crypto project. Use
-                    our intuitive Token Builder to deploy your token in minutes, set up vesting schedules to ensure
-                    smart distribution, and streamline your KYC onboarding to meet global compliance standards.
+                    MyCoinPoll’s Launchpad is your all-in-one gateway to
+                    successfully launching a crypto project. Use our intuitive
+                    Token Builder to deploy your token in minutes, set up
+                    vesting schedules to ensure smart distribution, and
+                    streamline your KYC onboarding to meet global compliance
+                    standards.
                   </p>
                   <p>
-                    Gain exposure and funding through access to our network of verified investors, and integrate your
-                    project directly into the MyCoinPoll ecosystem for long-term growth. Whether you're starting fresh
-                    or scaling up, our tools and support help you launch securely, quickly, and confidently.
+                    Gain exposure and funding through access to our network of
+                    verified investors, and integrate your project directly into
+                    the MyCoinPoll ecosystem for long-term growth. Whether
+                    you're starting fresh or scaling up, our tools and support
+                    help you launch securely, quickly, and confidently.
                   </p>
                   <a href="#" class="btn-1 btn-animate">
                     Buy ECM Now
@@ -826,12 +1006,20 @@
               <div class="email-box" onclick="copyEmail(this)">
                 <div class="email-inner">
                   <span class="email-text">hello@metafusionlabs.com</span>
-                  <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <svg
+                    class="copy-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
                     <path
                       d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zM20 5H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 18H8V7h12v16z"
                     />
                   </svg>
-                  <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
                     <path
                       d="M20.285 6.709a1 1 0 0 0-1.414-1.418L9 15.162l-3.871-3.87a1 1 0 1 0-1.415 1.414l4.578 4.578a1 1 0 0 0 1.414 0L20.285 6.709z"
                     />
@@ -893,11 +1081,14 @@
             </div>
             <div class="footer-right-bottom">
               <p>
-                Disclaimer: MetaFusionLabs provides general information only and does not offer financial or investment
-                advice. Trading crypto assets involves significant risk and can result in loss of funds. You are
-                responsible for your own tax obligations and should seek independent advice. Some products may be
-                unregulated or restricted in certain regions. MetaFusionLab’s services and protections vary by
-                jurisdiction. Always understand the risks before trading.
+                Disclaimer: MetaFusionLabs provides general information only and
+                does not offer financial or investment advice. Trading crypto
+                assets involves significant risk and can result in loss of
+                funds. You are responsible for your own tax obligations and
+                should seek independent advice. Some products may be unregulated
+                or restricted in certain regions. MetaFusionLab’s services and
+                protections vary by jurisdiction. Always understand the risks
+                before trading.
               </p>
             </div>
           </div>

@@ -29,17 +29,21 @@ body {
   position: absolute;
   width: 0;
   height: 0;
-  background: linear-gradient(180deg, #2a87ff 0%, rgba(253, 208, 133, 0) 91.67%);
-  filter: blur(30px);
+  background: linear-gradient(
+    180deg,
+    #2a87ff 0%,
+    rgba(253, 208, 133, 0) 91.67%
+  );
+  filter: blur(35px);
   z-index: 0;
-  top: -23%;
+  top: -30%;
   left: 12%;
   transform: rotate(-51deg);
   padding: initial;
 
-  border-left: 164px solid transparent;
+  border-left: 250px solid transparent;
   border-right: 123px solid transparent;
-  border-top: 888px solid #2a87ff3b;
+  border-top: 100px solid #2a87ff3b;
   opacity: 0.7;
   animation: growLight 4s ease-out forwards;
 }
@@ -66,7 +70,7 @@ a {
 h1 {
   font-weight: 600;
   font-size: 65px;
-  line-height: 72px;
+  line-height: 62px;
   text-align: center;
   color: #ffffff;
 }
@@ -97,7 +101,6 @@ p {
   top: 0;
   width: 100%;
   z-index: 9;
-  box-shadow: #ffbe38 0px 2px 10px -2px, #ffbe38 0px 0px 1px -2px;
 }
 .construction-wrapper .header-area {
   position: inherit;
@@ -129,13 +132,40 @@ p {
 }
 .dropdown-menu.show {
   background-color: #10131c;
-  border-radius: 8px;
-  box-shadow: #ffbe38 0px 2px 10px -2px, #ffbe38 0px 0px 1px -2px !important;
+  border-radius: 5px;
+  box-shadow: #ffbe38 0px 2px 3px -2px, #ffbe38 0px 0px 1px -2px !important;
 }
 .dropdown-item {
   color: #ffffff;
 }
-
+.ellipse {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  z-index: -2;
+  opacity: 0.8;
+  filter: blur(130px);
+}
+.ellipse-1 {
+  background: #0a2950;
+  left: -5%;
+  top: -10%;
+  opacity: 0.4;
+}
+.ellipse-2 {
+  background: #0a2950;
+  left: -5%;
+  bottom: 20%;
+  opacity: 0.6;
+}
+.ellipse-3 {
+  background: #0a2950;
+  left: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  z-index: 2;
+}
 .btn-1 {
   padding: 10px 31px;
   border-radius: 10px;
@@ -279,24 +309,43 @@ p {
   display: none;
 }
 .dropdown-toggle:hover {
-  background-color: #ffc8002f;
+  background-color: transparent;
+}
+.country-dropdown {
+  position: absolute;
+  inset: auto auto auto auto !important;
+  right: 0 !important;
+  transform: translate(0) !important;
+  top: 45px !important;
+}
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  background-color: transparent;
 }
 .dropdown-toggle:focus {
-  background-color: #ffc8002f !important;
+  background-color: transparent !important;
 }
 /*==========  Header Section End  ==========*/
 
 /*==========  Hero Section Start  ==========*/
 .hero-area {
-  padding: 160px 0;
-  position: relative;
+  padding-top: 70px;
+  position: fixed;
   z-index: 1;
-  top: 0;
+  top: 90px;
   background: #010613;
-  overflow: hidden;
+  z-index: 1;
   height: 100vh;
+  width: 100%;
 }
-
+.empower-area {
+  margin-top: 800px;
+  position: relative;
+  z-index: 99;
+}
 .hero-line img {
   width: 346px;
   position: absolute;
@@ -314,7 +363,7 @@ p {
   max-width: 740px;
   width: 100%;
   margin: 0 auto;
-  padding: 30px 0 60px 0;
+  padding: 30px 0 35px 0;
 }
 .hero-text {
   font-size: 16px !important;
@@ -336,6 +385,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 999999;
 }
 .hero-btn {
   position: relative;
@@ -353,6 +404,7 @@ p {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  z-index: 9999;
 }
 .hero-btn:hover {
   background-color: #2a86ff7a;
@@ -475,7 +527,7 @@ p {
 .hero-card {
   background: url("../images/bg/hero-card.png");
   background-size: cover;
-  padding: 25px;
+  padding: 16px 22px;
   border-radius: 5px;
   z-index: -1;
 }
@@ -487,21 +539,21 @@ p {
 }
 .hero-card p {
   font-weight: 700;
-  font-size: 39.64px;
+  font-size: 28px;
   line-height: 32.31px;
   color: #fdfdfdb5;
   text-align: left;
 }
 .hero-card1 {
   position: absolute;
-  top: 40%;
+  top: 20%;
   left: 110px;
   text-align: left;
   z-index: 9;
 }
 .hero-card2 {
   position: absolute;
-  top: 40%;
+  top: 20%;
   right: 110px;
   z-index: 9;
   text-align: right;
@@ -512,16 +564,21 @@ p {
 .style-2 .word-wrapper:last-child span {
   color: #ffbe38;
 }
-
+.hero-animation {
+  position: absolute;
+  width: 100%;
+  bottom: 28%;
+}
 /* start animation code  */
 .hero-animation-1 img {
-  width: 260px;
+  width: 200px;
   height: auto;
   position: absolute;
-  left: 142px;
+  left: -10%;
   z-index: -1;
   animation: iconAnim1 12s ease-in-out 0.5s infinite;
   opacity: 0.5;
+  bottom: 0;
   transform: translateY(40px) translateX(0px) rotate(0deg);
 }
 
@@ -549,11 +606,11 @@ p {
 }
 
 .hero-animation-2 img {
-  width: 164px;
+  width: 144px;
   height: auto;
   position: absolute;
-  left: 257px;
-  bottom: 100px;
+  left: 200px;
+  bottom: 50px;
   z-index: -1;
   animation: iconAnim2 14s ease-in-out 0.3s infinite;
   opacity: 0.5;
@@ -589,13 +646,12 @@ p {
 }
 
 .hero-animation-3 img {
-  width: 158px;
+  width: 140px;
   height: auto;
   position: absolute;
-  left: -361px;
-  right: 0;
+  left: 30%;
   margin: auto;
-  bottom: 110px;
+  bottom: 10px;
   z-index: -1;
   animation: iconAnim3 15s ease-in-out 0.7s infinite;
   opacity: 0.5;
@@ -640,7 +696,6 @@ p {
   z-index: -1;
   animation: iconAnim4 13s ease-in-out 0.5s infinite;
   opacity: 0.5;
-  /* Set initial transform state to match 0% keyframe */
   transform: translateY(35px) translateX(10px) rotate(0deg);
 }
 
@@ -668,7 +723,7 @@ p {
 }
 
 .hero-animation-5 img {
-  width: 260px;
+  width: 160px;
   height: auto;
   position: absolute;
   right: 0px;
@@ -677,7 +732,6 @@ p {
   bottom: 200px;
   animation: iconAnim5 16s ease-in-out 0.5s infinite;
   opacity: 0.5;
-  /* Set initial transform state to match 0% keyframe */
   transform: translateY(45px) translateX(-8px) rotate(0deg);
 }
 
@@ -707,7 +761,6 @@ p {
     opacity: 0.5;
   }
 }
-
 .hero-animation-6 img {
   width: 167px;
   height: auto;
@@ -717,7 +770,6 @@ p {
   z-index: -1;
   animation: iconAnim6 11s ease-in-out 0.9s infinite;
   opacity: 0.5;
-  /* Set initial transform state to match 0% keyframe */
   transform: translateY(28px) translateX(5px) rotate(0deg);
 }
 
@@ -747,25 +799,6 @@ p {
     opacity: 0.5;
   }
 }
-/* 
-.hero-animation-7 img {
-  width: 260px;
-  height: auto;
-  z-index: -1 !important;
-  position: absolute;
-}
-
-.hero-animation-8 img {
-  width: 177px;
-  height: auto;
-  position: absolute;
-  right: 387px;
-  bottom: 204px;
-  z-index: -1;
-  animation: iconAnim8 11s ease-in-out 0.9s infinite;
-  opacity: 0.5;
-  transform: translateY(28px) translateX(5px) rotate(0deg);
-} */
 
 @keyframes iconAnim8 {
   0% {
@@ -805,6 +838,12 @@ p {
   transform: translateY(100%);
 }
 
+.style-3{
+  position: relative;
+  z-index: 999999;
+ 
+ 
+}
 /* Hero Text: Word Flow (same animation as style-2) */
 .hero-text .word-wrapper {
   display: inline-block;
@@ -884,7 +923,11 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
   pointer-events: none;
   border-radius: inherit;
 }
@@ -904,7 +947,7 @@ p {
 /*==========  Hero Section End  ==========*/
 /*==========  Empower Section Start  ==========*/
 .empower-area {
-  padding: 300px 0 100px 0;
+  padding: 370px 0 100px 0;
   position: relative;
   background-color: #010613;
   z-index: 1;
@@ -912,11 +955,11 @@ p {
 
 .hero-bg img {
   position: absolute;
-  top: -247px;
+  top: -300px;
   left: 0;
   width: 100%;
-  height: 500px;
-  z-index: -1;
+  height: 600px;
+  z-index: -99;
 }
 .empower-area .container {
   position: relative;
@@ -999,9 +1042,9 @@ p {
 .single-empower-card h3 {
   font-weight: 600;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 25px;
   color: #ffffff;
-  padding: 40px 0 20px 0;
+  padding: 28px 0 10px 0;
 }
 .single-empower-card p {
   font-weight: 400;
@@ -1026,7 +1069,7 @@ p {
 /*==========  Empower Section End  ==========*/
 /*==========  ECM coin Section Start  ==========*/
 .ecm-area {
-  padding: 170px 0 133px 0;
+  padding: 120px 0 120px 0;
   background-color: rgba(1, 6, 19, 1);
   position: relative;
   z-index: 1;
@@ -1133,14 +1176,14 @@ p {
   z-index: -1;
 }
 .unlock-card-wrapper::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgb(1 6 19 / 81%), rgb(1 6 19 / 0%));
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(1 6 19 / 81%), rgb(1 6 19 / 0%));
+  z-index: -1;
 }
 
 .unlock-btn-wrapper {
@@ -1175,10 +1218,13 @@ p {
   transition: all 0.3s ease;
   height: 100%;
   width: 100%;
+ 
 }
+ 
 .unlock-card:hover {
-  box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d, inset 0px 50px 100px -48px #00a1fd4d,
-    inset 0px -40px 68px -64px #0e4e724d, inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
+  box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d,
+    inset 0px 50px 100px -48px #00a1fd4d, inset 0px -40px 68px -64px #0e4e724d,
+    inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
 }
 
 .unlock-card-main {
@@ -1237,8 +1283,9 @@ p {
   border: 2px solid ;
 } */
 .unlock-card.unlock-card3:hover {
-  box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d, inset 0px 50px 100px -48px #00a1fd4d,
-    inset 0px -40px 68px -64px #0e4e724d, inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
+  box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d,
+    inset 0px 50px 100px -48px #00a1fd4d, inset 0px -40px 68px -64px #0e4e724d,
+    inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
 }
 .unlock-card.unlock-card3::before {
   background: transparent;
@@ -1253,7 +1300,12 @@ p {
   width: 80%;
 }
 .unlock-card-sub .hero-btn {
-  background: linear-gradient(145deg, #24243100 0%, #434369d6 87%, #242431 100%);
+  background: linear-gradient(
+    145deg,
+    #24243100 0%,
+    #434369d6 87%,
+    #242431 100%
+  );
   border-radius: 10px;
 }
 .unlock-card-sub .hero-btn::before {
@@ -1285,17 +1337,17 @@ p {
   overflow: hidden;
 }
 .glow-path {
-  stroke: #ffcc00;
   stroke-width: 2;
   fill: none;
   stroke-linecap: round;
-  filter: drop-shadow(0 0 6px #ffcc00);
+  filter: drop-shadow(0 0 15px #ffcc00);
 }
 
 .moving-dot {
   fill: #ffcc00;
   filter: drop-shadow(0 0 10px #ffcc00) drop-shadow(0 0 20px #ffcc00);
 }
+
 .vector-animation1 svg path {
   position: absolute;
   bottom: 0;
@@ -1310,11 +1362,11 @@ p {
 }
 
 .glow-path2 {
-  stroke: #ffcc00;
+  stroke: #7B7B7B;
   stroke-width: 2;
   fill: none;
   stroke-linecap: round;
-  filter: drop-shadow(0 0 6px #ffcc00);
+  filter: drop-shadow(0 0 15px #ffcc00);
 }
 
 .moving-dot2 {
@@ -1332,11 +1384,11 @@ p {
 }
 
 .glow-path3 {
-  stroke: #ffcc00;
+  stroke: #7B7B7B;
   stroke-width: 2;
   fill: none;
   stroke-linecap: round;
-  filter: drop-shadow(0 0 6px #ffcc00);
+  filter: drop-shadow(0 0 15px #ffcc00);
 }
 
 .moving-dot3 {
@@ -1368,7 +1420,8 @@ p {
 .holding-content {
   position: relative;
   width: 100%;
-  background: url("../images/bg/ecm-coin.png") no-repeat scroll center center/cover;
+  background: url("../images/bg/ecm-coin.png") no-repeat scroll center
+    center/cover;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -1452,7 +1505,7 @@ p {
 }
 .single-ecosystem-card {
   position: relative;
-  padding: 40px 30px;
+  padding: 20px 30px;
   border-radius: 10px;
   background: linear-gradient(to bottom, #242431 0%, #ffffff1f 100%);
   backdrop-filter: blur(20px);
@@ -1480,8 +1533,9 @@ p {
   transition: all 0.3s ease;
 }
 .single-ecosystem-card:hover {
-  box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d, inset 0px 50px 100px -48px #00a1fd4d,
-    inset 0px -40px 68px -64px #0e4e724d, inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
+  box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d,
+    inset 0px 50px 100px -48px #00a1fd4d, inset 0px -40px 68px -64px #0e4e724d,
+    inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
 }
 
 .single-ecosystem-card::before {
@@ -1509,6 +1563,7 @@ p {
 }
 .ecosystem-card-text {
   padding: 20px 0;
+  padding-top:8px;
 }
 .ecosystem-card-text h3 {
   font-weight: 590;
@@ -1530,6 +1585,7 @@ p {
   font-size: 16px;
   line-height: 24px;
   padding: 20px 0;
+  padding-top: 0;
 }
 .ecosystem-btn-wrapper {
   display: flex;
@@ -1537,7 +1593,7 @@ p {
   align-items: center;
 }
 .ecosystem-btn-wrapper .hero-btn {
-  padding: 12px 48px;
+  padding: 10px 48px;
   border-radius: 8px;
 }
 .ecosystem-btn-wrapper .hero-btn span {
@@ -1549,7 +1605,7 @@ p {
 /*==========  Ecosystem Section End  ==========*/
 /*==========  Blockchain Section Start  ==========*/
 .blockchain-area {
-  padding: 330px 0 187px 0;
+  padding: 220px 0 187px 0;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -1569,16 +1625,19 @@ p {
 }
 .single-blockchain-card {
   padding: 20px;
-  box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d, inset 0px 50px 100px -48px #00a1fd4d,
-    inset 0px -40px 68px -64px #0e4e724d, inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
+  box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d,
+    inset 0px 50px 100px -48px #00a1fd4d, inset 0px -40px 68px -64px #0e4e724d,
+    inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
   border-radius: 8px;
   transition: all 0.3s ease;
   cursor: pointer;
   height: 100%;
 }
 .single-blockchain-card:hover {
-  box-shadow: inset 0px 17px 40px 0px #0d89cf33, inset 0px 6px 32px 16px #083b584d, inset 17px 62px 79px -9px #00a1fd4d,
-    inset 24px -119px 122px -94px #0e4e724d, inset 0px 0px 22px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
+  box-shadow: inset 0px 17px 40px 0px #0d89cf33,
+    inset 0px 6px 32px 16px #083b584d, inset 17px 62px 79px -9px #00a1fd4d,
+    inset 24px -119px 122px -94px #0e4e724d, inset 0px 0px 22px -4px #ffffff,
+    inset 0px 10px 56px -36px #ffffff80;
 }
 .blockchain-cards {
   padding-top: 150px;
@@ -1606,7 +1665,7 @@ p {
 .blockchain-card-desc p {
   font-weight: 400;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 26px;
   color: #d8d8d8;
 }
 /*==========  Blockchain Section End  ==========*/
@@ -1636,7 +1695,8 @@ p {
 /* animation  */
 .launch-animation {
   padding: 20px;
-  box-shadow: inset 0px 0px 8.73px 0px #0084ff, inset 0px -9.29px 18.58px 0px #de0aff40,
+  box-shadow: inset 0px 0px 8.73px 0px #0084ff,
+    inset 0px -9.29px 18.58px 0px #de0aff40,
     inset 0px 1.86px 5.57px 0px #ffffff80;
   width: 140px;
   text-align: center;
@@ -1646,7 +1706,11 @@ p {
   align-items: center;
   gap: 18px;
   border-radius: 8px;
-  background: radial-gradient(116.8% 131.22% at 0% -25.63%, rgba(43, 184, 255, 0.48) 0%, rgba(68, 43, 255, 0) 100%)
+  background: radial-gradient(
+      116.8% 131.22% at 0% -25.63%,
+      rgba(43, 184, 255, 0.48) 0%,
+      rgba(68, 43, 255, 0) 100%
+    )
     /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   position: absolute;
   animation-duration: 3s;
@@ -1926,7 +1990,8 @@ p {
 /*==========  Footer Section End  ==========*/
 /*==========  Footer Section End  ==========*/
 .construction-wrapper {
-  background: url("../images/bg/construction-bg.png") no-repeat center center/cover;
+  background: url("../images/bg/construction-bg.png") no-repeat center
+    center/cover;
   height: auto;
   z-index: -1;
   overflow: hidden;
@@ -2002,14 +2067,16 @@ p {
   transition: 0.5s;
   opacity: 0.8;
   cursor: pointer;
-  box-shadow: inset 0px 1px 40px 0px #0d88cf00, inset 0px 4px 18px 0px #083b5800, inset 0px 50px 100px -48px #00a0fd00,
-    inset 0px -40px 68px -64px #0e4d7200, inset 0px 7px 11px -4px #ffffff00, inset 0px 10px 56px -36px #ffffff00;
+  box-shadow: inset 0px 1px 40px 0px #0d88cf00, inset 0px 4px 18px 0px #083b5800,
+    inset 0px 50px 100px -48px #00a0fd00, inset 0px -40px 68px -64px #0e4d7200,
+    inset 0px 7px 11px -4px #ffffff00, inset 0px 10px 56px -36px #ffffff00;
   overflow: hidden;
 }
 
 .timer-block:hover {
-  box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d, inset 0px 50px 100px -48px #00a1fd4d,
-    inset 0px -40px 68px -64px #0e4e724d, inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
+  box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d,
+    inset 0px 50px 100px -48px #00a1fd4d, inset 0px -40px 68px -64px #0e4e724d,
+    inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
   opacity: 1;
 }
 
@@ -2089,7 +2156,8 @@ p {
   border-radius: 50%;
   opacity: 0.8;
   animation: twinkle 4s ease-in-out infinite;
-  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6), 0 0 18px rgba(255, 255, 255, 0.4),
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8),
+    0 0 12px rgba(255, 255, 255, 0.6), 0 0 18px rgba(255, 255, 255, 0.4),
     0 0 24px rgba(255, 255, 255, 0.2);
 }
 
@@ -2116,15 +2184,15 @@ p {
 /* Brighter stars */
 .dot.bright {
   background: #fff8dc;
-  box-shadow: 0 0 8px rgba(255, 248, 220, 1), 0 0 16px rgba(255, 248, 220, 0.8), 0 0 24px rgba(255, 248, 220, 0.6),
-    0 0 32px rgba(255, 248, 220, 0.4);
+  box-shadow: 0 0 8px rgba(255, 248, 220, 1), 0 0 16px rgba(255, 248, 220, 0.8),
+    0 0 24px rgba(255, 248, 220, 0.6), 0 0 32px rgba(255, 248, 220, 0.4);
 }
 
 /* Slightly blue stars */
 .dot.blue {
   background: #e6f3ff;
-  box-shadow: 0 0 6px rgba(230, 243, 255, 1), 0 0 12px rgba(230, 243, 255, 0.8), 0 0 18px rgba(173, 216, 255, 0.6),
-    0 0 24px rgba(173, 216, 255, 0.4);
+  box-shadow: 0 0 6px rgba(230, 243, 255, 1), 0 0 12px rgba(230, 243, 255, 0.8),
+    0 0 18px rgba(173, 216, 255, 0.6), 0 0 24px rgba(173, 216, 255, 0.4);
 }
 
 @keyframes twinkle {
@@ -2227,11 +2295,13 @@ p {
 
 /* Movement classes */
 .dot.floating {
-  animation: twinkle 4s ease-in-out infinite, float-gentle 8s ease-in-out infinite;
+  animation: twinkle 4s ease-in-out infinite,
+    float-gentle 8s ease-in-out infinite;
 }
 
 .dot.drifting {
-  animation: twinkle 4s ease-in-out infinite, float-drift 12s ease-in-out infinite;
+  animation: twinkle 4s ease-in-out infinite,
+    float-drift 12s ease-in-out infinite;
 }
 
 .dot.swaying {
@@ -2239,10 +2309,23 @@ p {
 }
 
 .dot.fast-twinkle.floating {
-  animation: twinkle-fast 2s ease-in-out infinite, float-gentle 7s ease-in-out infinite;
+  animation: twinkle-fast 2s ease-in-out infinite,
+    float-gentle 7s ease-in-out infinite;
 }
 
 .dot.slow-twinkle.drifting {
-  animation: twinkle-slow 6s ease-in-out infinite, float-drift 15s ease-in-out infinite;
+  animation: twinkle-slow 6s ease-in-out infinite,
+    float-drift 15s ease-in-out infinite;
 }
 /*==========  Footer Section End  ==========*/
+.empower-area:before{
+  content: "";
+  position: absolute;
+  top: -18%;
+  left: 0;
+  height: 35%;
+  width: 100%;
+  background-image: url('../images/bg/hero-bg.png');
+  background-size: 100% 100%;
+  z-index: -2;
+}
