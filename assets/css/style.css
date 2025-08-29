@@ -1218,7 +1218,9 @@ p {
   transition: all 0.3s ease;
   height: 100%;
   width: 100%;
+ 
 }
+ 
 .unlock-card:hover {
   box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d,
     inset 0px 50px 100px -48px #00a1fd4d, inset 0px -40px 68px -64px #0e4e724d,
@@ -1335,17 +1337,17 @@ p {
   overflow: hidden;
 }
 .glow-path {
-  stroke: #ffcc00;
   stroke-width: 2;
   fill: none;
   stroke-linecap: round;
-  filter: drop-shadow(0 0 6px #ffcc00);
+  filter: drop-shadow(0 0 15px #ffcc00);
 }
 
 .moving-dot {
   fill: #ffcc00;
   filter: drop-shadow(0 0 10px #ffcc00) drop-shadow(0 0 20px #ffcc00);
 }
+
 .vector-animation1 svg path {
   position: absolute;
   bottom: 0;
@@ -1360,11 +1362,11 @@ p {
 }
 
 .glow-path2 {
-  stroke: #ffcc00;
+  stroke: #7B7B7B;
   stroke-width: 2;
   fill: none;
   stroke-linecap: round;
-  filter: drop-shadow(0 0 6px #ffcc00);
+  filter: drop-shadow(0 0 15px #ffcc00);
 }
 
 .moving-dot2 {
@@ -1382,11 +1384,11 @@ p {
 }
 
 .glow-path3 {
-  stroke: #ffcc00;
+  stroke: #7B7B7B;
   stroke-width: 2;
   fill: none;
   stroke-linecap: round;
-  filter: drop-shadow(0 0 6px #ffcc00);
+  filter: drop-shadow(0 0 15px #ffcc00);
 }
 
 .moving-dot3 {
@@ -1503,7 +1505,7 @@ p {
 }
 .single-ecosystem-card {
   position: relative;
-  padding: 40px 30px;
+  padding: 20px 30px;
   border-radius: 10px;
   background: linear-gradient(to bottom, #242431 0%, #ffffff1f 100%);
   backdrop-filter: blur(20px);
@@ -1561,6 +1563,7 @@ p {
 }
 .ecosystem-card-text {
   padding: 20px 0;
+  padding-top:8px;
 }
 .ecosystem-card-text h3 {
   font-weight: 590;

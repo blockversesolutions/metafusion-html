@@ -46,7 +46,7 @@
           <div class="nav">
             <ul class="d-flex flex-lg-row flex-column align-items-center gx-4">
               <li class="fade-in-left nav-item-1">
-                <a class="nav-link active" href="#home">Home</a>
+                <a class="nav-link active" href="#home-section">Home</a>
               </li>
               <li class="fade-in-left nav-item-2">
                 <a class="nav-link" href="#about">About</a>
@@ -86,7 +86,7 @@
         </div>
       </div>
     </header>
-    <section class="hero-area section-link" id="home">
+    <section class="hero-area section-link" id="home-section">
       <div class="ellipse ellipse-1"></div>
       <div class="ellipse ellipse-2"></div>
       <div class="toplight">
@@ -146,7 +146,6 @@
               </a>
             </div>
           </div>
-
           <!-- Hero Logo animation start  -->
           <div class="hero-animation">
             <div class="hero-animation-1">
@@ -171,7 +170,6 @@
           <!-- Hero Logo animation End  -->
           <!-- Hero Text animation End  -->
           <!-- Hero Button animation start  -->
-
           <!-- Hero Button animation End  -->
         </div>
       </div>
@@ -399,6 +397,42 @@
               <div class="vector-animation">
                 <div class="vector-animation1">
                   <svg>
+                    <defs>
+                      <!-- Gradient stroke for the path -->
+                      <linearGradient
+                        id="multiColorStroke"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="0%"
+                      >
+                        <stop offset="0%" stop-color="#7B7B7B" />
+                        <stop offset="50%" stop-color="#7B7B7B" />
+                        <stop offset="100%" stop-color="#7B7B7B" />
+                      </linearGradient>
+
+                      <!-- Gradient beam for the trailing light -->
+                      <linearGradient
+                        id="beamGradient"
+                        x1="0%"
+                        y1="100%"
+                        x2="0%"
+                        y2="0%"
+                      >
+                        <stop
+                          offset="0%"
+                          stop-color="#ffcc00"
+                          stop-opacity="0"
+                        />
+                        <stop
+                          offset="100%"
+                          stop-color="#ffcc00"
+                          stop-opacity="0.8"
+                        />
+                      </linearGradient>
+                    </defs>
+
+                    <!-- Motion path -->
                     <path
                       id="motionPath"
                       class="glow-path"
@@ -406,9 +440,10 @@
                         L 150 300             
                         Q 150 350, 250 350  
                         L 500 350"
+                      stroke="url(#multiColorStroke)"
                     />
 
-                    <!-- Glowing moving dot -->
+                    <!-- Actual moving dot -->
                     <circle r="6" class="moving-dot">
                       <animateMotion
                         dur="5s"

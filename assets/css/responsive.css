@@ -71,7 +71,7 @@
     padding: 20px 20px;
   }
   .single-ecosystem-card {
-    padding: 40px 25px;
+    padding: 20px 25px;
   }
   .unlock-card {
     padding: 20px;
@@ -269,6 +269,11 @@
   }
 }
 
+@media all and (max-width:1024px) {
+  .hero-animation {
+    bottom: 54%;
+  }
+}
 @media all and (max-width: 991px) {
   h1 {
     font-size: 48px;
@@ -378,7 +383,7 @@
     transform: translateY(60px);
   }
   .single-ecosystem-card {
-    padding: 30px 20px;
+    padding: 20px 20px;
     border-radius: 6px;
   }
   .single-ecosystem-card::before {
@@ -440,7 +445,10 @@
   }
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
+  .hero-animation {
+    bottom: 50%;
+}
   .construction-area {
     padding-top: 20px;
   }
@@ -516,11 +524,11 @@
     padding-top: 60px;
   }
   .hero-card1 {
-    top: 71%;
+    top:50%;
   }
-  .hero-card2 {
-    top: 71%;
-  }
+ .hero-card2 {
+    top: 57%;
+}
   .hero-card p {
     font-size: 31px;
   }
@@ -809,14 +817,15 @@
   .hero-btn span {
     font-size: 14px;
   }
-  .hero-animation {
-    bottom: 35%;
-  }
+ .hero-animation {
+    bottom: 55%;
+}
   .hero-card {
     display: none;
   }
   .empower-area:before {
     background-size: cover;
+    top: -22%;
   }
 }
 
@@ -828,4 +837,12 @@
   .footer-left-contact h3 {
     font-size: 18px;
   }
+  .hero-animation {
+    bottom: 40%;
+}
+}
+@media all and (max-width: 430px) {
+.hero-animation {
+    bottom: 52%;
+}
 }
