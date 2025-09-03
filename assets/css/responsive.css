@@ -15,6 +15,11 @@
   }
 }
 @media all and (max-width: 1500px) {
+  .empower-area:after {
+    top: -180px;
+
+    height: 22%;
+  }
   .single-empower-card h3 {
     padding: 20px 0 15px 0;
   }
@@ -44,6 +49,10 @@
   }
 }
 @media all and (max-width: 1400px) {
+  h1 {
+    font-size: 46px;
+    line-height: 54px;
+  }
   .single-empower-card h3 {
     font-weight: 600;
     font-size: 20px;
@@ -113,12 +122,7 @@
   .construction-wrapper {
     background-position: left;
   }
-  .hero-card1 {
-    top: 57%;
-  }
-  .hero-card2 {
-    top: 57%;
-  }
+
   .social-links li a {
     width: 38px;
     height: 38px;
@@ -165,13 +169,19 @@
     width: 104%;
   }
 }
+@media all and (min-width: 1200px) {
+  #lottie-empower {
+    display: block !important;
+  }
+}
 @media all and (max-width: 1199px) {
+  #lottie-empower {
+    display: none;
+  }
   .construction-area {
     padding-top: 30px;
   }
-  h1 {
-    font-size: 55px;
-  }
+
   .nav ul {
     gap: 0 34px;
   }
@@ -179,14 +189,8 @@
     padding: 18px;
     border-radius: 3px;
   }
-  h1 {
-    line-height: 55px;
-  }
   .footer-content {
     gap: 25px;
-  }
-  .footer-left-contact h3 {
-    font-size: 30px;
   }
   .holding-content {
     transform: translateY(70px);
@@ -198,7 +202,7 @@
     width: 92%;
   }
   .empower-area {
-    padding: 300px 0 45px 0;
+    padding: 70px 0 100px 0;
   }
   h2 {
     font-size: 32px;
@@ -227,9 +231,7 @@
   .empower-top {
     padding-bottom: 173px;
   }
-  #lottie-empower {
-    display: none;
-  }
+
   .empower-image-flip img {
     width: 100%;
     position: inherit;
@@ -251,7 +253,7 @@
     transform: translateY(0px);
   }
   .unlock-card {
-    padding: 30px;
+    padding: 30px 15px;
   }
   .unlock-card-title h3 {
     font-size: 24px;
@@ -267,18 +269,23 @@
   .ecm-area {
     padding-top: 100px;
   }
+  .hero-card1,
+  .hero-card2 {
+    top: 53%;
+  }
+.ecosystem-icon img {
+    /* display: none; */
+    max-width: 100px;
+    opacity: 0.2;
+}
 }
 
-@media all and (max-width:1024px) {
+@media all and (max-width: 1024px) {
   .hero-animation {
     bottom: 54%;
   }
 }
 @media all and (max-width: 991px) {
-  h1 {
-    font-size: 48px;
-    line-height: 48px;
-  }
   .flip-card-current {
     font-size: 32px;
     line-height: 30px;
@@ -430,7 +437,7 @@
     margin-bottom: 40px;
   }
   .empower-area {
-    padding: 121px 0 45px 0;
+    padding: 15px 0 28px 0;
   }
   .vector-animation1 svg,
   .vector-animation2 svg,
@@ -443,17 +450,27 @@
   .empower-image-flip img {
     left: 0;
   }
-}
-
-@media all and (min-width: 769px) {
-  #lottie-empower{
-    display: block !important;
+  .empower-area:after {
+    background-size: cover;
+    background-position: center center;
+  }
+  .single-empower-card-1,
+  .single-empower-card-3 {
+    margin-top: 0px;
+  }
+  .ecm-card {
+    padding: 15px;
+  }
+  .ecm-card h3 {
+    font-size: 24px;
+    line-height: 26px;
   }
 }
+
 @media all and (max-width: 768px) {
   .hero-animation {
     bottom: 50%;
-}
+  }
   .construction-area {
     padding-top: 20px;
   }
@@ -487,26 +504,17 @@
     top: 0;
     left: 20%;
   }
-
   .ecm-card {
-    padding: 30px 30px 50px 30px;
+    padding: 30px 15px;
   }
-
-  .ecm-card h3 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
   .ecm-card p {
     font-size: 20px;
     line-height: 28px;
   }
-
   .ecm-head-text h2 {
     font-size: 36px;
     line-height: 44px;
   }
-
   .ecm-head-text p {
     font-size: 16px;
     line-height: 24px;
@@ -526,16 +534,21 @@
   }
   .hero-area {
     padding: 120px 0;
-    padding-top: 60px;
+    padding-top: 30px;
   }
   .hero-card1 {
-    top:50%;
+    top: 50%;
   }
- .hero-card2 {
-    top: 57%;
-}
+  .hero-card2 {
+    top: 50%;
+  }
+  .hero-title p {
+    margin-top: 10px !important;
+    font-size: 15px;
+  }
   .hero-card p {
-    font-size: 31px;
+    font-size: 20px;
+    text-align: center;
   }
   .hero-card {
     padding: 9px 12px;
@@ -562,13 +575,7 @@
   .empower-top {
     padding-bottom: 172px;
   }
-  #lottie-empower {
-    display: none;
-  }
-  .empower-area {
-    padding: 79px 0 44px 0;
-    padding-top: 170px;
-  }
+
   .ecm-area {
     padding: 40px 0 70px 0;
   }
@@ -582,7 +589,7 @@
     width: 35px;
   }
   .launch-animation {
-    padding: 10px;
+    padding: 10px 5px;
     width: 84px;
     gap: 10px;
     border-radius: 6px;
@@ -644,9 +651,34 @@
     padding-top: 10px;
     gap: 3px;
   }
+  .single-empower-card {
+    padding: 20px 15px;
+  }
+  .empower-icon {
+    max-height: 48px;
+  }
+  .ecosystem-card-text span {
+    font-size: 15px;
+    line-height: 26px;
+  }
 }
 
 @media all and (max-width: 575px) {
+  .email-box{
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .launch-animation2 {
+    bottom: 50px;
+    left: 12px;
+  }
+  .launch-animation4 {
+    bottom: 86px;
+    right: 10px;
+  }
+  .launch-animation1 {
+    left: 16px;
+  }
   .toplight {
     display: none;
   }
@@ -677,7 +709,7 @@
   }
   h1 {
     font-size: 30px;
-    line-height: 40px;
+    line-height: 30px;
   }
   .timer-blocks {
     padding-top: 20px;
@@ -704,11 +736,11 @@
     border-radius: 7px;
   }
   .hero-card1 {
-    top: 53%;
+    top: 47%;
     left: 31px;
   }
   .hero-card2 {
-    top: 53%;
+    top: 47%;
     right: 31px;
   }
   .holding-content {
@@ -790,7 +822,7 @@
   }
   .footer-left-contact h3 {
     font-size: 20px;
-    line-height: 31px;
+    line-height: 28px;
     padding-bottom: 20px;
     margin-top: 10px;
   }
@@ -815,18 +847,12 @@
   .hero-bg img {
     top: -315px;
   }
-  .empower-area {
-    padding: 4px 0 44px 0;
-    padding-top: 140px;
-  }
+
   .hero-btn span {
     font-size: 14px;
   }
- .hero-animation {
+  .hero-animation {
     bottom: 55%;
-}
-  .hero-card {
-    display: none;
   }
   .empower-area:before {
     background-size: cover;
@@ -843,10 +869,15 @@
   }
   .hero-animation {
     bottom: 40%;
-}
+  }
+  .hero-card1,
+  .hero-card2 {
+    top: 54%;
+  }
+  
 }
 @media all and (max-width: 430px) {
-.hero-animation {
+  .hero-animation {
     bottom: 52%;
-}
+  }
 }
