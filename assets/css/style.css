@@ -166,23 +166,19 @@ p {
   opacity: 0.6;
   z-index: 2;
 }
-.btn-1 {
-  padding: 10px 31px;
-  border-radius: 10px;
-  background: #ffbe38;
-  font-weight: 600;
-  color: #1c1c1e;
-  z-index: 99;
-  display: inline-block;
-  transition: 0.3s;
-  font-size: 16px;
-  line-height: 24px;
+.ellipse-4 {
+  background: #0a2950;
+  left: -5%;
+  top: 10%;
+  opacity: 0.9;
+  z-index: 999;
 }
-.btn-1:hover {
-  background: #ffbe38;
+
+/* .btn-1:hover {
+  background: #ca9222;
   color: #1c1c1e !important;
   box-shadow: #ffbe38 0px 2px 8px 0px;
-}
+} */
 
 /* Left Side Animations */
 .fade-in-left {
@@ -337,6 +333,9 @@ p {
   height: 100vh;
   width: 100%;
 }
+.text-primary {
+  color: #ffc700;
+}
 .empower-area {
   position: relative;
   z-index: 99;
@@ -393,7 +392,7 @@ p {
   transition: all 0.3s ease;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(145deg, #2a87ff00 0%, #2a86ff7a 100%);
+  background: linear-gradient(145deg, #2a86ff34 0%, #2a86ff7a 100%);
   border: none;
   color: #ffffff;
   display: flex;
@@ -438,7 +437,25 @@ p {
 .hero-btn:hover {
   border-color: #2a87ff00;
 }
-
+.btn-1 {
+  padding: 10px 31px;
+  border-radius: 10px;
+  background: #ffbe38;
+  font-weight: 600;
+  color: #1c1c1e;
+  z-index: 99;
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 16px;
+  line-height: 24px;
+}
+.btn-1:hover {
+  background: #775207;
+  color: #fff;
+}
+.btn-1:hover:before {
+  border-radius: 10px;
+}
 .hero-btn span {
   position: relative;
   z-index: 2;
@@ -528,13 +545,13 @@ p {
 }
 .hero-card h3 {
   font-weight: 590;
-  font-size: 13.36px;
+  font-size: 16px;
   line-height: 32.81px;
   color: #fdfdfdbd;
 }
 .hero-card p {
   font-weight: 700;
-  font-size: 28px;
+  font-size: 32px;
   line-height: 32.31px;
   color: #fdfdfdb5;
   text-align: left;
@@ -885,8 +902,15 @@ p {
 .hero-card1 {
   transform: perspective(18px) rotate3d(1, -14, 0, -2deg);
 }
+.hero-card1:hover {
+  transform: perspective(18px) rotate3d(1, -14, 0, -1deg) scale(1.1);
+}
+
 .hero-card2 {
   transform: perspective(17px) rotate3d(1, -14, 0, 2deg);
+}
+.hero-card2:hover {
+  transform: perspective(17px) rotate3d(1, -14, 0, 1deg) scale(1.1);
 }
 .hero-area:hover .hero-card1 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -904,7 +928,7 @@ p {
 }
 .hero-card1:not(:hover),
 .hero-card2:not(:hover) {
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
 }
 .hero-card1:hover::before,
 .hero-card2:hover::before {
@@ -938,7 +962,7 @@ p {
 /*==========  Hero Section End  ==========*/
 /*==========  Empower Section Start  ==========*/
 .empower-area {
-  padding: 150px 0 100px 0;
+  padding: 170px 0 100px 0;
   position: relative;
   background-color: #010613;
   z-index: 9;
@@ -1014,7 +1038,7 @@ p {
   transform: translateY(-85px);
 }
 .col-xl-3:nth-child(odd) .single-empower-card {
-  transform: translateY(85px);
+  transform: translateY(50px);
 }
 .single-empower-card:hover {
   box-shadow: #ffc700 0px 1px 15px;
@@ -1040,7 +1064,7 @@ p {
 }
 .single-empower-card h3 {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 25px;
   color: #ffffff;
   padding: 28px 0 10px 0;
@@ -1165,7 +1189,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 99%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
@@ -1186,7 +1210,7 @@ p {
   padding-bottom: 70px;
 }
 .unlock-btn-wrapper .hero-btn {
-  background: linear-gradient(145deg, #ffbe3800 0%, #ffbe38 100%);
+  background: linear-gradient(145deg, #ffbd384b 0%, #ffbe38 100%);
 }
 .unlock-btn-wrapper .hero-btn::before {
   background: linear-gradient(to right, #ffbe3800, #ffbe38);
@@ -1206,8 +1230,8 @@ p {
     rgba(67, 67, 105, 0.75) 54.9%,
     rgba(36, 36, 49, 0) 116.47%
   );
-  backdrop-filter: blur(17px);
-  -webkit-backdrop-filter: blur(17px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 1;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -1223,10 +1247,16 @@ p {
 
 .unlock-card-main {
   display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
 }
 .unlock-card {
   flex: 0 0 calc(33.33% - 20px);
-  margin-right: 30px;
+  outline: 3px solid #30314d;
+  outline-offset: 5px;
+}
+.unlock-card-1 {
+  margin-left: 20px;
 }
 .unlock-card::before {
   content: "";
@@ -1294,7 +1324,7 @@ p {
   width: 80%;
 }
 .unlock-card-sub .hero-btn {
-  background: linear-gradient(145deg, #24243100 0%, #11111a 87%, #242431 100%);
+  background: linear-gradient(145deg, #24243100 0%, #11111a 100%, #242431 100%);
   border-radius: 10px;
 }
 .unlock-card-sub .hero-btn::before {
@@ -1303,26 +1333,32 @@ p {
 }
 .unlock-card.unlock-card2 {
   transform: translateY(308px);
+  margin-left: -100px;
+  margin-right: 30px;
 }
 .unlock-btn1:hover {
-  background: linear-gradient(145deg, #221a05 0%, #684c04 100%) !important;
+  background: linear-gradient(145deg, #5e4810 0%, #684c04 100%) !important;
 }
 .unlock-btn2:hover {
-  background: linear-gradient(145deg, #112433 0%, #0b688c 100%) !important;
+  background: linear-gradient(145deg, #244763 0%, #0b688c 100%) !important;
 }
 .unlock-btn3:hover {
-  background: linear-gradient(145deg, #0b1122 0%, #182345 100%) !important;
+  background: linear-gradient(145deg, #2b4383 0%, #537dfa 100%) !important;
 }
 .unlock-btn4:hover {
   background: linear-gradient(145deg, #0a7254 0%, #164d96 100%) !important;
 }
 .unlock-btn5:hover {
-  background: linear-gradient(145deg, #1a1404 0%, #9c8116 100%) !important;
+  background: linear-gradient(145deg, #4d3b0c 0%, #9c8116 100%) !important;
 }
 .unlock-card-right {
   position: relative;
 }
-.unlock-card-right:after {
+.unlock-card-inner {
+  outline: none;
+  outline-offset: 0;
+}
+/* .unlock-card-right:after {
   content: "";
   position: absolute;
   right: 20px;
@@ -1332,7 +1368,7 @@ p {
   background: url("../images/bg/shape-1.png");
   background-size: 100% 80%;
   background-repeat: no-repeat;
-}
+} */
 .unlock-card-right .hero-btn {
   padding: 20px 30px;
 }
@@ -1346,6 +1382,7 @@ p {
 .hold-animation {
   position: relative;
   overflow: hidden;
+  border-radius: 15px;
 }
 .glow-path {
   stroke-width: 2;
@@ -1392,7 +1429,6 @@ p {
   height: 416px;
 }
 .unlock-card-right {
-  padding-right: 50px !important;
   border: none !important;
 }
 .vector-animation4 svg {
@@ -1404,7 +1440,6 @@ p {
   height: 416px;
   z-index: 999;
 }
-
 .glow-path3 {
   stroke: #7b7b7b;
   stroke-width: 2;
@@ -1496,6 +1531,9 @@ p {
   max-width: 687px;
   margin: auto;
 }
+.holding-head-text img {
+  max-width: 120px;
+}
 .btn-1 i {
   /* transform: translateX(5px) rotate(-30deg); */
   transition: all 0.3s ease;
@@ -1571,7 +1609,6 @@ p {
   mask-composite: exclude;
   z-index: -0;
 }
-
 .single-ecosystem-card img {
   width: 120px;
   height: auto;
@@ -1733,7 +1770,7 @@ p {
     )
     /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   position: absolute;
-  animation-duration: 3s;
+
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -1742,11 +1779,13 @@ p {
   top: 0;
   left: 35px;
   animation-name: anim1;
+  animation-duration: 3s;
 }
 
 .launch-animation2 {
   bottom: 122px;
   left: 45px;
+  animation-duration: 4s;
   animation-name: anim2;
 }
 
@@ -1754,12 +1793,14 @@ p {
   top: 0;
   right: 35px;
   animation-name: anim3;
+  animation-duration: 5s;
 }
 
 .launch-animation4 {
   bottom: 87px;
   right: 35px;
   animation-name: anim4;
+  animation-duration: 3s;
 }
 
 @keyframes anim1 {
@@ -1785,10 +1826,10 @@ p {
 @keyframes anim3 {
   0%,
   100% {
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(5deg);
   }
 }
 
@@ -1932,7 +1973,7 @@ p {
 .email-box {
   padding: 2px; /* Border thickness */
   border-radius: 16px;
-  background: linear-gradient(145deg, #2a87ff00 0%, #2a86ff7a 100%);
+  background: linear-gradient(50deg, #2a86ff88 0%, #2a86ff7a 100%);
   cursor: pointer;
   transition: 0.3s;
   width: fit-content;
@@ -2361,7 +2402,7 @@ p {
   top: 35%;
   opacity: 0.5;
   transform: translateY(30px) translateX(-5px);
-  animation: ecosystem-icon-1 4s ease-in-out 0.6s infinite alternate;
+  animation: ecosystem-icon-1 5s ease-in-out 0.6s infinite alternate;
 }
 .ecosystem-icon-2 {
   left: 15%;
@@ -2374,24 +2415,24 @@ p {
   left: 35%;
   top: 48%;
   transform: scale(0.6);
-  animation: ecosystem-icon-3 4s ease-in-out 0.5s infinite alternate;
+  animation: ecosystem-icon-3 6s ease-in-out 0.6s infinite alternate;
 }
 .ecosystem-icon-4 {
   right: 35%;
   top: 55%;
   transform: translateX(35px);
-  animation: ecosystem-icon-4 4s ease-in-out 0.5s infinite alternate;
+  animation: ecosystem-icon-4 4s ease-in-out 0.7s infinite alternate;
 }
 .ecosystem-icon-5 {
   right: 15%;
   top: 38%;
-  animation: ecosystem-icon-5 4s ease-in-out 0.5s infinite alternate;
+  animation: ecosystem-icon-5 7s ease-in-out 0.8s infinite alternate;
 }
 .ecosystem-icon-6 {
   right: 30%;
   top: 35%;
-  transform: scale(0.6);
-  animation: ecosystem-icon-3 4s ease-in-out 0.5s infinite alternate;
+  transform: scale(0.7);
+  animation: ecosystem-icon-3 10s ease-in-out 0.9s infinite alternate;
 }
 @keyframes ecosystem-icon-1 {
   0% {
@@ -2506,4 +2547,68 @@ p {
 
 .node:first-child::before {
   display: none;
+}
+/* maintenance  */
+
+.maintenance-hero {
+  padding-top: 180px;
+  margin-bottom: 60px;
+}
+.countdown {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.box {
+  background: #42424262;
+  backdrop-filter: blur(40px);
+
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  min-width: 80px;
+}
+.box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 700;
+  border-bottom: 2px solid #918e8e;
+}
+
+.box label {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  display: block;
+  color: #fff;
+}
+.text-primary {
+  color: #ffc733 !important;
+}
+.maintenance-content h1 {
+  font-size: 44px;
+}
+.counter-section h5 {
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.line-shape-area {
+  position: absolute;
+  right: 35px;
+  top: 40px;
+}
+
+.left-curve-svg-1 {
+  position: absolute;
+  left: 0;
+  top: 30%;
+}
+
+.right-curve-svg-2 {
+  position: absolute;
+  right: -22px;
+  top: 30%;
 }
