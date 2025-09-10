@@ -29,7 +29,11 @@ $(document).ready(function () {
   $(document).on("click", function (e) {
     const nav = $(".nav");
     const target = $(e.target);
-    if (nav.hasClass("show") && !target.closest(".nav ul").length && !target.closest(".mobile-bars").length) {
+    if (
+      nav.hasClass("show") &&
+      !target.closest(".nav ul").length &&
+      !target.closest(".mobile-bars").length
+    ) {
       nav.fadeOut(300).removeClass("show");
     }
   });
@@ -61,43 +65,42 @@ function initAnimations() {
 }
 
 // Hero Card Mouse Position Animation (Hover-based)
-document.addEventListener("DOMContentLoaded", function () {
-  const heroArea = document.querySelector(".hero-area");
-  const heroCard1 = document.querySelector(".hero-card1");
-  const heroCard2 = document.querySelector(".hero-card2");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const heroArea = document.querySelector(".hero-area");
+//   const heroCard1 = document.querySelector(".hero-card1");
+//   const heroCard2 = document.querySelector(".hero-card2");
 
-  if (!heroArea || !heroCard1 || !heroCard2) return;
+//   if (!heroArea || !heroCard1 || !heroCard2) return;
 
-  heroArea.addEventListener("mousemove", function (e) {
-    const rect = heroArea.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const mouseX = e.clientX;
+//   heroArea.addEventListener("mousemove", function (e) {
+//     const rect = heroArea.getBoundingClientRect();
+//     const centerX = rect.left + rect.width / 2;
+//     const mouseX = e.clientX;
 
-    const distance = Math.abs(mouseX - centerX);
-    const maxDistance = rect.width / 2;
-    const intensity = Math.min(distance / maxDistance, 1);
+//     const distance = Math.abs(mouseX - centerX);
+//     const maxDistance = rect.width / 2;
+//     const intensity = Math.min(distance / maxDistance, 1);
 
-    if (mouseX < centerX) {
-      heroCard1.style.transform = `perspective(20px) rotate3d(${1 * intensity}, -14, 0, -2deg)`;
-      heroCard2.style.transform = `perspective(10px) rotate3d(${1 * intensity}, -14, 0, 2deg)`;
-    } else {
-      heroCard1.style.transform = `perspective(10px) rotate3d(${1 * intensity}, -14, 0, 2deg)`;
-      heroCard2.style.transform = `perspective(20px) rotate3d(${1 * intensity}, -14, 0, -2deg)`;
-    }
-  });
+//     if (mouseX < centerX) {
+//       heroCard1.style.transform = `perspective(20px) rotate3d(${1 * intensity}, -14, 0, -2deg)`;
+//       heroCard2.style.transform = `perspective(10px) rotate3d(${1 * intensity}, -14, 0, 2deg)`;
+//     } else {
+//       heroCard1.style.transform = `perspective(10px) rotate3d(${1 * intensity}, -14, 0, 2deg)`;
+//       heroCard2.style.transform = `perspective(20px) rotate3d(${1 * intensity}, -14, 0, -2deg)`;
+//     }
+//   });
 
-  heroArea.addEventListener("mouseleave", function () {
-    heroCard1.style.transform = "";
-    heroCard2.style.transform = "";
-  });
-});
-
-
-
+//   heroArea.addEventListener("mouseleave", function () {
+//     heroCard1.style.transform = "";
+//     heroCard2.style.transform = "";
+//   });
+// });
 
 function createDots() {
   // Select all containers with either class name
-  const dotsContainers = document.querySelectorAll(".dots-background, .dotsBackground");
+  const dotsContainers = document.querySelectorAll(
+    ".dots-background, .dotsBackground"
+  );
   const numberOfDots = 80;
 
   dotsContainers.forEach((dotsContainer) => {
@@ -145,7 +148,8 @@ function createDots() {
         dot.classList.contains("drifting") ||
         dot.classList.contains("swaying")
       ) {
-        dot.style.animationDelay = Math.random() * 8 + "s, " + Math.random() * 6 + "s";
+        dot.style.animationDelay =
+          Math.random() * 8 + "s, " + Math.random() * 6 + "s";
       }
 
       dotsContainer.appendChild(dot);
@@ -170,28 +174,25 @@ function copyEmail(box) {
   });
 }
 
-
-// Email coppy text End
+// Email copy text End
 
 // focus hover color
 
+const focusBg = document.querySelector(".focus-bg");
+const ecmArea = document.querySelector(".ecm-card-main");
 
-  const focusBg = document.querySelector(".focus-bg");
-  const ecmArea = document.querySelector(".ecm-card-main");
+ecmArea.addEventListener("mousemove", function (e) {
+  const rect = ecmArea.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
 
-  ecmArea.addEventListener("mousemove", function (e) {
-    const rect = ecmArea.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+  focusBg.style.opacity = "1";
+  focusBg.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 190, 56, 0.7), transparent 300px)`;
+});
 
-    focusBg.style.opacity = "1";
-    focusBg.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 190, 56, 0.7), transparent 300px)`;
-  });
-
-  ecmArea.addEventListener("mouseleave", function () {
-    focusBg.style.opacity = "0";
-  });
-
+ecmArea.addEventListener("mouseleave", function () {
+  focusBg.style.opacity = "0";
+});
 
 window.addEventListener("beforeunload", () => {
   localStorage.setItem("scrollY", window.scrollY);
@@ -204,6 +205,16 @@ window.addEventListener("load", () => {
     localStorage.removeItem("scrollY");
   }
 });
+// Set default focus point on load
+// window.addEventListener("load", () => {
+//   const rect = ecmArea.getBoundingClientRect();
+//   const defaultX = rect.width / 2;
+//   const defaultY = rect.height / 2;
+
+//   focusBg.style.opacity = "1";
+//   focusBg.style.background = `radial-gradient(circle at ${defaultX}px ${defaultY}px, rgba(255, 190, 56, 0.7), transparent 300px)`;
+// });
+
 
 const holdingContent = document.querySelector(".holding-content");
 const ball = document.querySelector(".rotating-ball");
@@ -225,14 +236,15 @@ setAnimationDuration();
 // Call on window resize to adjust dynamically
 window.addEventListener("resize", setAnimationDuration);
 
+// hover end
 
 // Dropdown menu active section code Start
 document.querySelectorAll(".dropdown-item").forEach((item) => {
   item.addEventListener("click", function () {
-    document.querySelectorAll(".dropdown-item").forEach((el) =>
-      el.classList.remove("active")
-    );
+    document
+      .querySelectorAll(".dropdown-item")
+      .forEach((el) => el.classList.remove("active"));
     this.classList.add("active");
   });
-}); 
-// Dropdown menu active section code End 
+});
+// Dropdown menu active section code End

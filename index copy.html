@@ -312,6 +312,7 @@
           </div>
         </div>
       </section>
+
       <section class="ecm-area section-link" id="ecmcoin">
         <!-- extra-container2 -->
         <div class="container-fluid">
@@ -646,17 +647,24 @@
                           <div class="light-particle"></div>
                           <span>bCoinMart</span>
                         </button>
-                        <div class="left-curve-svg-1">
+                        <div class="left-curve-svg left-curve-svg-1">
+                          <!-- SVG Block 1 -->
                           <svg
                             class="animatedDots"
-                            data-cycle-gap="7000"
+                            data-cycle-gap="6000"
                             data-start-delay="1000"
-                            data-direction="normal"
                             width="100"
                             height="110"
                             viewBox="0 0 100 110"
                             xmlns="http://www.w3.org/2000/svg"
                           >
+                            <path
+                              id="path1"
+                              d="M40,10 C15,35 15,75 40,100"
+                              fill="none"
+                              stroke="#30314D"
+                              stroke-width="2"
+                            />
                             <defs>
                               <filter
                                 id="glow1"
@@ -686,38 +694,6 @@
                           <div class="light-particle"></div>
                           <span>Androverse</span>
                         </button>
-                        <div class="right-curve-svg-2">
-                          <svg
-                            class="animatedDots"
-                            data-cycle-gap="7000"
-                            data-start-delay="3000"
-                            data-direction="mirror"
-                            width="100"
-                            height="110"
-                            viewBox="0 0 100 110"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <defs>
-                              <filter
-                                id="glow1"
-                                x="-50%"
-                                y="-50%"
-                                width="200%"
-                                height="200%"
-                              >
-                                <feGaussianBlur
-                                  in="SourceGraphic"
-                                  stdDeviation="2"
-                                  result="blur"
-                                />
-                                <feMerge>
-                                  <feMergeNode in="blur" />
-                                  <feMergeNode in="SourceGraphic" />
-                                </feMerge>
-                              </filter>
-                            </defs>
-                          </svg>
-                        </div>
                       </div>
                       <div class="position-relative text-center">
                         <button class="hero-btn unlock-btn3">
@@ -726,11 +702,11 @@
                           <div class="light-particle"></div>
                           <span>Tap Tap Game</span>
                         </button>
-                        <div class="left-curve-svg-1">
+                        <div class="left-curve-svg left-curve-svg-1">
                           <!-- SVG Block 2 -->
                           <svg
                             class="animatedDots"
-                            data-cycle-gap="7000"
+                            data-cycle-gap="6000"
                             data-start-delay="5000"
                             width="100"
                             height="110"
@@ -767,46 +743,12 @@
                         </div>
                       </div>
 
-                      <div class="position-relative text-center">
-                        <button class="hero-btn unlock-btn4">
-                          <div class="light-particle"></div>
-                          <div class="light-particle"></div>
-                          <div class="light-particle"></div>
-                          <span>MyCoinPoll</span>
-                        </button>
-                        <div class="right-curve-svg-2">
-                          <svg
-                            class="animatedDots"
-                            data-cycle-gap="7000"
-                            data-start-delay="7000"
-                            data-direction="mirror"
-                            width="100"
-                            height="110"
-                            viewBox="0 0 100 110"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <defs>
-                              <filter
-                                id="glow1"
-                                x="-50%"
-                                y="-50%"
-                                width="200%"
-                                height="200%"
-                              >
-                                <feGaussianBlur
-                                  in="SourceGraphic"
-                                  stdDeviation="2"
-                                  result="blur"
-                                />
-                                <feMerge>
-                                  <feMergeNode in="blur" />
-                                  <feMergeNode in="SourceGraphic" />
-                                </feMerge>
-                              </filter>
-                            </defs>
-                          </svg>
-                        </div>
-                      </div>
+                      <button class="hero-btn unlock-btn4">
+                        <div class="light-particle"></div>
+                        <div class="light-particle"></div>
+                        <div class="light-particle"></div>
+                        <span>MyCoinPoll</span>
+                      </button>
                       <button class="hero-btn unlock-btn5">
                         <div class="light-particle"></div>
                         <div class="light-particle"></div>
@@ -826,14 +768,7 @@
         <div class="container">
           <div class="holding-content">
             <span class="rotating-ball"></span>
-
             <div class="holding-head-text">
-              <div class="mb-3 d-block d-lg-none">
-                <img
-                  src="assets/images/icon/mycoinpoll-icon-web.png"
-                  alt="logo"
-                />
-              </div>
               <h2>Start Holding ECM on MyCoinPoll</h2>
               <p>
                 Purchase ECM directly on MyCoinPoll and unlock exclusive
@@ -1232,9 +1167,7 @@
                 </span>
               </a>
             </div>
-            <div
-              class="footer-left-email d-flex flex-column align-items-center align-items-md-start"
-            >
+            <div class="footer-left-email">
               <span>EMAIL US</span>
               <div class="email-box" onclick="copyEmail(this)">
                 <div class="email-inner d-flex align-items-center">
@@ -1390,29 +1323,9 @@
       video.playbackRate = 0.7;
     </script>
     <script>
-      const dotCount = 6;
-      const dotDelay = 210; // ms between dots
-      const motionDuration = 800; // ms per dot
-
-      function createPath(svg, direction, pathId) {
-        const path = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          "path"
-        );
-        path.setAttribute("id", pathId);
-        path.setAttribute("fill", "none");
-        path.setAttribute("stroke", "#30314D");
-        path.setAttribute("stroke-width", "2");
-
-        // Define path based on direction
-        if (direction === "mirror") {
-          path.setAttribute("d", "M40,10 C65,35 65,75 40,100"); // top → right → bottom
-        } else {
-          path.setAttribute("d", "M40,10 C15,35 15,75 40,100"); // bottom-left → top
-        }
-
-        svg.appendChild(path);
-      }
+      const dotCount = 4;
+      const dotDelay = 400; // ms between dots
+      const motionDuration = 2000; // ms per dot
 
       function createDot(svg, pathId, beginTime) {
         const circle = document.createElementNS(
@@ -1469,11 +1382,8 @@
         svg.appendChild(circle);
       }
 
-      function scheduleCycle(svg, cycleGap, startDelay, direction) {
+      function scheduleCycle(svg, cycleGap, startDelay, pathId) {
         let cycleIndex = 0;
-        const pathId = "path_" + Math.random().toString(36).substr(2, 5);
-        createPath(svg, direction, pathId);
-
         function runCycle() {
           const baseTime =
             startDelay + cycleIndex * (dotDelay * dotCount + cycleGap);
@@ -1484,15 +1394,15 @@
           cycleIndex++;
           setTimeout(runCycle, dotDelay * dotCount + cycleGap);
         }
-
         setTimeout(runCycle, startDelay);
       }
 
       document.querySelectorAll(".animatedDots").forEach((svg) => {
         const cycleGap = parseInt(svg.getAttribute("data-cycle-gap")) || 6000;
         const startDelay = parseInt(svg.getAttribute("data-start-delay")) || 0;
-        const direction = svg.getAttribute("data-direction") || "normal";
-        scheduleCycle(svg, cycleGap, startDelay, direction);
+        const path = svg.querySelector("path");
+        const pathId = path.getAttribute("id");
+        scheduleCycle(svg, cycleGap, startDelay, pathId);
       });
     </script>
   </body>
