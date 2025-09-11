@@ -47,6 +47,9 @@
   .col-xl-3:nth-child(even) .single-empower-card {
     transform: translateY(-52px);
   }
+  .col-xl-3:nth-child(odd) .single-empower-card {
+    transform: translateY(66px);
+}
 }
 @media all and (max-width: 1400px) {
   h1 {
@@ -116,6 +119,9 @@
   .col-xl-3:nth-child(2n) .single-empower-card {
     transform: translateY(-81px);
   }
+  .col-xl-3:nth-child(odd) .single-empower-card {
+    transform: translateY(90px);
+}
 }
 
 @media all and (max-width: 1320px) {
@@ -319,8 +325,10 @@
     max-width: 100px;
     opacity: 0.4;
   }
+  .left-curve-svg-1,.right-curve-svg-2{
+    display: none;
+  }
 }
-
 @media all and (max-width: 1024px) {
   .hero-animation {
     bottom: 54%;
@@ -744,7 +752,6 @@
     width: 85%;
   }
 }
-
 @media all and (max-width: 575px) {
   .left-curve-svg-1 {
     left: -10px;
@@ -752,7 +759,6 @@
   .right-curve-svg-2 {
     right: -30px;
   }
-
   .email-box {
     margin: 0 auto;
     margin-top: 20px;
@@ -972,6 +978,13 @@
   .left-curve-svg-1 {
     left: -18px;
   }
+  .single-empower-card h3 {
+    font-size: 17px;
+    line-height:24px;
+  }
+  .blockchain-card-icon {
+    gap: 10px;
+}
 }
 @media all and (max-width: 430px) {
   .hero-animation {

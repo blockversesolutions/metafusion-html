@@ -442,7 +442,7 @@ p {
   border-radius: 10px;
   background: #ffbe38;
   font-weight: 600;
-  color: #1c1c1e;
+  color: #1c1c1e !important;
   z-index: 99;
   display: inline-block;
   transition: 0.3s;
@@ -1233,7 +1233,7 @@ p {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 1;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: all 0.3s ease;
   height: 100%;
   width: 100%;
@@ -1269,6 +1269,75 @@ p {
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   z-index: -1;
+}
+.unlock-card-title-after {
+  position: relative;
+}
+.unlock-card-title-after-circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 12px;
+  width: 12px;
+  background-color: #ffd400;
+  top: 62px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 14px 0 #ffd400;
+}
+
+/* Animation class */
+.animate-circle {
+  animation: circlePulse 1s ease-in-out forwards;
+}
+
+@keyframes circlePulse {
+  0% {
+    opacity: 0;
+    top: 62px;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    top: 110px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 110px;
+  }
+}
+
+.unlock-card-title-after:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 50px;
+  width: 2px;
+  background-color: #30314d;
+  top: 62px;
+  z-index: -2;
+}
+@keyframes pulseMove {
+  0% {
+    opacity: 0;
+    top: 62px;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    top: 108px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 108px;
+  }
 }
 
 .unlock-card-title h3 {
@@ -2101,7 +2170,6 @@ p {
 .timer-flip-header h3 span {
   font-weight: 400;
 }
-
 /* Timer blocks container */
 .timer-blocks {
   display: flex;
@@ -2112,7 +2180,6 @@ p {
   text-align: center;
   transition: all 0.3s ease;
 }
-
 .timer-block {
   background: rgb(30, 35, 40);
   border: 1px solid rgb(45, 55, 72);
@@ -2132,14 +2199,12 @@ p {
     inset 0px 7px 11px -4px #ffffff00, inset 0px 10px 56px -36px #ffffff00;
   overflow: hidden;
 }
-
 .timer-block:hover {
   box-shadow: inset 0px 1px 40px 0px #0d89cf33, inset 0px 4px 18px 0px #083b584d,
     inset 0px 50px 100px -48px #00a1fd4d, inset 0px -40px 68px -64px #0e4e724d,
     inset 0px 7px 11px -4px #ffffff, inset 0px 10px 56px -36px #ffffff80;
   opacity: 1;
 }
-
 .timer-block::after {
   content: "";
   position: absolute;
@@ -2171,14 +2236,12 @@ p {
   text-align: center;
   color: #ffffff;
 }
-
 /* Simplified timer display - no flip animation */
 .flip-card {
   position: relative;
   width: 100%;
   height: 60px;
 }
-
 .flip-card-current {
   position: absolute;
   width: 100%;
@@ -2189,11 +2252,15 @@ p {
   color: #ffffff;
   background: transparent;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 40px; 
   line-height: 44px;
   text-align: center;
 }
-
+.rocket-thumbnails {
+  max-width: 380px;
+  width: 100;
+  margin: 0 auto;
+}
 /* Hide the next element as it's not needed for simple countdown */
 .flip-card-next {
   display: none;
@@ -2499,7 +2566,6 @@ p {
     transform: scale(1);
   }
 }
-
 /* CSS */
 .ecosystem-container {
   background-color: #0b0f1a;
@@ -2510,20 +2576,17 @@ p {
   flex-direction: column;
   align-items: center;
 }
-
 .title {
   color: #fffae4;
   font-size: 24px;
   margin-bottom: 30px;
 }
-
 .ecosystem-flow {
   display: flex;
   flex-direction: column;
   gap: 20px;
   position: relative;
 }
-
 .node {
   background-color: #1a1f2e;
   border: 1px solid #fffae4;
@@ -2532,7 +2595,6 @@ p {
   text-align: center;
   position: relative;
 }
-
 /* Connecting line */
 .node::before {
   content: "";
@@ -2549,9 +2611,8 @@ p {
   display: none;
 }
 /* maintenance  */
-
 .maintenance-hero {
-  padding-top: 180px;
+  padding-top: 110px;
   margin-bottom: 60px;
 }
 .countdown {
@@ -2562,7 +2623,6 @@ p {
 .box {
   background: #42424262;
   backdrop-filter: blur(40px);
-
   color: #fff;
   padding: 20px 30px;
   border-radius: 8px;
@@ -2574,7 +2634,6 @@ p {
   font-weight: 700;
   border-bottom: 2px solid #918e8e;
 }
-
 .box label {
   font-size: 18px;
   text-transform: uppercase;
@@ -2600,13 +2659,11 @@ p {
   right: 35px;
   top: 40px;
 }
-
 .left-curve-svg-1 {
   position: absolute;
   left: 0;
   top: 30%;
 }
-
 .right-curve-svg-2 {
   position: absolute;
   right: -22px;
