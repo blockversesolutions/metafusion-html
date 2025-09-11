@@ -163,9 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Function to create white dots End
  
-
 // focus hover color
-
 const focusBg = document.querySelector(".focus-bg");
 const ecmArea = document.querySelector(".ecm-card-main");
 

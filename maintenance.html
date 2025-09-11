@@ -92,7 +92,7 @@
     </header>
     <section class="maintenance-hero">
       <div class="ellipse ellipse-1"></div>
-      <div class="ellipse ellipse-2"></div>
+      <div class="ellipse ellipse-2 z-3"></div>
       <div class="toplight">
         <span class="small-shadow"></span>
       </div>
@@ -276,7 +276,6 @@
         const targetDate = new Date("2025-09-23T00:00:00").getTime(); // Change this to your event date
         const now = new Date().getTime();
         const gap = targetDate - now;
-
         const second = 1000;
         const minute = second * 60;
         const hour = minute * 60;

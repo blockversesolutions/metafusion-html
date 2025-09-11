@@ -329,7 +329,6 @@
     display: none;
   }
 }
-
 @media all and (max-width: 1024px) {
   .hero-animation {
     bottom: 54%;
@@ -753,7 +752,6 @@
     width: 85%;
   }
 }
-
 @media all and (max-width: 575px) {
   .left-curve-svg-1 {
     left: -10px;
@@ -761,7 +759,6 @@
   .right-curve-svg-2 {
     right: -30px;
   }
-
   .email-box {
     margin: 0 auto;
     margin-top: 20px;

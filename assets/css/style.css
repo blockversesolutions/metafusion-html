@@ -2170,7 +2170,6 @@ p {
 .timer-flip-header h3 span {
   font-weight: 400;
 }
-
 /* Timer blocks container */
 .timer-blocks {
   display: flex;
@@ -2253,7 +2252,7 @@ p {
   color: #ffffff;
   background: transparent;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 40px; 
   line-height: 44px;
   text-align: center;
 }
@@ -2567,7 +2566,6 @@ p {
     transform: scale(1);
   }
 }
-
 /* CSS */
 .ecosystem-container {
   background-color: #0b0f1a;
@@ -2578,20 +2576,17 @@ p {
   flex-direction: column;
   align-items: center;
 }
-
 .title {
   color: #fffae4;
   font-size: 24px;
   margin-bottom: 30px;
 }
-
 .ecosystem-flow {
   display: flex;
   flex-direction: column;
   gap: 20px;
   position: relative;
 }
-
 .node {
   background-color: #1a1f2e;
   border: 1px solid #fffae4;
@@ -2600,7 +2595,6 @@ p {
   text-align: center;
   position: relative;
 }
-
 /* Connecting line */
 .node::before {
   content: "";
@@ -2617,7 +2611,6 @@ p {
   display: none;
 }
 /* maintenance  */
-
 .maintenance-hero {
   padding-top: 110px;
   margin-bottom: 60px;
@@ -2630,7 +2623,6 @@ p {
 .box {
   background: #42424262;
   backdrop-filter: blur(40px);
-
   color: #fff;
   padding: 20px 30px;
   border-radius: 8px;
@@ -2642,7 +2634,6 @@ p {
   font-weight: 700;
   border-bottom: 2px solid #918e8e;
 }
-
 .box label {
   font-size: 18px;
   text-transform: uppercase;
@@ -2668,13 +2659,11 @@ p {
   right: 35px;
   top: 40px;
 }
-
 .left-curve-svg-1 {
   position: absolute;
   left: 0;
   top: 30%;
 }
-
 .right-curve-svg-2 {
   position: absolute;
   right: -22px;

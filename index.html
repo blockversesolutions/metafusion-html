@@ -1055,7 +1055,7 @@
         <div class="container">
           <div class="blockchain-content">
             <div class="row">
-              <div class="col-md-4 col-xl-6">
+              <div class="col-md-8 col-xl-6">
                 <div class="blockchain-head-text text-center text-md-start">
                   <h2>Why ECM Blockchain?</h2>
                   <p>
@@ -1324,12 +1324,10 @@
       integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
       crossorigin="anonymous"
     ></script>
-
     <script src="./assets/js/script.js"></script>
     <script>
       const sections = document.querySelectorAll(".section-link");
       const navLinks = document.querySelectorAll(".nav-link");
-
       window.addEventListener("scroll", () => {
         let current = "";
         sections.forEach((section) => {
@@ -1338,7 +1336,6 @@
             current = section.getAttribute("id");
           }
         });
-
         navLinks.forEach((link) => {
           link.classList.remove("active");
           if (link.getAttribute("href") === "#" + current) {
@@ -1346,7 +1343,6 @@
           }
         });
       });
-
       // lottifile
       const animation = lottie.loadAnimation({
         container: document.getElementById("lottie-empower"),
@@ -1357,7 +1353,6 @@
       });
       window.addEventListener("scroll", function () {
         const scrollY = window.scrollY || window.pageYOffset;
-
         if (scrollY >= 700) {
           animation.play();
         }
@@ -1365,117 +1360,94 @@
       const video = document.getElementById("bg-video");
       video.playbackRate = 0.7;
     </script>
-    
-<script>
-  const dotCount = 3;
-  const dotDelay = 210; // ms between dots
-  const motionDuration = 800; // ms per dot
-
-  function createPath(svg, direction, pathId) {
-    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.setAttribute("id", pathId);
-    path.setAttribute("fill", "none");
-    path.setAttribute("stroke", "#30314D");
-    path.setAttribute("stroke-width", "2");
-
-    if (direction === "mirror") {
-      path.setAttribute("d", "M40,10 C65,35 65,75 40,100");
-    } else {
-      path.setAttribute("d", "M40,10 C15,35 15,75 40,100");
-    }
-
-    svg.appendChild(path);
-  }
-
-  function createDot(svg, pathId, beginTime) {
-    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    circle.setAttribute("r", "5");
-    circle.setAttribute("fill", "#FFD400");
-    circle.setAttribute("filter", "url(#glow1)");
-    circle.setAttribute("visibility", "hidden");
-
-    const setVisible = document.createElementNS("http://www.w3.org/2000/svg", "set");
-    setVisible.setAttribute("attributeName", "visibility");
-    setVisible.setAttribute("to", "visible");
-    setVisible.setAttribute("begin", beginTime + "s");
-
-    const setHidden = document.createElementNS("http://www.w3.org/2000/svg", "set");
-    setHidden.setAttribute("attributeName", "visibility");
-    setHidden.setAttribute("to", "hidden");
-    setHidden.setAttribute("begin", beginTime + motionDuration / 1000 + "s");
-
-    const animateMotion = document.createElementNS("http://www.w3.org/2000/svg", "animateMotion");
-    animateMotion.setAttribute("dur", motionDuration / 1000 + "s");
-    animateMotion.setAttribute("begin", beginTime + "s");
-    animateMotion.setAttribute("fill", "freeze");
-    animateMotion.setAttribute("rotate", "auto");
-
-    const mpath = document.createElementNS("http://www.w3.org/2000/svg", "mpath");
-    mpath.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "#" + pathId);
-
-    animateMotion.appendChild(mpath);
-    circle.appendChild(setVisible);
-    circle.appendChild(setHidden);
-    circle.appendChild(animateMotion);
-    svg.appendChild(circle);
-  }
-
-  function clearOldDots(svg) {
-    svg.querySelectorAll("circle").forEach((circle) => circle.remove());
-  }
-
-  function scheduleCycle(svg, cycleGap, startDelay, direction) {
-    let cycleIndex = 0;
-    const pathId = "path_" + Date.now() + "_" + Math.floor(Math.random() * 1000);
-    createPath(svg, direction, pathId);
-
-    function runCycle() {
-      clearOldDots(svg);
-      const baseTime = startDelay + cycleIndex * (dotDelay * dotCount + cycleGap);
-      for (let i = 0; i < dotCount; i++) {
-        const beginTime = (baseTime + i * dotDelay) / 1000;
-        createDot(svg, pathId, beginTime);
-      }
-      cycleIndex++;
-      setTimeout(runCycle, dotDelay * dotCount + cycleGap);
-    }
-
-    setTimeout(runCycle, startDelay);
-  }
-
-  document.querySelectorAll(".animatedDots").forEach((svg) => {
-    const cycleGap = parseInt(svg.getAttribute("data-cycle-gap")) || 6000;
-    const startDelay = parseInt(svg.getAttribute("data-start-delay")) || 0;
-    const direction = svg.getAttribute("data-direction") || "normal";
-    scheduleCycle(svg, cycleGap, startDelay, direction);
-  });
-</script>
     <script>
- 
-  const initialDelay =8000; 
-  const repeatInterval = 8000; 
-  const animationDuration =1000; 
+      const dotCount = 3;
+      const dotDelay = 210; // ms between dots
+      const motionDuration = 800; // ms per dot
+      function createPath(svg, direction, pathId) {
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("id", pathId);
+        path.setAttribute("fill", "none");
+        path.setAttribute("stroke", "#30314D");
+        path.setAttribute("stroke-width", "2");
+        if (direction === "mirror") {
+          path.setAttribute("d", "M40,10 C65,35 65,75 40,100");
+        } else {
+          path.setAttribute("d", "M40,10 C15,35 15,75 40,100");
+        }
+        svg.appendChild(path);
+      }
+      function createDot(svg, pathId, beginTime) {
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("r", "5");
+        circle.setAttribute("fill", "#FFD400");
+        circle.setAttribute("filter", "url(#glow1)");
+        circle.setAttribute("visibility", "hidden");
+        const setVisible = document.createElementNS("http://www.w3.org/2000/svg", "set");
+        setVisible.setAttribute("attributeName", "visibility");
+        setVisible.setAttribute("to", "visible");
+        setVisible.setAttribute("begin", beginTime + "s");
+        const setHidden = document.createElementNS("http://www.w3.org/2000/svg", "set");
+        setHidden.setAttribute("attributeName", "visibility");
+        setHidden.setAttribute("to", "hidden");
+        setHidden.setAttribute("begin", beginTime + motionDuration / 1000 + "s");
+        const animateMotion = document.createElementNS("http://www.w3.org/2000/svg", "animateMotion");
+        animateMotion.setAttribute("dur", motionDuration / 1000 + "s");
+        animateMotion.setAttribute("begin", beginTime + "s");
+        animateMotion.setAttribute("fill", "freeze");
+        animateMotion.setAttribute("rotate", "auto");
+        const mpath = document.createElementNS("http://www.w3.org/2000/svg", "mpath");
+        mpath.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "#" + pathId);
+        animateMotion.appendChild(mpath);
+        circle.appendChild(setVisible);
+        circle.appendChild(setHidden);
+        circle.appendChild(animateMotion);
+        svg.appendChild(circle);
+      }
+      function clearOldDots(svg) {
+        svg.querySelectorAll("circle").forEach((circle) => circle.remove());
+      }
+      function scheduleCycle(svg, cycleGap, startDelay, direction) {
+        let cycleIndex = 0;
+        const pathId = "path_" + Date.now() + "_" + Math.floor(Math.random() * 1000);
+        createPath(svg, direction, pathId);
+        function runCycle() {
+          clearOldDots(svg);
+          const baseTime = startDelay + cycleIndex * (dotDelay * dotCount + cycleGap);
+          for (let i = 0; i < dotCount; i++) {
+            const beginTime = (baseTime + i * dotDelay) / 1000;
+            createDot(svg, pathId, beginTime);
+          }
+          cycleIndex++;
+          setTimeout(runCycle, dotDelay * dotCount + cycleGap);
+        }
+        setTimeout(runCycle, startDelay);
+      }
+      document.querySelectorAll(".animatedDots").forEach((svg) => {
+        const cycleGap = parseInt(svg.getAttribute("data-cycle-gap")) || 6000;
+        const startDelay = parseInt(svg.getAttribute("data-start-delay")) || 0;
+        const direction = svg.getAttribute("data-direction") || "normal";
+        scheduleCycle(svg, cycleGap, startDelay, direction);
+      });
+    </script>
+    <script>
+        const initialDelay =8000; 
+        const repeatInterval = 8000; 
+        const animationDuration =1000; 
+        function triggerAnimation() {
+          const el = document.querySelector('.unlock-card-title-after-circle');
+          el.classList.add('animate-circle');
+          setTimeout(() => {
+            el.classList.remove('animate-circle');
+          }, animationDuration);
+        }
+        setTimeout(() => {
+          triggerAnimation();
+          setInterval(() => {
+            triggerAnimation();
+          }, repeatInterval);
 
-  function triggerAnimation() {
-    const el = document.querySelector('.unlock-card-title-after-circle');
-    el.classList.add('animate-circle');
-
-    setTimeout(() => {
-      el.classList.remove('animate-circle');
-    }, animationDuration);
-  }
-
-  
-  setTimeout(() => {
-    triggerAnimation();
-
-  
-    setInterval(() => {
-      triggerAnimation();
-    }, repeatInterval);
-
-  }, initialDelay);
-</script>
-
+        }, initialDelay);
+    </script>
   </body>
 </html>
