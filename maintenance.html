@@ -24,7 +24,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-
     <title>Metafusion | Home</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
@@ -46,25 +45,30 @@
           <div class="nav">
             <ul class="d-flex flex-lg-row flex-column align-items-center gx-4">
               <li class="fade-in-left nav-item-1">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link active" href="#home-section">Home</a>
               </li>
               <li class="fade-in-left nav-item-2">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="fade-in-left nav-item-3">
-                <a class="nav-link" href="#">ECM Coin</a>
+                <a class="nav-link" href="#ecmcoin">ECM Coin</a>
               </li>
               <li class="fade-in-left nav-item-4">
-                <a class="nav-link" href="#">Ecosystem</a>
+                <a class="nav-link" href="#ecosystem">Ecosystem</a>
               </li>
               <li class="fade-in-left nav-item-5 d-block d-lg-none">
-                <a href="#" class="btn-1 nav-link">Contact Us</a>
+                <a href="#footer" class="btn-1 nav-link">Contact Us</a>
               </li>
             </ul>
           </div>
-          <div class="header-btn d-lg-block">
+          <div class="header-btn d-lg-block d-none">
             <div class="d-flex align-items-center">
-              <a href="#" class="btn-1 fade-in-right btn-animate">Contact Us</a>
+              <a href="#" class="btn-1 fade-in-right btn-animate hero-btn">
+                <span class="light-particle"></span>
+                <span class="light-particle"></span>
+                <span class="light-particle"></span>
+                Contact Us</a
+              >
               <div class="dropdown fade-in-right dropdown-item-animate">
                 <div class="position-relative">
                   <span
@@ -106,12 +110,19 @@
               <h1>
                 Website Under <span class="text-primary">Maintenance</span>
               </h1>
-              <p>
+              <p class="mt-4">
                 Scheduled maintenance is in progress to enhance your experience.
                 We’ll be back shortly. We appreciate your patience.
               </p>
             </div>
-            <div class="counter-section">
+            <div class="rocket-thumbnails">
+              <img
+                src="assets/images/thumbnails/rocket.png"
+                alt="img"
+                class="w-100"
+              />
+            </div>
+            <div class="counter-section d-none">
               <h5>Coming Soon</h5>
               <div class="countdown">
                 <div class="box">
@@ -132,15 +143,14 @@
         </div>
       </div>
     </section>
-
-    <footer class="footer-area pt-5 mt-5">
+    <footer class="footer-area section-link pt-5" id="footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-left text-center text-md-start">
             <div class="footer-left-contact">
               <span>CONTACT US</span>
               <h3>Let’s Discuss General And Business Inquiries</h3>
-              <a href="#" class="hero-btn">
+              <a href="tel:56595665" class="hero-btn">
                 <div class="light-particle"></div>
                 <div class="light-particle"></div>
                 <div class="light-particle"></div>
@@ -150,29 +160,19 @@
                 </span>
               </a>
             </div>
-            <div class="footer-left-email">
+            <div
+              class="footer-left-email d-flex flex-column align-items-center align-items-md-start"
+            >
               <span>EMAIL US</span>
               <div class="email-box" onclick="copyEmail(this)">
                 <div class="email-inner">
-                  <span class="email-text">hello@metafusionlabs.com</span>
-                  <svg
-                    class="copy-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
+                  <a
+                    href="mailto:hello@metafusionlabs.com"
+                    class="text-white d-flex align-items-center gap-2"
                   >
-                    <path
-                      d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zM20 5H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 18H8V7h12v16z"
-                    />
-                  </svg>
-                  <svg
-                    class="check-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M20.285 6.709a1 1 0 0 0-1.414-1.418L9 15.162l-3.871-3.87a1 1 0 1 0-1.415 1.414l4.578 4.578a1 1 0 0 0 1.414 0L20.285 6.709z"
-                    />
-                  </svg>
+                    <span class="email-text">hello@metafusionlabs.com</span>
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -188,6 +188,7 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">ECM Coin</a></li>
                     <li><a href="#">Ecosystem</a></li>
+                    <li><a href="#">Blog</a></li>
                   </ul>
                 </div>
               </div>
@@ -198,7 +199,6 @@
                   <span>INFORMATION</span>
                   <ul class="footer-links">
                     <li><a href="#">Whitepaper</a></li>
-                    <li><a href="#">Blog</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Legal Document</a></li>
                     <li><a href="#">Contact Address</a></li>

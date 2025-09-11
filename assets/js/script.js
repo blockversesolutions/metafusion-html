@@ -162,19 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Function to create white dots End
-
-// Email coppy text Start
-function copyEmail(box) {
-  const email = box.querySelector(".email-text").textContent;
-  navigator.clipboard.writeText(email).then(() => {
-    box.classList.add("copied");
-    setTimeout(() => {
-      box.classList.remove("copied");
-    }, 2000);
-  });
-}
-
-// Email copy text End
+ 
 
 // focus hover color
 
@@ -248,3 +236,8 @@ document.querySelectorAll(".dropdown-item").forEach((item) => {
   });
 });
 // Dropdown menu active section code End
+
+
+
+
+ 

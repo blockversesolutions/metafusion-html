@@ -466,7 +466,7 @@
                     <!-- Actual moving dot -->
                     <circle r="6" class="moving-dot">
                       <animateMotion
-                        dur="10s"
+                        dur="5s"
                         repeatCount="indefinite"
                         rotate="auto"
                       >
@@ -490,7 +490,7 @@
                     <!-- Glowing moving dot -->
                     <circle r="6" class="moving-dot2">
                       <animateMotion
-                        dur="9s"
+                        dur="5s"
                         repeatCount="indefinite"
                         rotate="auto"
                       >
@@ -515,7 +515,7 @@
                     <!-- Glowing moving circle -->
                     <circle r="6" class="moving-dot3">
                       <animateMotion
-                        dur="8s"
+                        dur="6s"
                         repeatCount="indefinite"
                         rotate="auto"
                       >
@@ -621,7 +621,7 @@
 
                         <!-- Glowing yellow dot -->
                         <circle r="5" fill="#ffcc00">
-                          <animateMotion dur="9s" repeatCount="indefinite">
+                          <animateMotion dur="6s" repeatCount="indefinite">
                             <mpath xlink:href="#motionPath" />
                           </animateMotion>
                           <animate
@@ -648,18 +648,36 @@
                           <span>bCoinMart</span>
                         </button>
                         <div class="left-curve-svg-1">
-                          <svg class="animatedDots" data-cycle-gap="7500" data-start-delay="9000" data-direction="normal">
+                          <svg
+                            class="animatedDots"
+                            data-cycle-gap="7000"
+                            data-start-delay="1000"
+                            data-direction="normal"
+                            width="100"
+                            height="110"
+                            viewBox="0 0 100 110"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
                             <defs>
-                              <filter id="glow1">
-                                <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+                              <filter
+                                id="glow1"
+                                x="-50%"
+                                y="-50%"
+                                width="200%"
+                                height="200%"
+                              >
+                                <feGaussianBlur
+                                  in="SourceGraphic"
+                                  stdDeviation="2"
+                                  result="blur"
+                                />
                                 <feMerge>
-                                  <feMergeNode in="coloredBlur"/>
-                                  <feMergeNode in="SourceGraphic"/>
+                                  <feMergeNode in="blur" />
+                                  <feMergeNode in="SourceGraphic" />
                                 </feMerge>
                               </filter>
                             </defs>
                           </svg>
-                          
                         </div>
                       </div>
                       <div class="position-relative text-center">
@@ -670,11 +688,10 @@
                           <span>Androverse</span>
                         </button>
                         <div class="right-curve-svg-2">
-                          
                           <svg
                             class="animatedDots"
-                            data-cycle-gap="7500"
-                            data-start-delay="11000"
+                            data-cycle-gap="7000"
+                            data-start-delay="3000"
                             data-direction="mirror"
                             width="100"
                             height="110"
@@ -714,8 +731,8 @@
                           <!-- SVG Block 2 -->
                           <svg
                             class="animatedDots"
-                            data-cycle-gap="7500"
-                            data-start-delay="13000"
+                            data-cycle-gap="7000"
+                            data-start-delay="5000"
                             width="100"
                             height="110"
                             viewBox="0 0 100 110"
@@ -761,8 +778,8 @@
                         <div class="right-curve-svg-2">
                           <svg
                             class="animatedDots"
-                            data-cycle-gap="7500"
-                            data-start-delay="14500"
+                            data-cycle-gap="7000"
+                            data-start-delay="7000"
                             data-direction="mirror"
                             width="100"
                             height="110"
@@ -1365,95 +1382,116 @@
       const video = document.getElementById("bg-video");
       video.playbackRate = 0.7;
     </script>
-    
-<script>
-  const dotCount = 3;
-  const dotDelay = 210; // ms between dots
-  const motionDuration = 800; // ms per dot
+    <script>
+      const dotCount = 6;
+      const dotDelay = 210; // ms between dots
+      const motionDuration = 800; // ms per dot
 
-  function createPath(svg, direction, pathId) {
-    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.setAttribute("id", pathId);
-    path.setAttribute("fill", "none");
-    path.setAttribute("stroke", "#30314D");
-    path.setAttribute("stroke-width", "2");
+      function createPath(svg, direction, pathId) {
+        const path = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "path"
+        );
+        path.setAttribute("id", pathId);
+        path.setAttribute("fill", "none");
+        path.setAttribute("stroke", "#30314D");
+        path.setAttribute("stroke-width", "2");
 
-    if (direction === "mirror") {
-      path.setAttribute("d", "M40,10 C65,35 65,75 40,100");
-    } else {
-      path.setAttribute("d", "M40,10 C15,35 15,75 40,100");
-    }
+        // Define path based on direction
+        if (direction === "mirror") {
+          path.setAttribute("d", "M40,10 C65,35 65,75 40,100"); // top → right → bottom
+        } else {
+          path.setAttribute("d", "M40,10 C15,35 15,75 40,100"); // bottom-left → top
+        }
 
-    svg.appendChild(path);
-  }
-
-  function createDot(svg, pathId, beginTime) {
-    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    circle.setAttribute("r", "5");
-    circle.setAttribute("fill", "#FFD400");
-    circle.setAttribute("filter", "url(#glow1)");
-    circle.setAttribute("visibility", "hidden");
-
-    const setVisible = document.createElementNS("http://www.w3.org/2000/svg", "set");
-    setVisible.setAttribute("attributeName", "visibility");
-    setVisible.setAttribute("to", "visible");
-    setVisible.setAttribute("begin", beginTime + "s");
-
-    const setHidden = document.createElementNS("http://www.w3.org/2000/svg", "set");
-    setHidden.setAttribute("attributeName", "visibility");
-    setHidden.setAttribute("to", "hidden");
-    setHidden.setAttribute("begin", beginTime + motionDuration / 1000 + "s");
-
-    const animateMotion = document.createElementNS("http://www.w3.org/2000/svg", "animateMotion");
-    animateMotion.setAttribute("dur", motionDuration / 1000 + "s");
-    animateMotion.setAttribute("begin", beginTime + "s");
-    animateMotion.setAttribute("fill", "freeze");
-    animateMotion.setAttribute("rotate", "auto");
-
-    const mpath = document.createElementNS("http://www.w3.org/2000/svg", "mpath");
-    mpath.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "#" + pathId);
-
-    animateMotion.appendChild(mpath);
-    circle.appendChild(setVisible);
-    circle.appendChild(setHidden);
-    circle.appendChild(animateMotion);
-    svg.appendChild(circle);
-  }
-
-  function clearOldDots(svg) {
-    svg.querySelectorAll("circle").forEach((circle) => circle.remove());
-  }
-
-  function scheduleCycle(svg, cycleGap, startDelay, direction) {
-    let cycleIndex = 0;
-    const pathId = "path_" + Date.now() + "_" + Math.floor(Math.random() * 1000);
-    createPath(svg, direction, pathId);
-
-    function runCycle() {
-      clearOldDots(svg);
-      const baseTime = startDelay + cycleIndex * (dotDelay * dotCount + cycleGap);
-      for (let i = 0; i < dotCount; i++) {
-        const beginTime = (baseTime + i * dotDelay) / 1000;
-        createDot(svg, pathId, beginTime);
+        svg.appendChild(path);
       }
-      cycleIndex++;
-      setTimeout(runCycle, dotDelay * dotCount + cycleGap);
-    }
 
-    setTimeout(runCycle, startDelay);
-  }
+      function createDot(svg, pathId, beginTime) {
+        const circle = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "circle"
+        );
+        circle.setAttribute("r", "5");
+        circle.setAttribute("fill", "#FFD400");
+        circle.setAttribute("filter", "url(#glow1)");
+        circle.setAttribute("visibility", "hidden");
 
-  document.querySelectorAll(".animatedDots").forEach((svg) => {
-    const cycleGap = parseInt(svg.getAttribute("data-cycle-gap")) || 6000;
-    const startDelay = parseInt(svg.getAttribute("data-start-delay")) || 0;
-    const direction = svg.getAttribute("data-direction") || "normal";
-    scheduleCycle(svg, cycleGap, startDelay, direction);
-  });
-</script>
+        const setVisible = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "set"
+        );
+        setVisible.setAttribute("attributeName", "visibility");
+        setVisible.setAttribute("to", "visible");
+        setVisible.setAttribute("begin", beginTime + "s");
+
+        const setHidden = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "set"
+        );
+        setHidden.setAttribute("attributeName", "visibility");
+        setHidden.setAttribute("to", "hidden");
+        setHidden.setAttribute(
+          "begin",
+          beginTime + motionDuration / 1000 + "s"
+        );
+
+        const animateMotion = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "animateMotion"
+        );
+        animateMotion.setAttribute("dur", motionDuration / 1000 + "s");
+        animateMotion.setAttribute("begin", beginTime + "s");
+        animateMotion.setAttribute("fill", "freeze");
+        animateMotion.setAttribute("rotate", "auto");
+
+        const mpath = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "mpath"
+        );
+        mpath.setAttributeNS(
+          "http://www.w3.org/1999/xlink",
+          "xlink:href",
+          "#" + pathId
+        );
+
+        animateMotion.appendChild(mpath);
+        circle.appendChild(setVisible);
+        circle.appendChild(setHidden);
+        circle.appendChild(animateMotion);
+        svg.appendChild(circle);
+      }
+
+      function scheduleCycle(svg, cycleGap, startDelay, direction) {
+        let cycleIndex = 0;
+        const pathId = "path_" + Math.random().toString(36).substr(2, 5);
+        createPath(svg, direction, pathId);
+
+        function runCycle() {
+          const baseTime =
+            startDelay + cycleIndex * (dotDelay * dotCount + cycleGap);
+          for (let i = 0; i < dotCount; i++) {
+            const beginTime = (baseTime + i * dotDelay) / 1000;
+            createDot(svg, pathId, beginTime);
+          }
+          cycleIndex++;
+          setTimeout(runCycle, dotDelay * dotCount + cycleGap);
+        }
+
+        setTimeout(runCycle, startDelay);
+      }
+
+      document.querySelectorAll(".animatedDots").forEach((svg) => {
+        const cycleGap = parseInt(svg.getAttribute("data-cycle-gap")) || 6000;
+        const startDelay = parseInt(svg.getAttribute("data-start-delay")) || 0;
+        const direction = svg.getAttribute("data-direction") || "normal";
+        scheduleCycle(svg, cycleGap, startDelay, direction);
+      });
+    </script>
     <script>
  
-  const initialDelay =8000; 
-  const repeatInterval = 8000; 
+  const initialDelay =500; 
+  const repeatInterval = 8300; 
   const animationDuration =1000; 
 
   function triggerAnimation() {
