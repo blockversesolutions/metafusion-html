@@ -900,14 +900,25 @@ p {
   overflow: hidden;
 }
 .hero-card1 {
-  transform: perspective(18px) rotate3d(1, -14, 0, -2deg);
+  /* transform: perspective(18px) rotate3d(1, -14, 0, -2deg); */
+  animation: rotateCard 3s ease-in-out infinite alternate;
+  /* transform: perspective(18px) rotate3d(1, 14, 0, -2deg); */
 }
-.hero-card1:hover {
-  transform: perspective(18px) rotate3d(1, -14, 0, -1deg) scale(1.1);
+@keyframes rotateCard {
+  0% {
+    transform: perspective(18px) rotate3d(1, -14, 0, -2deg);
+  }
+  100% {
+    transform: perspective(18px) rotate3d(1, 14, 0, -2deg);
+  }
+}
+.hero-card1:hover,.hero-card2:hover {
+  animation-play-state: paused;
 }
 
 .hero-card2 {
-  transform: perspective(17px) rotate3d(1, -14, 0, 2deg);
+   animation: rotateCard 4s ease-in-out infinite alternate;
+  /* transform: perspective(17px) rotate3d(1, -14, 0, 2deg); */
 }
 .hero-card2:hover {
   transform: perspective(17px) rotate3d(1, -14, 0, 1deg) scale(1.1);
@@ -962,7 +973,7 @@ p {
 /*==========  Hero Section End  ==========*/
 /*==========  Empower Section Start  ==========*/
 .empower-area {
-  padding: 170px 0 100px 0;
+  padding: 240px 0 100px 0;
   position: relative;
   background-color: #010613;
   z-index: 9;
@@ -1797,7 +1808,7 @@ p {
 /*==========  Blockchain Section End  ==========*/
 /*==========  Blockchain Section End  ==========*/
 .launch-area {
-  padding-bottom: 110px;
+  padding-bottom:70px;
   position: relative;
   z-index: 1;
   background-color: #010613;
@@ -1928,6 +1939,7 @@ p {
   position: relative;
   z-index: 1;
   background: url("../images/bg/footer-bg.png") no-repeat center center / cover;
+  padding-top: 60px;
 }
 .footer-content {
   display: flex;
@@ -2613,7 +2625,7 @@ p {
 /* maintenance  */
 .maintenance-hero {
   padding-top: 110px;
-  margin-bottom: 60px;
+
 }
 .countdown {
   display: flex;
