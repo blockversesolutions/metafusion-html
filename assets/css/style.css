@@ -1071,7 +1071,7 @@ p {
   z-index: -1;
 }
 .empower-icon {
-  width: 80px;
+  width:65px;
   height: auto;
   min-width: 48px;
 }
@@ -2530,16 +2530,16 @@ p {
 }
 @keyframes ecosystem-icon-2 {
   0% {
-    transform: translateY(30px) translateX(-5px);
+    transform: translateY(30px) translateX(-20px);
     opacity: 0.5;
   }
   50% {
-    transform: translateY(40px) translateX(-50px);
+    transform: translateY(10px) translateX(-80px);
     opacity: 0.5;
   }
 
   100% {
-    transform: translateY(-25px) translateX(10px);
+    transform: translateY(-25px) translateX(30px);
     opacity: 1;
   }
 }
@@ -2566,7 +2566,7 @@ p {
 @keyframes ecosystem-icon-5 {
   0% {
     transform: translateX(-50px) translateY(0);
-    opacity: 0;
+    opacity: 1;
   }
   50% {
     transform: translateX(-50px) translateY(50px);
