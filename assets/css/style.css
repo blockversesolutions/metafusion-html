@@ -450,7 +450,7 @@ p {
   line-height: 24px;
 }
 .btn-1:hover {
-  background: #775207;
+  background: #d49c2c;
   color: #fff;
 }
 .btn-1:hover:before {
@@ -1420,10 +1420,10 @@ p {
   margin-right: 30px;
 }
 .unlock-btn1:hover {
-  background: linear-gradient(145deg, #5e4810 0%, #684c04 100%) !important;
+  background: linear-gradient(145deg, #FFBE4A 0%, #b48129 100%) !important;
 }
 .unlock-btn2:hover {
-  background: linear-gradient(145deg, #244763 0%, #0b688c 100%) !important;
+  background: linear-gradient(145deg, #094d68 0%, #0b688c 100%) !important;
 }
 .unlock-btn3:hover {
   background: linear-gradient(145deg, #2b4383 0%, #537dfa 100%) !important;
@@ -1432,7 +1432,7 @@ p {
   background: linear-gradient(145deg, #0a7254 0%, #164d96 100%) !important;
 }
 .unlock-btn5:hover {
-  background: linear-gradient(145deg, #4d3b0c 0%, #9c8116 100%) !important;
+  background: linear-gradient(145deg, #FFBE4A 0%, #9c8116 100%) !important;
 }
 .unlock-card-right {
   position: relative;
@@ -1471,7 +1471,7 @@ p {
   stroke-width: 2;
   fill: none;
   stroke-linecap: round;
-  filter: drop-shadow(0 0 15px #ffcc00);
+  /* filter: drop-shadow(0 0 15px #ffcc00); */
 }
 
 .moving-dot {
@@ -1882,7 +1882,6 @@ p {
   animation-name: anim3;
   animation-duration: 5s;
 }
-
 .launch-animation4 {
   bottom: 87px;
   right: 35px;
@@ -2237,7 +2236,6 @@ p {
   height: 1px;
   margin: auto;
 }
-
 .timer-number {
   font-size: 40px;
   color: #ffffff;
@@ -2247,7 +2245,6 @@ p {
   text-align: center;
   padding-bottom: 16px;
 }
-
 .timer-label {
   font-weight: 400;
   font-size: 30px;
