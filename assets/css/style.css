@@ -990,9 +990,8 @@ p {
   height: 28%;
   background-size: 100% 100%;
   z-index: -2;
- 
 }
- 
+
 .hero-bg img {
   position: absolute;
   top: -300px;
@@ -1420,7 +1419,7 @@ p {
   margin-right: 30px;
 }
 .unlock-btn1:hover {
-  background: linear-gradient(145deg, #FFBE4A 0%, #b48129 100%) !important;
+  background: linear-gradient(145deg, #ffbe4a 0%, #b48129 100%) !important;
 }
 .unlock-btn2:hover {
   background: linear-gradient(145deg, #094d68 0%, #0b688c 100%) !important;
@@ -1432,7 +1431,7 @@ p {
   background: linear-gradient(145deg, #0a7254 0%, #164d96 100%) !important;
 }
 .unlock-btn5:hover {
-  background: linear-gradient(145deg, #FFBE4A 0%, #9c8116 100%) !important;
+  background: linear-gradient(145deg, #ffbe4a 0%, #9c8116 100%) !important;
 }
 .unlock-card-right {
   position: relative;
@@ -1808,7 +1807,7 @@ p {
   line-height: 26px;
   color: #d8d8d8;
 }
-.disable{
+.disable {
   pointer-events: none;
 }
 /*==========  Blockchain Section End  ==========*/
@@ -2475,7 +2474,8 @@ p {
   margin-top: -30px;
 }
 .ecosystem-icon img {
-  max-width: 150px;
+  max-width: 80px;
+  width: 100%;
 }
 .ecosystem-icon {
   position: absolute;
@@ -2484,7 +2484,7 @@ p {
   left: 20%;
   top: 35%;
   opacity: 0.5;
-  transform: translateY(30px) translateX(-5px);
+  transform: translateY(30px) translateX(-5px) scale(0.8);
   animation: ecosystem-icon-1 5s ease-in-out 0.6s infinite alternate;
 }
 .ecosystem-icon-2 {
@@ -2507,7 +2507,7 @@ p {
   animation: ecosystem-icon-4 4s ease-in-out 0.7s infinite alternate;
 }
 .ecosystem-icon-5 {
-  right: 15%;
+  right: 10%;
   top: 38%;
   animation: ecosystem-icon-5 7s ease-in-out 0.8s infinite alternate;
 }
@@ -2519,12 +2519,12 @@ p {
 }
 @keyframes ecosystem-icon-1 {
   0% {
-    transform: translateY(30px) translateX(-5px);
+    transform: translateY(30px) translateX(-5px) scale(0.8);
     opacity: 0.5;
   }
 
   100% {
-    transform: translateY(-25px) translateX(10px) scale(1.5);
+    transform: translateY(-25px) translateX(10px) scale(1);
     opacity: 1;
   }
 }
@@ -2566,17 +2566,20 @@ p {
 @keyframes ecosystem-icon-5 {
   0% {
     transform: translateX(-50px) translateY(0);
+    opacity: 0;
   }
   50% {
     transform: translateX(-50px) translateY(50px);
+    opacity: 1;
   }
   100% {
     transform: translateX(50px) translateY(80px);
+    opacity: 1;
   }
 }
 @keyframes ecosystem-icon-6 {
   0% {
-    transform: scale(0.6);
+    transform: scale(0.8);
   }
   100% {
     transform: scale(1);
@@ -2688,104 +2691,102 @@ video::-webkit-media-controls {
   display: none !important;
 }
 
-
 /*Start loader */
 #preloader {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #16283D;
-	z-index: 99999999;
-	width: 100%;
-	height: auto;
- 
-  }
-  
-  #status {
-	width: 120px;
-	height: 120px;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	-webkit-transform: translate(-50%, -50%);
-			-ms-transform: translate(-50%, -50%);
-	    transform: translate(-50%, -50%);
-	padding: 25px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-  }
-  
-  #status img {
-	max-width: 100%;
-  }
-  .tab_img span{
-	  display: inline-block;
-	  padding: 10px 0;
-	  font-weight: 400;
-	  font-size: 20px;
-	  color: #132725;
-  }
-  
-  #status:before {
-	content: "";
-	position: absolute;
-	pointer-events: none;
-	width: 100% !important;
-	height: 100% !important;
-	left: 0;
-	top: 0;
-	opacity: 1;
-	bottom: 0;
-	right: 0;
-	margin: auto;
-	border-bottom: 2px solid #FFBE38;
-	border-radius: 50%;
-	-webkit-animation: rotatingPlus 1s linear infinite;
-			animation: rotatingPlus 1s linear infinite;
-  }
-  
-  #status:after {
-	content: "";
-	position: absolute;
-	pointer-events: none;
-	width: 90%;
-	height: 90%;
-	left: 0;
-	top: 0;
-	opacity: 1;
-	bottom: 0; 
-	right: 0;
-	margin: auto;
-	border-top: 2px solid #0C67A0 ;
-	border-radius: 50%;
-	-webkit-animation: rotatingMinus 5s linear infinite;
-			animation: rotatingMinus 5s linear infinite;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #16283d;
+  z-index: 99999999;
+  width: 100%;
+  height: auto;
+}
 
-  @-webkit-keyframes rotatingPlus {
-	from {
-	  -webkit-transform: rotate(0deg);
-	  transform: rotate(0deg);
-	}
-	to {
-	  -webkit-transform: rotate(360deg);
-	  transform: rotate(360deg);
-	}
+#status {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#status img {
+  max-width: 100%;
+}
+.tab_img span {
+  display: inline-block;
+  padding: 10px 0;
+  font-weight: 400;
+  font-size: 20px;
+  color: #132725;
+}
+
+#status:before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 100% !important;
+  height: 100% !important;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border-bottom: 2px solid #ffbe38;
+  border-radius: 50%;
+  -webkit-animation: rotatingPlus 1s linear infinite;
+  animation: rotatingPlus 1s linear infinite;
+}
+
+#status:after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 90%;
+  height: 90%;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border-top: 2px solid #0c67a0;
+  border-radius: 50%;
+  -webkit-animation: rotatingMinus 5s linear infinite;
+  animation: rotatingMinus 5s linear infinite;
+}
+
+@-webkit-keyframes rotatingPlus {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  @keyframes rotatingPlus {
-	from {
-	  -webkit-transform: rotate(0deg);
-	  transform: rotate(0deg);
-	}
-	to {
-	  -webkit-transform: rotate(360deg);
-	  transform: rotate(360deg);
-	}
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
- /*End loader */
+}
+@keyframes rotatingPlus {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*End loader */
