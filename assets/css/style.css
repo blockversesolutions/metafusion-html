@@ -1808,16 +1808,20 @@ p {
   line-height: 26px;
   color: #d8d8d8;
 }
+.disable{
+  pointer-events: none;
+}
 /*==========  Blockchain Section End  ==========*/
 /*==========  Blockchain Section End  ==========*/
 .launch-area {
   padding-bottom: 70px;
   position: relative;
   z-index: 1;
-  background-color: #010613;
+  background-color: #050717;
 }
 .launch-left {
   position: relative;
+  z-index: 2;
 }
 .launch-left img {
   width: 100%;
@@ -2699,7 +2703,9 @@ video::-webkit-media-controls {
 	z-index: 99999999;
 	width: 100%;
 	height: auto;
+ 
   }
+  
   #status {
 	width: 120px;
 	height: 120px;
@@ -2717,6 +2723,7 @@ video::-webkit-media-controls {
     justify-content: center;
     align-content: center;
   }
+  
   #status img {
 	max-width: 100%;
   }
@@ -2727,6 +2734,7 @@ video::-webkit-media-controls {
 	  font-size: 20px;
 	  color: #132725;
   }
+  
   #status:before {
 	content: "";
 	position: absolute;
@@ -2744,6 +2752,7 @@ video::-webkit-media-controls {
 	-webkit-animation: rotatingPlus 1s linear infinite;
 			animation: rotatingPlus 1s linear infinite;
   }
+  
   #status:after {
 	content: "";
 	position: absolute;
@@ -2761,6 +2770,7 @@ video::-webkit-media-controls {
 	-webkit-animation: rotatingMinus 5s linear infinite;
 			animation: rotatingMinus 5s linear infinite;
   }
+
   @-webkit-keyframes rotatingPlus {
 	from {
 	  -webkit-transform: rotate(0deg);
