@@ -547,14 +547,15 @@ p {
   font-weight: 590;
   font-size: 16px;
   line-height: 32.81px;
+  text-align: center;
   color: #fdfdfdbd;
 }
 .hero-card p {
   font-weight: 700;
-  font-size: 32px;
+  font-size:26px;
   line-height: 32.31px;
   color: #fdfdfdb5;
-  text-align: left;
+  text-align: center;
 }
 .hero-card1 {
   position: absolute;
@@ -1051,7 +1052,7 @@ p {
   transform: translateY(-85px);
 }
 .col-xl-3:nth-child(odd) .single-empower-card {
-  transform: translateY(50px);
+  transform: translateY(78px);
 }
 .single-empower-card:hover {
   box-shadow: #ffc700 0px 1px 15px;
@@ -1371,7 +1372,7 @@ p {
   line-height: 24px;
   color: #ffffff;
   list-style-type: disc;
-  list-style-position: inside;
+
 }
 .unlock-card.unlock-card3 {
   background: transparent;
@@ -1414,7 +1415,7 @@ p {
   border-radius: 10px;
 }
 .unlock-card.unlock-card2 {
-  transform: translateY(308px);
+  transform: translateY(340px);
   margin-left: -100px;
   margin-right: 30px;
 }
@@ -1646,7 +1647,7 @@ p {
 }
 .single-ecosystem-card {
   position: relative;
-  padding: 20px 30px;
+  padding: 20px 15px;
   border-radius: 10px;
   background: linear-gradient(to bottom, #242431 0%, #ffffff1f 100%);
   backdrop-filter: blur(20px);
@@ -1720,7 +1721,7 @@ p {
   color: #ffffffb2;
 }
 .ecosystem-card-desc {
-  font-weight: 510;
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   padding: 20px 0;
