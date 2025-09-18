@@ -45,10 +45,10 @@
     left: 68px;
   }
   .col-xl-3:nth-child(even) .single-empower-card {
-    transform: translateY(-52px);
+    transform: translateY(-72px);
   }
   .col-xl-3:nth-child(odd) .single-empower-card {
-    transform: translateY(66px);
+    transform: translateY(108px);
   }
 }
 @media all and (max-width: 1400px) {
@@ -120,7 +120,7 @@
     transform: translateY(-81px);
   }
   .col-xl-3:nth-child(odd) .single-empower-card {
-    transform: translateY(90px);
+    transform: translateY(162px);
   }
 }
 
@@ -164,7 +164,7 @@
   }
 
   .col-xl-3:nth-child(even) .single-empower-card {
-    transform: translateY(-75px);
+    transform: translateY(-82px);
   }
 }
 @media all and (max-width: 1220px) {
@@ -300,7 +300,7 @@
     transform: translateY(0px);
   }
   .unlock-card {
-    padding: 30px 15px;
+    padding: 30px 30px;
   }
   .unlock-card-title h3 {
     font-size: 24px;
