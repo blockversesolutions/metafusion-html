@@ -1949,7 +1949,7 @@ p {
 }
 .footer-content {
   display: flex;
-  gap: 40px;
+  gap: 10px;
   flex: wrap;
   padding-bottom: 60px;
 }
@@ -1968,6 +1968,13 @@ p {
   color: #c8d1ff80;
   padding-bottom: 10px;
 }
+.footer-about p{
+  font-size: 14px;
+  line-height: 24px;
+}
+.ffc{
+  color: #FFC700 !important;
+}
 .footer-left-contact h3 {
   font-weight: 400;
   font-size: 24px;
@@ -1977,7 +1984,7 @@ p {
   margin-top: 10px;
 }
 .footer-left-email {
-  padding-top: 60px;
+  padding-top:15px;
 }
 .footer-area .hero-btn span {
   position: relative;
