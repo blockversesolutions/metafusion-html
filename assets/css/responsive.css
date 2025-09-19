@@ -18,7 +18,7 @@
   .empower-area:after {
     top: -180px;
 
-    height: 22%;
+    height: 20%;
   }
   .single-empower-card h3 {
     padding: 20px 0 15px 0;
@@ -153,6 +153,26 @@
     bottom: -38px;
     left: 84px;
     width: 96%;
+  }
+}
+@media all and (width: 1280px) {
+  .ecosystem-icon-animation {
+    position: absolute;
+    bottom: 30%;
+    width: 100%;
+  }
+  .empower-top {
+    padding-bottom: 205px;
+  }
+  .hero-card1,
+  .hero-card2 {
+    top: 46%;
+  }
+  .col-xl-3:nth-child(odd) .single-empower-card {
+    transform: translateY(150px);
+  }
+  .single-empower-card p {
+    padding-bottom: 20px;
   }
 }
 @media all and (max-width: 1250px) {
@@ -551,9 +571,69 @@
   }
 }
 @media all and (width: 820px) {
+}
+@media all and (width: 834px) {
+}
+@media all and (min-width: 800px) and (max-width: 884px) {
+  .hero-card.hero-card1 {
+    top: 36%;
+    left: 30px;
+  }
+  .hero-card.hero-card2 {
+    top: 36%;
+    right: 30px;
+  }
   .hero-card1,
   .hero-card2 {
-    top: 44%;
+    top: 38%;
+  }
+  .hero-card1 {
+    left: 27px;
+  }
+  .hero-card2 {
+    right: 27px;
+  }
+  .ecosystem-icon-animation {
+    position: absolute;
+    top: 52%;
+    width: 100%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 884px) {
+  .blockchain-video video {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    left: inherit;
+  }
+  .blockchain-area {
+    padding: 143px 0 90px 0;
+  }
+  .launch-animation4 {
+    bottom: 168px;
+    right: 15px;
+  }
+  .launch-animation1 {
+    top: 92px;
+    left: 35px;
+  }
+  .launch-animation2 {
+    bottom: 168px;
+    left: 5px;
+  }
+  .launch-animation3 {
+    top: 90px;
+  }
+  .launch-animation {
+    width: 170px;
+  }
+  .blockchain-video video {
+    height: 50%;
+    width: 63%;
   }
 }
 @media all and (max-width: 768px) {
@@ -781,23 +861,14 @@
   }
 }
 @media all and (width: 768px) {
-  .ecosystem-icon-1 {
-    top: 40%;
+  .hero-card1,
+  .hero-card2 {
+    top: 36%;
   }
-  .ecosystem-icon-2 {
-    top: 34%;
-  }
-  .ecosystem-icon-3 {
-    top: 55%;
-  }
-  .ecosystem-icon-4 {
-    top: 35%;
-  }
-  .ecosystem-icon-5 {
-    top: 26%;
-  }
-  .ecosystem-icon-6 {
-    top: 62%;
+  .ecosystem-icon-animation {
+    position: absolute;
+    width: 100%;
+    top: 58%;
   }
 }
 @media all and (max-width: 575px) {

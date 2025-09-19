@@ -1876,7 +1876,7 @@ p {
 
 .launch-animation2 {
   bottom: 122px;
-  left: 45px;
+  left: 4px;
   animation-duration: 4s;
   animation-name: anim2;
 }
@@ -1888,8 +1888,8 @@ p {
   animation-duration: 5s;
 }
 .launch-animation4 {
-  bottom: 87px;
-  right: 35px;
+  bottom: 112px;
+  right: -4px;
   animation-name: anim4;
   animation-duration: 3s;
 }
