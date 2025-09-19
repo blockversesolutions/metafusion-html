@@ -156,6 +156,10 @@
   }
 }
 @media all and (width: 1280px) {
+  .ecosystem-icon-4 {
+    right: 40%;
+    
+}
   .single-empower-card-two{
     margin-left: 5px;
   }
