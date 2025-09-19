@@ -358,6 +358,9 @@
   }
 }
 @media all and (max-width: 991px) {
+  .blockchain-video video {
+    opacity: 0.5;
+  }
   .launch-animation {
     padding: 10px 5px;
     width: 120px;
