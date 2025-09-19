@@ -156,10 +156,22 @@
   }
 }
 @media all and (width: 1280px) {
+  .single-empower-card-two{
+    margin-left: 5px;
+  }
+  .single-empower-card-1{
+    margin-right: -12px;
+  }
   .ecosystem-icon-animation {
     position: absolute;
     bottom: 30%;
     width: 100%;
+  }
+  .single-empower-card-4{
+    margin-left: -14px;
+  }
+  .single-empower-card-3{
+    margin-left: -5px;
   }
   .empower-top {
     padding-bottom: 205px;
@@ -169,7 +181,7 @@
     top: 46%;
   }
   .col-xl-3:nth-child(odd) .single-empower-card {
-    transform: translateY(150px);
+    transform: translateY(132px);
   }
   .single-empower-card p {
     padding-bottom: 20px;
@@ -361,22 +373,7 @@
   .blockchain-video video {
     opacity: 0.5;
   }
-  .launch-animation {
-    padding: 10px 5px;
-    width: 120px;
-    gap: 10px;
-    border-radius: 6px;
-  }
-  .launch-animation p {
-    font-size: 12px;
-    line-height: 16px;
-  }
-  .launch-animation span {
-    font-size: 10px;
-  }
-  .launch-animation img {
-    width: 35px;
-  }
+
   .left-curve-svg-1 {
     left: 25px;
   }
@@ -641,6 +638,22 @@
 }
 @media all and (max-width: 768px) {
   .hero-card1,
+    .launch-animation {
+    padding: 16px 5px;
+    width: 120px;
+    gap: 10px;
+    border-radius: 6px;
+  }
+  .launch-animation p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .launch-animation span {
+    font-size: 10px;
+  }
+  .launch-animation img {
+    width: 35px;
+  }
   .hero-card2 {
     animation-play-state: paused;
     transform: perspective(0px) rotate3d(0, 0, 0, 0deg) !important;
