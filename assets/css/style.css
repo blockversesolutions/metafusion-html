@@ -1350,7 +1350,7 @@ p {
   margin: auto;
 }
 .holding-head-text img {
-  max-width: 120px;
+  max-width: 160px;
 }
 .btn-1 i {
   transition: all 0.3s ease;
@@ -2524,4 +2524,5 @@ video::-webkit-media-controls {
     transform: rotate(360deg);
   }
 }
+ 
 /*End loader */
