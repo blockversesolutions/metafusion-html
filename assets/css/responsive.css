@@ -77,8 +77,8 @@
     transform: translateY(-85px);
   }
   /* .hero-bg img {
-    top: -174px;
-  } */
+      top: -174px;
+    } */
   .single-empower-card {
     padding: 20px 20px;
   }
@@ -181,6 +181,9 @@
   }
 }
 @media all and (max-width: 1199px) {
+  .launch-right {
+    padding-left: 0;
+  }
   .ellipse.ellipse-3 {
     display: none;
   }
@@ -255,9 +258,7 @@
   .launch-animation {
     padding: 15px;
   }
-  .launch-animation {
-    width: 115px;
-  }
+
   .launch-animation img {
     width: 43px;
   }
@@ -326,7 +327,8 @@
     opacity: 0.4;
   }
   .left-curve-svg-1,
-  .right-curve-svg-2 {
+  .right-curve-svg-2,
+  .unlock-card-title-after-circle {
     display: none;
   }
 }
@@ -336,6 +338,22 @@
   }
 }
 @media all and (max-width: 991px) {
+  .launch-animation {
+    padding: 10px 5px;
+    width: 120px;
+    gap: 10px;
+    border-radius: 6px;
+  }
+  .launch-animation p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .launch-animation span {
+    font-size: 10px;
+  }
+  .launch-animation img {
+    width: 35px;
+  }
   .left-curve-svg-1 {
     left: 25px;
   }
@@ -487,8 +505,6 @@
     line-height: 40px;
   }
   .launch-left {
-    max-width: 496px;
-    margin: auto;
     width: 100%;
     margin-bottom: 40px;
   }
@@ -541,6 +557,11 @@
   }
 }
 @media all and (max-width: 768px) {
+  .hero-card1,
+  .hero-card2 {
+    animation-play-state: paused;
+    transform: perspective(0px) rotate3d(0, 0, 0, 0deg) !important;
+  }
   .right-curve-svg-2 {
     right: -24px;
   }
@@ -679,7 +700,7 @@
     transform: translateY(0px);
   }
   .empower-top {
-    padding-bottom: 172px;
+    padding-bottom: 50px;
   }
 
   .ecm-area {
@@ -691,19 +712,7 @@
   .empower-icon {
     width: 58px;
   }
-  .launch-animation img {
-    width: 35px;
-  }
-  .launch-animation {
-    padding: 10px 5px;
-    width: 84px;
-    gap: 10px;
-    border-radius: 6px;
-  }
-  .launch-animation p {
-    font-size: 11px;
-    line-height: 16px;
-  }
+
   .launch-right p {
     padding-top: 10px;
   }
@@ -792,6 +801,25 @@
   }
 }
 @media all and (max-width: 575px) {
+  .ecosystem-icon {
+    animation-play-state: paused;
+  }
+  .ecosystem-icon-4 {
+    top: 74%;
+  }
+  .ecosystem-icon-1 {
+    top: 73%;
+  }
+  .ecosystem-icon-3 {
+    top: 69%;
+    transform: scale(0.8);
+  }
+  .ecosystem-icon-2 {
+    top: 65%;
+  }
+  .hero-card {
+    min-width: 151px;
+  }
   .left-curve-svg-1 {
     left: -10px;
   }
@@ -803,15 +831,23 @@
     margin-top: 20px;
   }
   .launch-animation2 {
-    bottom: 50px;
-    left: 12px;
+    bottom: -135px;
+    left: 0px;
+  }
+  .launch-right {
+    margin-top: 100px;
   }
   .launch-animation4 {
-    bottom: 86px;
-    right: 10px;
+    bottom: -129px;
+    right: 0px;
   }
   .launch-animation1 {
     left: 16px;
+    top: -36px;
+  }
+  .launch-animation3 {
+    top: -45px;
+    right: 10px;
   }
   .toplight {
     display: none;
@@ -871,11 +907,11 @@
   }
   .hero-card1 {
     top: 47%;
-    left: 31px;
+    left: 18px;
   }
   .hero-card2 {
     top: 47%;
-    right: 31px;
+    right: 18px;
   }
   .holding-content {
     transform: translateY(24px);
@@ -884,7 +920,7 @@
     padding: 30px 0 50px 0;
   }
   h2 {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 140%;
   }
   .holding-head-text p {

@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Function to create white dots End
- 
+
 // focus hover color
 const focusBg = document.querySelector(".focus-bg");
 const ecmArea = document.querySelector(".ecm-card-main");
@@ -201,7 +201,6 @@ window.addEventListener("load", () => {
 //   focusBg.style.background = `radial-gradient(circle at ${defaultX}px ${defaultY}px, rgba(255, 190, 56, 0.7), transparent 300px)`;
 // });
 
-
 const holdingContent = document.querySelector(".holding-content");
 const ball = document.querySelector(".rotating-ball");
 
@@ -234,8 +233,3 @@ document.querySelectorAll(".dropdown-item").forEach((item) => {
   });
 });
 // Dropdown menu active section code End
-
-
-
-
- 
