@@ -14,7 +14,6 @@ $(document).ready(function () {
 
   initAnimations();
 });
-
 $(document).ready(function () {
   // Menu toggle
   $(".mobile-bars").click(function () {
@@ -63,39 +62,6 @@ function initAnimations() {
 
   window.timelines = [tl2, tl3];
 }
-
-// Hero Card Mouse Position Animation (Hover-based)
-// document.addEventListener("DOMContentLoaded", function () {
-//   const heroArea = document.querySelector(".hero-area");
-//   const heroCard1 = document.querySelector(".hero-card1");
-//   const heroCard2 = document.querySelector(".hero-card2");
-
-//   if (!heroArea || !heroCard1 || !heroCard2) return;
-
-//   heroArea.addEventListener("mousemove", function (e) {
-//     const rect = heroArea.getBoundingClientRect();
-//     const centerX = rect.left + rect.width / 2;
-//     const mouseX = e.clientX;
-
-//     const distance = Math.abs(mouseX - centerX);
-//     const maxDistance = rect.width / 2;
-//     const intensity = Math.min(distance / maxDistance, 1);
-
-//     if (mouseX < centerX) {
-//       heroCard1.style.transform = `perspective(20px) rotate3d(${1 * intensity}, -14, 0, -2deg)`;
-//       heroCard2.style.transform = `perspective(10px) rotate3d(${1 * intensity}, -14, 0, 2deg)`;
-//     } else {
-//       heroCard1.style.transform = `perspective(10px) rotate3d(${1 * intensity}, -14, 0, 2deg)`;
-//       heroCard2.style.transform = `perspective(20px) rotate3d(${1 * intensity}, -14, 0, -2deg)`;
-//     }
-//   });
-
-//   heroArea.addEventListener("mouseleave", function () {
-//     heroCard1.style.transform = "";
-//     heroCard2.style.transform = "";
-//   });
-// });
-
 function createDots() {
   // Select all containers with either class name
   const dotsContainers = document.querySelectorAll(
@@ -232,4 +198,3 @@ document.querySelectorAll(".dropdown-item").forEach((item) => {
     this.classList.add("active");
   });
 });
-// Dropdown menu active section code End

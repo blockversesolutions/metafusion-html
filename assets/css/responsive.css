@@ -344,7 +344,7 @@
   .ecosystem-icon img {
     /* display: none; */
     max-width: 100px;
-    opacity: 0.4;
+    opacity: 0.3;
   }
   .left-curve-svg-1,
   .right-curve-svg-2,
@@ -358,6 +358,9 @@
   }
 }
 @media all and (max-width: 991px) {
+  .blockchain-video video {
+    opacity: 0.5;
+  }
   .launch-animation {
     padding: 10px 5px;
     width: 120px;
