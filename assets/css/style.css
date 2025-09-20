@@ -1309,6 +1309,7 @@ p {
   text-align: center;
   transform: translateY(106px);
   padding: 40px 30px;
+  background-size: 125% 125%;
 }
 .rotating-ball {
   position: absolute;
