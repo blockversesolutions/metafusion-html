@@ -94,7 +94,7 @@ p {
   width: 100%;
   background-color: #10131c33;
   backdrop-filter: blur(20px);
-  padding: 23px 0px;
+  padding: 14px 0px;
   position: fixed;
   left: 0;
   top: 0;
@@ -1350,7 +1350,7 @@ p {
   margin: auto;
 }
 .holding-head-text img {
-  max-width: 160px;
+  max-width: 200px;
 }
 .btn-1 i {
   transition: all 0.3s ease;
@@ -2524,5 +2524,5 @@ video::-webkit-media-controls {
     transform: rotate(360deg);
   }
 }
- 
+
 /*End loader */
