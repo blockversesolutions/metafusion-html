@@ -6,6 +6,14 @@
     padding: 0 20px;
   }
 }
+@media all and (min-width: 1200px) and (max-width:1610px)  {
+  .hero-card1 {
+  left:25px;
+  }
+  .hero-card2 {
+  right:25px;
+  }
+}
 @media all and (min-width: 992px) {
   .nav {
     display: block !important;
@@ -52,6 +60,10 @@
   }
 }
 @media all and (max-width: 1400px) {
+  .holding-head-text p {
+    padding: 10px 0 16px 0;
+ 
+}
   .holding-head-text{
     max-width: 58%;
   }

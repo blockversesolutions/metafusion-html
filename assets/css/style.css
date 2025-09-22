@@ -68,7 +68,7 @@ a {
 }
 h1 {
   font-weight: 600;
-  font-size: 58px;
+  font-size: 56px;
   line-height: 64px;
   text-align: center;
   color: #ffffff;
@@ -538,12 +538,12 @@ p {
 
 /* button code End  */
 .hero-card {
-  background: url("../images/bg/hero-card.png");
-  background-size: cover;
-  padding: 16px 22px;
-  border-radius: 5px;
-  z-index: -1;
-  min-width: 200px;
+    background: url("../images/bg/hero-card.png");
+    background-size: cover;
+    padding: 16px 16px;
+    border-radius: 5px;
+    z-index: -1;
+    min-width: 195px;
 }
 .hero-card h3 {
   font-weight: 590;
@@ -654,10 +654,10 @@ p {
 }
 @keyframes rotateCard {
   0% {
-    transform: perspective(18px) rotate3d(1, -14, 0, -2deg);
+    transform: perspective(10px) rotate3d(1, -10, 0, -1deg);
   }
   100% {
-    transform: perspective(18px) rotate3d(1, 14, 0, -2deg);
+    transform: perspective(10px) rotate3d(1, 10, 0, -1deg);
   }
 }
 .hero-card1:hover,
@@ -670,7 +670,7 @@ p {
   /* transform: perspective(17px) rotate3d(1, -14, 0, 2deg); */
 }
 .hero-card2:hover {
-  transform: perspective(17px) rotate3d(1, -14, 0, 1deg) scale(1.1);
+  transform: perspective(14px) rotate3d(1, -12, 0, 1deg) scale(1.1);
 }
 .hero-area:hover .hero-card1 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -706,18 +706,7 @@ p {
   pointer-events: none;
   border-radius: inherit;
 }
-.hero-area.mouse-left .hero-card1 {
-  transform: perspective(-20deg) rotate3d(1, -14, 0, -2deg);
-}
-.hero-area.mouse-left .hero-card2 {
-  transform: perspective(-5deg) rotate3d(1, -14, 0, 2deg);
-}
-.hero-area.mouse-right .hero-card1 {
-  transform: perspective(5deg) rotate3d(1, -14, 0, 2deg);
-}
-.hero-area.mouse-right .hero-card2 {
-  transform: perspective(20deg) rotate3d(1, -14, 0, -2deg);
-}
+
 
 /*==========  Hero Section End  ==========*/
 /*==========  Empower Section Start  ==========*/
@@ -1308,7 +1297,7 @@ p {
   box-shadow: #0084ff 0px 1px 15px;
   text-align: center;
   transform: translateY(106px);
-  padding: 40px 30px;
+  padding: 30px 30px;
   background-size: 125% 125%;
 }
 .rotating-ball {
